@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import heroPortrait from "@/assets/hero-portrait.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,21 +39,44 @@ function Home() {
       <section className="relative overflow-hidden border-b hairline">
         <div className="absolute inset-0 grid-bg opacity-60 pointer-events-none" />
         <div className="container-page relative pt-20 pb-24 md:pt-32 md:pb-40">
-          <div className="flex items-center gap-3 mb-8">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-            <p className="mono-label">Nairobi · accepting Q3 projects</p>
-          </div>
-          <h1 className="display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-ink max-w-5xl">
-            A studio for the<br />
-            <span className="italic text-accent">internet-native</span> African business.
-          </h1>
-          <p className="mt-8 max-w-xl text-lg text-muted-foreground">
-            We design websites, build brands and ship AI automations that turn attention into revenue.
-            One small team. Senior work only.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-3">
-            <Link to="/contact" className="btn-primary">Start a project <span aria-hidden>→</span></Link>
-            <Link to="/work" className="btn-ghost">See the work</Link>
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-7">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                <p className="mono-label">Nairobi · accepting Q3 projects</p>
+              </div>
+              <h1 className="display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-ink">
+                A studio for the<br />
+                <span className="italic text-accent">internet-native</span> African business.
+              </h1>
+              <p className="mt-8 max-w-xl text-lg text-muted-foreground">
+                We design websites, build brands and ship AI automations that turn attention into revenue.
+                One small team. Senior work only.
+              </p>
+              <div className="mt-10 flex flex-wrap items-center gap-3">
+                <Link to="/contact" className="btn-primary">Start a project <span aria-hidden>→</span></Link>
+                <Link to="/work" className="btn-ghost">See the work</Link>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 relative">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-md border hairline bg-surface">
+                <img
+                  src={heroPortrait}
+                  alt="Founder on a call, building an internet-native African business"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/20 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4">
+                  <p className="mono-label text-background bg-ink/70 backdrop-blur px-2 py-1 rounded">
+                    // always-on
+                  </p>
+                  <span className="font-mono text-xs text-background bg-accent px-2 py-1 rounded">
+                    AI-native
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 border-t hairline pt-10">

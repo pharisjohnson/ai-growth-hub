@@ -1,4 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import chariot from "@/assets/work-chariot.png";
+import eika from "@/assets/work-eika.png";
+import eve from "@/assets/work-explorewitheve.png";
+import miji from "@/assets/work-miji.png";
+import krish from "@/assets/work-krish.png";
+import comfy from "@/assets/work-comfy.png";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
@@ -13,12 +19,12 @@ export const Route = createFileRoute("/work")({
 });
 
 const projects = [
-  { tag: "Web · E-commerce", title: "Savanna Goods", year: "2026", body: "Headless storefront and brand refresh for a Nairobi specialty grocer.", color: "from-amber-200 to-orange-300" },
-  { tag: "AI · Automation", title: "Acacia Capital", year: "2026", body: "Custom GPT for client onboarding and an automated KYC pipeline.", color: "from-stone-300 to-stone-500" },
-  { tag: "Brand · Identity", title: "Mara Health", year: "2025", body: "Visual identity and patient-facing collateral for a clinic group.", color: "from-emerald-200 to-teal-400" },
-  { tag: "Marketing · Funnel", title: "Tatu SaaS", year: "2025", body: "Paid acquisition + landing-page CRO that 3.2× qualified demos.", color: "from-sky-200 to-indigo-400" },
-  { tag: "Social · Content", title: "Ndani Hospitality", year: "2025", body: "Full social management and reels production for a boutique group.", color: "from-rose-200 to-pink-400" },
-  { tag: "SEO · Content", title: "Pamba EdTech", year: "2024", body: "Technical SEO + content engine — 4× organic traffic in 6 months.", color: "from-lime-200 to-green-400" },
+  { tag: "Web · Photography", title: "Chariot Creations", year: "2025", body: "Brand-forward portfolio and booking site for a Mombasa photography studio.", img: chariot, href: "https://chariotcreations.com/" },
+  { tag: "Web · Travel", title: "Eik Africa Experience", year: "2025", body: "Multi-destination travel site for safaris, beach getaways and cultural tours.", img: eika, href: "https://www.eikafricaexperience.com/" },
+  { tag: "Web · Tourism", title: "Explore With Eve", year: "2025", body: "Editorial-style experiences site spotlighting the Kenyan coast and beyond.", img: eve, href: "https://explorewitheve.com/" },
+  { tag: "Web · Innovation", title: "Miji Africa", year: "2024", body: "Living Lab platform supporting inclusive innovation across African cities.", img: miji, href: "https://mijiafrica.com/" },
+  { tag: "Web · Music", title: "Krish-Kenya", year: "2025", body: "Bold artist site and booking funnel for an East African electronic DJ.", img: krish, href: "https://www.krishkenya.com/" },
+  { tag: "Web · Hospitality", title: "Comfy Dhows Hotel", year: "2024", body: "Conversion-focused site for a coastal hotel in Kilifi — bookings, rooms, dining.", img: comfy, href: "https://comfydhowshotel.co.ke/" },
 ];
 
 function Work() {
@@ -39,10 +45,21 @@ function Work() {
       <section className="container-page py-20 md:py-28">
         <div className="grid md:grid-cols-2 gap-px bg-hairline border hairline">
           {projects.map((p) => (
-            <article key={p.title} className="bg-background p-6 md:p-10 group cursor-pointer hover:bg-surface transition-colors">
-              <div className={`aspect-[16/10] rounded-md bg-gradient-to-br ${p.color} relative overflow-hidden`}>
-                <div className="absolute inset-0 grid-bg opacity-30" />
-                <div className="absolute bottom-4 left-4 font-mono text-xs text-ink/70 bg-background/80 backdrop-blur px-2 py-1 rounded">
+            <a
+              key={p.title}
+              href={p.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-background p-6 md:p-10 group cursor-pointer hover:bg-surface transition-colors block"
+            >
+              <div className="aspect-[16/10] rounded-md bg-surface relative overflow-hidden border hairline">
+                <img
+                  src={p.img}
+                  alt={`${p.title} website screenshot`}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+                <div className="absolute bottom-3 left-3 font-mono text-xs text-ink/80 bg-background/90 backdrop-blur px-2 py-1 rounded">
                   {p.tag}
                 </div>
               </div>
@@ -51,7 +68,7 @@ function Work() {
                 <span className="font-mono text-xs text-muted-foreground">{p.year}</span>
               </div>
               <p className="mt-2 text-sm text-muted-foreground">{p.body}</p>
-            </article>
+            </a>
           ))}
         </div>
       </section>
