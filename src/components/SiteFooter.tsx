@@ -1,6 +1,21 @@
 import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
+  const getDaysToChristmas = () => {
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    const christmas = new Date(currentYear, 11, 25); // December 25
+    
+    // If Christmas has passed, calculate for next year
+    if (today > christmas) {
+      christmas.setFullYear(currentYear + 1);
+    }
+    
+    const timeDiff = christmas.getTime() - today.getTime();
+    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    return daysDiff;
+  };
+
   return (
     <footer className="border-t hairline mt-24">
       <div className="container-page py-16 grid gap-12 md:grid-cols-4">
@@ -36,7 +51,7 @@ export function SiteFooter() {
       <div className="border-t hairline">
         <div className="container-page py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} Noon Studio Africa. All rights reserved.</p>
-          <p className="font-mono">Made in Nairobi · 01°N</p>
+          <p className="font-mono">{getDaysToChristmas()} days to Christmas</p>
         </div>
       </div>
     </footer>
