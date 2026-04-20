@@ -40,6 +40,13 @@ export function SiteFooter() {
         </div>
 
         <div>
+          <p className="mono-label mb-3">Resources</p>
+          <ul className="space-y-2 text-sm">
+            <li><a href="https://freeocrscanner.noonstudio.africa/" className="hover:text-accent" target="_blank" rel="noopener noreferrer">Free Photo to Text Tool</a></li>
+          </ul>
+        </div>
+
+        <div>
           <p className="mono-label mb-3">Contact</p>
           <ul className="space-y-2 text-sm">
             <li><a href="mailto:matata@noonstudio.africa" className="hover:text-accent">matata@noonstudio.africa</a></li>
