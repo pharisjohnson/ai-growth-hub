@@ -16,8 +16,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b hairline bg-background/80 backdrop-blur-md">
       <div className="container-page flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="h-2 w-2 rounded-full bg-accent" />
-          <span className="font-mono text-sm tracking-tight">noon<span className="text-muted-foreground">/</span>studio</span>
+          <span className="h-3 w-3 rounded-full bg-accent" />
+          <span className="font-mono text-base tracking-tight">noon<span className="text-muted-foreground">/</span>studio</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

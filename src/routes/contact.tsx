@@ -1,5 +1,55 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { createServerFn, useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Valid email is required"),
+  company: z.string().optional(),
+  message: z.string().min(1, "Message is required"),
+  budget: z.string().optional(),
+  services: z.array(z.string()).optional(),
+});
+
+const sendContactEmail = createServerFn({ method: "POST" })
+  .inputValidator(contactSchema)
+  .handler(async ({ data }) => {
+    const { Resend } = await import("resend");
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    const { name, email, company, message, budget, services } = data;
+    const servicesText = services && services.length > 0 ? services.join(", ") : "Not specified";
+
+    const { error } = await resend.emails.send({
+      from: "Noon Studio Africa <contact@noonstudio.africa>",
+      to: ["matata@noonstudio.africa"],
+      subject: `New project enquiry — ${company || name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #333;">New Project Enquiry</h2>
+          <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            ${company ? `<p><strong>Company:</strong> ${company}</p>` : ""}
+            ${budget ? `<p><strong>Budget:</strong> ${budget}</p>` : ""}
+            <p><strong>Services:</strong> ${servicesText}</p>
+          </div>
+          <div style="background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+            <h3>Message:</h3>
+            <p style="white-space: pre-wrap;">${message}</p>
+          </div>
+        </div>
+      `,
+    });
+
+    if (error) {
+      console.error("Resend error:", error);
+      throw new Error("Failed to send email");
+    }
+
+    return { success: true, message: "Email sent successfully" };
+  });
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -17,21 +67,39 @@ const interests = ["Web Design", "AI Automation", "Digital Marketing", "Branding
 
 function Contact() {
   const [selected, setSelected] = useState<string[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
+  const sendContactEmailFn = useServerFn(sendContactEmail);
+
   const toggle = (i: string) =>
     setSelected((s) => (s.includes(i) ? s.filter((x) => x !== i) : [...s, i]));
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
     const fd = new FormData(e.currentTarget);
-    const name = fd.get("name") as string;
-    const company = fd.get("company") as string;
-    const message = fd.get("message") as string;
-    const budget = fd.get("budget") as string;
-    const subject = encodeURIComponent(`New project enquiry — ${company || name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nCompany: ${company}\nBudget: ${budget}\nServices: ${selected.join(", ")}\n\n${message}`,
-    );
-    window.location.href = `mailto:matata@noonstudio.africa?subject=${subject}&body=${body}`;
+    const data = {
+      name: fd.get("name") as string,
+      email: fd.get("email") as string,
+      company: fd.get("company") as string,
+      message: fd.get("message") as string,
+      budget: fd.get("budget") as string,
+      services: selected,
+    };
+
+    try {
+      await sendContactEmailFn({ data });
+      setSubmitStatus({ type: 'success', message: 'Thank you! We\'ll get back to you within one business day.' });
+      // Reset form
+      (e.target as HTMLFormElement).reset();
+      setSelected([]);
+    } catch (error) {
+      setSubmitStatus({ type: 'error', message: 'Something went wrong. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -70,6 +138,7 @@ function Contact() {
         </div>
 
         <form onSubmit={onSubmit} className="md:col-span-8 space-y-8">
+
           <div className="grid sm:grid-cols-2 gap-6">
             <Field label="Your name" name="name" required />
             <Field label="Company" name="company" />
@@ -109,9 +178,18 @@ function Contact() {
             />
           </div>
 
-          <button type="submit" className="btn-primary">
-            Send enquiry →
+          <button type="submit" className="btn-primary" disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send enquiry →'}
           </button>
+          {submitStatus.type && (
+            <div className={`p-4 rounded-lg border ${
+              submitStatus.type === 'success'
+                ? 'bg-green-50 border-green-200 text-green-800'
+                : 'bg-red-50 border-red-200 text-red-800'
+            }`}>
+              {submitStatus.message}
+            </div>
+          )}
         </form>
       </section>
     </>
