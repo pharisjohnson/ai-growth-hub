@@ -19,12 +19,12 @@ export const Route = createFileRoute("/work")({
 });
 
 const projects = [
-  { tag: "Web · Photography", title: "Chariot Creations", year: "2025", body: "Brand-forward portfolio and booking site for a Mombasa photography studio.", img: chariot, href: "https://chariotcreations.com/" },
-  { tag: "Web · Travel", title: "Eik Africa Experience", year: "2025", body: "Multi-destination travel site for safaris, beach getaways and cultural tours.", img: eika, href: "https://www.eikafricaexperience.com/" },
-  { tag: "Web · Tourism", title: "Explore With Eve", year: "2025", body: "Editorial-style experiences site spotlighting the Kenyan coast and beyond.", img: eve, href: "https://explorewitheve.com/" },
-  { tag: "Web · Innovation", title: "Miji Africa", year: "2024", body: "Living Lab platform supporting inclusive innovation across African cities.", img: miji, href: "https://mijiafrica.com/" },
-  { tag: "Web · Music", title: "Krish-Kenya", year: "2025", body: "Bold artist site and booking funnel for an East African electronic DJ.", img: krish, href: "https://www.krishkenya.com/" },
-  { tag: "Web · Hospitality", title: "Comfy Dhows Hotel", year: "2024", body: "Conversion-focused site for a coastal hotel in Kilifi — bookings, rooms, dining.", img: comfy, href: "https://comfydhowshotel.co.ke/" },
+  { tag: "Web · Photography", title: "Chariot Creations", year: "2025", body: "Brand-forward portfolio and booking site for a Mombasa photography studio.", result: "Live in 3 weeks · seamless booking flow", img: chariot, href: "https://chariotcreations.com/" },
+  { tag: "Web · Travel", title: "Eik Africa Experience", year: "2025", body: "Multi-destination travel site for safaris, beach getaways and cultural tours.", result: "12+ tour packages · multi-language support", img: eika, href: "https://www.eikafricaexperience.com/" },
+  { tag: "Web · Tourism", title: "Explore With Eve", year: "2025", body: "Editorial-style experiences site spotlighting the Kenyan coast and beyond.", result: "Editorial CMS · growing organic traffic", img: eve, href: "https://explorewitheve.com/" },
+  { tag: "Web · Innovation", title: "Miji Africa", year: "2024", body: "Living Lab platform supporting inclusive innovation across African cities.", result: "Cross-city platform · research integration", img: miji, href: "https://mijiafrica.com/" },
+  { tag: "Web · Music", title: "Krish-Kenya", year: "2025", body: "Bold artist site and booking funnel for an East African electronic DJ.", result: "Direct booking · growing fan inquiries", img: krish, href: "https://www.krishkenya.com/" },
+  { tag: "Web · Hospitality", title: "Comfy Dhows Hotel", year: "2024", body: "Conversion-focused site for a coastal hotel in Kilifi — bookings, rooms, dining.", result: "35% increase in direct bookings", img: comfy, href: "https://comfydhowshotel.co.ke/" },
 ];
 
 function Work() {
@@ -37,7 +37,7 @@ function Work() {
             Quiet craft. Loud results.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            A snapshot of recent engagements. Full case studies available on request.
+            A snapshot of recent engagements, with the outcomes that matter.
           </p>
         </div>
       </section>
@@ -68,6 +68,7 @@ function Work() {
                 <span className="font-mono text-xs text-muted-foreground">{p.year}</span>
               </div>
               <p className="mt-2 text-sm text-muted-foreground">{p.body}</p>
+              <p className="mt-2 text-xs font-mono text-accent">{p.result}</p>
             </a>
           ))}
         </div>

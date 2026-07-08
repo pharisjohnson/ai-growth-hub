@@ -16,6 +16,7 @@ const tiers = [
   {
     name: "Launch",
     price: "From KES 120k",
+    usd: "≈ $800",
     tag: "One-off",
     body: "A focused starter project — perfect for new brands or single-page launches.",
     features: ["Up to 5-page website", "Brand starter kit", "Basic SEO setup", "Analytics & forms", "30-day post-launch support"],
@@ -24,6 +25,7 @@ const tiers = [
   {
     name: "Growth",
     price: "From KES 320k",
+    usd: "≈ $2,100",
     tag: "Most popular",
     featured: true,
     body: "A full digital foundation: site, brand and the automations that run behind it.",
@@ -33,6 +35,7 @@ const tiers = [
   {
     name: "Studio Retainer",
     price: "From KES 180k / mo",
+    usd: "≈ $1,200 / mo",
     tag: "Ongoing",
     body: "An embedded team for marketing, content, AI ops and continuous improvement.",
     features: ["Dedicated strategist", "Social + content production", "Paid media management", "AI/automation iteration", "Monthly reporting & reviews"],
@@ -70,6 +73,7 @@ function Pricing() {
               </div>
               <h3 className="display text-3xl mt-6">{t.name}</h3>
               <p className={`mt-2 font-mono text-sm ${t.featured ? "text-background/70" : "text-muted-foreground"}`}>{t.price}</p>
+              {t.usd && <p className={`font-mono text-xs ${t.featured ? "text-background/50" : "text-muted-foreground/60"}`}>{t.usd}</p>}
               <p className={`mt-4 text-sm ${t.featured ? "text-background/80" : "text-muted-foreground"}`}>{t.body}</p>
 
               <ul className="mt-6 space-y-2.5 text-sm flex-1">
@@ -98,6 +102,14 @@ function Pricing() {
         <p className="mt-10 text-center text-sm text-muted-foreground">
           Need something custom? <Link to="/contact" className="text-accent underline underline-offset-4">Brief us</Link> — we'll come back with a tailored proposal.
         </p>
+
+        <div className="mt-16 max-w-2xl mx-auto text-center border-t hairline pt-10">
+          <p className="mono-label">// Not sure yet?</p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Every project starts with a free, no-obligation discovery call. We'll scope the work, give you a fixed price, and only start when you're ready.
+          </p>
+          <Link to="/contact" className="btn-ghost mt-6 inline-flex">Book a free call →</Link>
+        </div>
       </section>
     </>
   );

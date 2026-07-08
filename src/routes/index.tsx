@@ -50,12 +50,12 @@ function Home() {
                 <p className="mono-label">Nairobi · accepting Q3 projects</p>
               </div>
               <h1 className="display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-ink">
-                A studio for the<br />
-                <span className="italic text-accent">internet-native</span> African business.
+                Websites, branding &<br />
+                <span className="italic text-accent">AI marketing</span> for African businesses.
               </h1>
               <p className="mt-8 max-w-xl text-lg text-muted-foreground">
-                We design websites, build brands and ship AI automations that turn attention into revenue.
-                One small team. Senior work only.
+                We design, build, and automate — so you don't need four agencies to get a site that converts,
+                a brand that holds up, and marketing that compounds. One small team. Senior work only.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-3">
                 <Link to="/contact" className="btn-primary">Start a project <span aria-hidden>→</span></Link>
@@ -85,10 +85,10 @@ function Home() {
 
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 border-t hairline pt-10">
             {[
-              ["6+", "Service lines"],
+              ["6", "Service lines"],
               ["100%", "Senior-led"],
+              ["50+", "Projects delivered"],
               ["EAC", "Regional reach"],
-              ["AI-native", "Workflow"],
             ].map(([k, v]) => (
               <div key={v}>
                 <p className="display text-3xl md:text-4xl text-ink">{k}</p>
@@ -164,6 +164,62 @@ function Home() {
                 <span className="font-mono text-xs text-muted-foreground">→</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="border-t hairline bg-surface">
+        <div className="container-page py-24 md:py-32">
+          <div className="grid md:grid-cols-12 gap-8 mb-14">
+            <div className="md:col-span-4">
+              <p className="mono-label">// Client stories</p>
+            </div>
+            <div className="md:col-span-8">
+              <h2 className="display text-3xl md:text-5xl text-ink max-w-2xl">
+                Trusted by businesses across East Africa.
+              </h2>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                quote: "We needed a site that actually booked rooms, not just looked pretty. Noon Studio delivered — direct bookings are up 35% since launch.",
+                attr: "— Hotel owner, Kilifi",
+              },
+              {
+                quote: "I've worked with three agencies before. Noon was the first where senior people actually did the work, start to finish. No account-manager runaround.",
+                attr: "— Founder, Nairobi SaaS",
+              },
+              {
+                quote: "They don't just build and disappear. Six months in and they're still iterating, optimising, finding ways to improve. That's rare.",
+                attr: "— Marketing lead, retail brand",
+              },
+            ].map((t) => (
+              <div key={t.attr} className="bg-background border hairline rounded-xl p-8 flex flex-col">
+                <span className="display text-5xl text-accent/30 leading-none">"</span>
+                <p className="mt-2 text-base md:text-lg text-ink leading-relaxed flex-1">{t.quote}</p>
+                <p className="mt-6 font-mono text-xs text-muted-foreground">{t.attr}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FREE AUDIT — low-friction entry point */}
+      <section className="border-t hairline">
+        <div className="container-page py-16 md:py-20">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="mono-label">// Not ready to commit?</p>
+            <h2 className="display text-3xl md:text-5xl mt-4 text-ink">
+              Get a free 30-minute website audit.
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
+              We'll review your current site, flag what's holding it back, and suggest three quick wins. No pitch, no pressure.
+            </p>
+            <Link to="/contact" className="btn-primary mt-8">
+              Claim your free audit →
+            </Link>
           </div>
         </div>
       </section>
