@@ -38,14 +38,6 @@ const posts = [
     readTime: "6 min",
   },
   {
-    slug: "branding-agency-kenya",
-    title: "Branding in Kenya: Why Your Business Needs More Than a Logo",
-    excerpt: "Logo design is not branding. Here's what a real brand system includes and why Kenyan businesses that invest in it grow faster.",
-    tag: "Branding",
-    date: "2026-06-10",
-    readTime: "5 min",
-  },
-  {
     slug: "why-senior-led-studio-beats-agency",
     title: "Why a Senior-Led Studio Beats a Traditional Agency",
     excerpt: "The difference between getting account managers and getting the people who actually do the work. And why your business deserves the latter.",
@@ -53,70 +45,18 @@ const posts = [
     date: "2026-05-28",
     readTime: "4 min",
   },
-  {
-    slug: "ecommerce-website-kenya",
-    title: "Building an E-Commerce Website in Kenya: The Complete Guide",
-    excerpt: "From M-Pesa integration to shipping logistics — everything you need to know before launching an online store in Kenya.",
-    tag: "E-Commerce",
-    date: "2026-05-20",
-    readTime: "7 min",
-  },
-  {
-    slug: "seo-services-kenya",
-    title: "SEO in Kenya: How to Actually Rank on Google",
-    excerpt: "Most Kenyan businesses waste money on SEO. Here's what actually moves the needle — and what doesn't.",
-    tag: "SEO",
-    date: "2026-05-05",
-    readTime: "6 min",
-  },
-  {
-    slug: "google-ads-kenya",
-    title: "Google Ads in Kenya: A Beginner's Guide to Paid Search",
-    excerpt: "Is Google Ads worth it for Kenyan businesses? Here's a realistic breakdown of costs, results, and what to expect.",
-    tag: "Paid Ads",
-    date: "2026-04-22",
-    readTime: "5 min",
-  },
-  {
-    slug: "social-media-marketing-kenya",
-    title: "Social Media Marketing in Kenya: What Actually Works in 2026",
-    excerpt: "Instagram, TikTok, LinkedIn — which platforms matter for Kenyan businesses and how to use them without wasting time.",
-    tag: "Social Media",
-    date: "2026-04-10",
-    readTime: "6 min",
-  },
-  {
-    slug: "content-marketing-east-africa",
-    title: "Content Marketing for East African Businesses: A Practical Playbook",
-    excerpt: "How to create content that attracts customers, builds trust, and drives revenue — without a massive team or budget.",
-    tag: "Content Marketing",
-    date: "2026-03-28",
-    readTime: "5 min",
-  },
-  {
-    slug: "digital-marketing-agency-kenya",
-    title: "How to Choose a Digital Marketing Agency in Kenya",
-    excerpt: "Not all agencies are equal. Here's a framework for evaluating agencies — and the red flags to watch for.",
-    tag: "Business",
-    date: "2026-03-15",
-    readTime: "5 min",
-  },
-  {
-    slug: "website-redesign-when",
-    title: "5 Signs Your Website Needs a Redesign",
-    excerpt: "Your website might be costing you customers without you knowing. Here are the warning signs — and what to do about them.",
-    tag: "Web Design",
-    date: "2026-03-01",
-    readTime: "4 min",
-  },
-  {
-    slug: "ai-tools-small-business-kenya",
-    title: "10 AI Tools Every Kenyan Small Business Should Try",
-    excerpt: "Practical, affordable AI tools that save time and generate results — from content creation to customer support.",
-    tag: "AI Marketing",
-    date: "2026-02-15",
-    readTime: "6 min",
-  },
+];
+
+const scheduledPosts = [
+  { slug: "branding-agency-kenya", title: "Branding in Kenya: Why Your Business Needs More Than a Logo", tag: "Branding", date: "Jul 9" },
+  { slug: "ecommerce-website-kenya", title: "Building an E-Commerce Website in Kenya: The Complete Guide", tag: "E-Commerce", date: "Jul 11" },
+  { slug: "seo-services-kenya", title: "SEO in Kenya: How to Actually Rank on Google", tag: "SEO", date: "Jul 14" },
+  { slug: "google-ads-kenya", title: "Google Ads in Kenya: A Beginner's Guide to Paid Search", tag: "Paid Ads", date: "Jul 16" },
+  { slug: "social-media-marketing-kenya", title: "Social Media Marketing in Kenya: What Actually Works in 2026", tag: "Social Media", date: "Jul 18" },
+  { slug: "content-marketing-east-africa", title: "Content Marketing for East African Businesses: A Practical Playbook", tag: "Content Marketing", date: "Jul 21" },
+  { slug: "digital-marketing-agency-kenya", title: "How to Choose a Digital Marketing Agency in Kenya", tag: "Business", date: "Jul 23" },
+  { slug: "website-redesign-when", title: "5 Signs Your Website Needs a Redesign", tag: "Web Design", date: "Jul 25" },
+  { slug: "ai-tools-small-business-kenya", title: "10 AI Tools Every Kenyan Small Business Should Try", tag: "AI Marketing", date: "Jul 28" },
 ];
 
 function BlogIndex() {
@@ -156,6 +96,25 @@ function BlogIndex() {
               <p className="mt-6 font-mono text-xs text-muted-foreground">{p.date}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="border-t hairline">
+        <div className="container-page py-16 md:py-20">
+          <p className="mono-label">// Coming Soon</p>
+          <h2 className="display text-3xl md:text-4xl mt-6 text-ink">Up next on the blog</h2>
+          <p className="mt-3 text-muted-foreground">New articles every Monday, Wednesday, and Friday.</p>
+          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {scheduledPosts.map((p) => (
+              <div key={p.slug} className="border hairline rounded-xl p-5 opacity-60">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="font-mono text-xs text-accent">{p.tag}</span>
+                  <span className="font-mono text-xs text-muted-foreground">{p.date}</span>
+                </div>
+                <h3 className="font-display text-lg text-ink">{p.title}</h3>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
