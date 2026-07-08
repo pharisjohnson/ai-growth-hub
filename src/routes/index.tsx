@@ -4,10 +4,10 @@ import heroPortrait from "@/assets/hero-portrait.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Noon Studio Africa — Web, Brand & AI Marketing Studio · Nairobi" },
-      { name: "description", content: "We design websites, build brands and ship AI automations that grow African businesses. Based in Nairobi, working across East Africa." },
-      { property: "og:title", content: "Noon Studio Africa — Web, Brand & AI Marketing" },
-      { property: "og:description", content: "Websites, brand systems, and AI automations for businesses across Africa." },
+      { title: "Noon Studio Africa — Nairobi Web Design & AI Marketing Agency" },
+      { name: "description", content: "Nairobi web design and AI marketing agency. We build websites, branding, and AI automations for businesses across Kenya and East Africa." },
+      { property: "og:title", content: "Noon Studio Africa — Nairobi Web Design & AI Marketing" },
+      { property: "og:description", content: "Nairobi-based web design, branding, and AI marketing agency serving Kenya and East Africa." },
       { property: "og:image", content: "https://noonstudio.africa/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -184,16 +184,16 @@ function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                quote: "We needed a site that actually booked rooms, not just looked pretty. Noon Studio delivered — direct bookings are up 35% since launch.",
-                attr: "— Hotel owner, Kilifi",
+                quote: "Noon Studio Africa is the best website provider in Kenya I have worked with.",
+                attr: "— KRISH-KENYA, Google Review",
               },
               {
-                quote: "I've worked with three agencies before. Noon was the first where senior people actually did the work, start to finish. No account-manager runaround.",
-                attr: "— Founder, Nairobi SaaS",
+                quote: "Great service and execution is very creative. Makes us stand out in the market place. Keep on going on…",
+                attr: "— Nancy Mugo, Google Review",
               },
               {
-                quote: "They don't just build and disappear. Six months in and they're still iterating, optimising, finding ways to improve. That's rare.",
-                attr: "— Marketing lead, retail brand",
+                quote: "Noon Studio are the best website service providers we've worked with. We had a personal experience dealing with Mr…",
+                attr: "— Bonie Mbogo, Google Review",
               },
             ].map((t) => (
               <div key={t.attr} className="bg-background border hairline rounded-xl p-8 flex flex-col">

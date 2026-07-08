@@ -3,10 +3,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Packages & Engagements · Noon Studio Africa" },
-      { name: "description", content: "Transparent packages for web, branding, AI automation and ongoing marketing retainers. Built for African SMEs." },
-      { property: "og:title", content: "Pricing · Noon Studio Africa" },
-      { property: "og:description", content: "Transparent packages for web, brand, AI and ongoing marketing." },
+      { title: "Pricing — Web Design & Marketing Packages · Noon Studio Africa · Nairobi" },
+      { name: "description", content: "Web design and marketing pricing for Kenyan and East African businesses. Transparent packages from KES 120k. Free consultation available." },
+      { property: "og:title", content: "Pricing · Noon Studio Africa · Nairobi" },
+      { property: "og:description", content: "Transparent pricing for web design, branding, AI and marketing retainers in Nairobi, Kenya." },
     ],
   }),
   component: Pricing,

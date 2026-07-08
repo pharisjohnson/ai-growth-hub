@@ -3,10 +3,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — A Senior-led Studio in Nairobi · Noon Studio Africa" },
-      { name: "description", content: "Noon Studio Africa is a Nairobi-based marketing consultancy. Lean, senior-led, and built for African businesses." },
-      { property: "og:title", content: "About · Noon Studio Africa" },
-      { property: "og:description", content: "Lean, senior-led marketing consultancy based in Nairobi." },
+      { title: "About — Nairobi Web Design & AI Marketing Studio · Noon Studio Africa" },
+      { name: "description", content: "Noon Studio Africa is a senior-led web design and AI marketing consultancy in Nairobi, Kenya. We help African businesses grow online with websites, branding, and AI." },
+      { property: "og:title", content: "About · Noon Studio Africa · Nairobi, Kenya" },
+      { property: "og:description", content: "Senior-led web design and AI marketing consultancy based in Nairobi, Kenya serving East Africa." },
     ],
   }),
   component: About,

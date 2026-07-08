@@ -9,10 +9,10 @@ import comfy from "@/assets/work-comfy.png";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Work — Selected Projects · Noon Studio Africa" },
-      { name: "description", content: "A selection of recent web, brand, AI and marketing work by Noon Studio Africa." },
-      { property: "og:title", content: "Work · Noon Studio Africa" },
-      { property: "og:description", content: "Selected projects across web, brand, AI and marketing." },
+      { title: "Portfolio — Web Design & Branding Projects · Noon Studio Africa · Nairobi" },
+      { name: "description", content: "Recent web design, branding, AI and marketing projects by Noon Studio Africa in Nairobi. See results from across Kenya and East Africa." },
+      { property: "og:title", content: "Portfolio · Noon Studio Africa · Nairobi" },
+      { property: "og:description", content: "Selected web, brand, AI and marketing projects delivered from Nairobi across East Africa." },
     ],
   }),
   component: Work,

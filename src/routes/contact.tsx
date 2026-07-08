@@ -54,10 +54,10 @@ const sendContactEmail = createServerFn({ method: "POST" })
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Start a Project · Noon Studio Africa" },
-      { name: "description", content: "Tell us about your project. We'll reply within one business day. Nairobi, Kenya." },
-      { property: "og:title", content: "Contact · Noon Studio Africa" },
-      { property: "og:description", content: "Brief the studio. Replies within one business day." },
+      { title: "Contact — Start a Project · Noon Studio Africa · Nairobi" },
+      { name: "description", content: "Contact Noon Studio Africa in Nairobi, Kenya. Tell us about your web design, branding or AI marketing project — we reply within one business day." },
+      { property: "og:title", content: "Contact · Noon Studio Africa · Nairobi" },
+      { property: "og:description", content: "Start a project with Noon Studio Africa in Nairobi. Web design, branding, AI marketing and more." },
     ],
   }),
   component: Contact,
