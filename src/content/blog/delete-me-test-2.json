@@ -1,0 +1,16 @@
+{
+  "slug": "delete-me-test-2",
+  "title": "Delete Me Test 2",
+  "excerpt": "Temporary post to verify the dashboard save and delete flow on production.",
+  "tag": "Test",
+  "date": "2026-08-01",
+  "readTime": "4 min",
+  "published": false,
+  "image": "",
+  "content": [
+    {
+      "type": "p",
+      "text": "Temporary post to verify the dashboard save and delete flow on production."
+    }
+  ]
+}
