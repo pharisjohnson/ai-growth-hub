@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Blog — Web Design & AI Marketing Insights · Noon Studio Africa · Nairobi" },
@@ -57,6 +57,10 @@ const scheduledPosts = [
   { slug: "digital-marketing-agency-kenya", title: "How to Choose a Digital Marketing Agency in Kenya", tag: "Business", date: "Jul 23" },
   { slug: "website-redesign-when", title: "5 Signs Your Website Needs a Redesign", tag: "Web Design", date: "Jul 25" },
   { slug: "ai-tools-small-business-kenya", title: "10 AI Tools Every Kenyan Small Business Should Try", tag: "AI Marketing", date: "Jul 28" },
+  { slug: "digital-operations-tools-kenya", title: "Digital Operations Tools: How to Run Your Business Without Chaos", tag: "Business", date: "Aug 3" },
+  { slug: "blog-management-tools", title: "How to Manage a Business Blog: Tools for Planning, Writing, and Publishing", tag: "Content Marketing", date: "Aug 5" },
+  { slug: "content-calendar-kenya", title: "Build a Content Calendar: Plan a Month of Posts in One Afternoon", tag: "Content Marketing", date: "Aug 7" },
+  { slug: "business-automation-kenya", title: "Automation for Small Businesses: Reclaim 10 Hours a Week", tag: "AI Marketing", date: "Aug 10" },
 ];
 
 function BlogIndex() {
