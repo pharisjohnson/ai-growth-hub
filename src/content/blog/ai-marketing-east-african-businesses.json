@@ -1,0 +1,77 @@
+{
+  "slug": "ai-marketing-east-african-businesses",
+  "title": "AI Marketing for East African Businesses: A Practical Guide",
+  "excerpt": "How Nairobi businesses are using AI tools for customer support, content generation, and lead qualification — without hiring a data science team.",
+  "tag": "AI Marketing",
+  "date": "2026-06-15",
+  "readTime": "6 min",
+  "published": true,
+  "image": "",
+  "content": [
+    {
+      "type": "p",
+      "text": "AI marketing sounds like something Silicon Valley startups do. But in 2026, the most practical AI tools are being used by Nairobi businesses with small teams and lean budgets."
+    },
+    {
+      "type": "p",
+      "text": "Here's what's actually working for East African businesses right now — no data science team required."
+    },
+    {
+      "type": "h2",
+      "text": "1. Customer Support Chatbots"
+    },
+    {
+      "type": "p",
+      "text": "The most common AI adoption we're seeing: custom GPTs trained on a business's own content. A hotel in Kilifi uses a chatbot to answer booking questions 24/7. A Nairobi SaaS company uses one to qualify leads before they reach the sales team."
+    },
+    {
+      "type": "p",
+      "text": "Setup cost: KES 30k-80k. Ongoing cost: minimal. Result: response time drops from hours to seconds."
+    },
+    {
+      "type": "h2",
+      "text": "2. Automated Content Pipelines"
+    },
+    {
+      "type": "p",
+      "text": "Businesses that need regular content (blog posts, social media, email newsletters) are using AI to generate first drafts, then having a human polish and approve. The result: 3-4x more content output without hiring a full-time writer."
+    },
+    {
+      "type": "note",
+      "text": "Key insight: AI replaces the blank page problem, not the editor. The best results come from businesses that treat AI as a junior writer and keep a senior person reviewing output."
+    },
+    {
+      "type": "h2",
+      "text": "3. Lead Qualification and Routing"
+    },
+    {
+      "type": "p",
+      "text": "AI agents can now handle inbound enquiries, ask qualifying questions, and route serious leads to the right person. One Nairobi retail brand uses an AI workflow that books qualified leads directly into the sales team's calendar — no back-and-forth."
+    },
+    {
+      "type": "p",
+      "text": "The result: sales teams spend less time on tyre-kickers and more time on actual buyers."
+    },
+    {
+      "type": "h2",
+      "text": "The Prerequisites"
+    },
+    {
+      "type": "p",
+      "text": "AI tools produce results proportional to the quality of your data and processes. Before adopting AI:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Clean up your customer data",
+        "Document your standard operating procedures",
+        "Have a clear definition of a qualified lead",
+        "Be ready to review and iterate"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "AI amplifies good processes. It does not fix bad ones."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "ecommerce-website-kenya",
+  "title": "Building an E-Commerce Website in Kenya: The Complete Guide",
+  "excerpt": "From M-Pesa integration to shipping logistics — everything you need to know before launching an online store in Kenya.",
+  "tag": "E-Commerce",
+  "date": "2026-07-11",
+  "readTime": "7 min",
+  "published": false,
+  "image": "",
+  "content": [
+    {
+      "type": "p",
+      "text": "E-commerce in Kenya is growing fast. M-Pesa adoption, improving logistics, and changing consumer behavior mean more Kenyan businesses are selling online than ever before."
+    },
+    {
+      "type": "p",
+      "text": "But building an e-commerce website in Kenya has unique challenges that most guides don't cover. Here's what you actually need to know."
+    },
+    {
+      "type": "h2",
+      "text": "The Platform Question"
+    },
+    {
+      "type": "p",
+      "text": "You have three main options:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "WooCommerce (WordPress): Most flexible, huge ecosystem, requires maintenance. Best for businesses that want full control.",
+        "Shopify: Easiest to set up, limited customization, monthly fees. Good for simple product catalogs.",
+        "Custom build: Maximum flexibility, highest cost. Only makes sense for complex requirements."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "For most Kenyan businesses, WooCommerce offers the best balance of flexibility, cost, and local payment integration."
+    },
+    {
+      "type": "h2",
+      "text": "M-Pesa Integration"
+    },
+    {
+      "type": "p",
+      "text": "No Kenyan e-commerce site is complete without M-Pesa. The Daraja API makes integration straightforward, but there are nuances:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Use the Daraja API (not STK push for customer-initiated payments)",
+        "Set up proper webhooks for payment confirmation",
+        "Test thoroughly with the sandbox environment",
+        "Handle edge cases: timeouts, partial payments, reversals"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Logistics and Delivery"
+    },
+    {
+      "type": "p",
+      "text": "The biggest friction point in Kenyan e-commerce isn't payments — it's delivery. Options include:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "In-house delivery (control but high cost)",
+        "Third-party logistics (Sendy, G4S, etc.)",
+        "Customer pickup points",
+        "Hybrid model (delivery for Nairobi, pickup for upcountry)"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What to Budget"
+    },
+    {
+      "type": "p",
+      "text": "A professional e-commerce site in Kenya:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Basic (10-50 products): KES 250k-400k",
+        "Mid-range (50-200 products): KES 400k-700k",
+        "Advanced (200+ products, custom features): KES 700k-1.5M+"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "These include design, development, payment integration, and launch. Ongoing hosting and maintenance are additional (typically KES 15k-30k/month)."
+    },
+    {
+      "type": "h2",
+      "text": "Common Mistakes"
+    },
+    {
+      "type": "p",
+      "text": "The biggest: launching before the logistics are sorted. A beautiful e-commerce site with unreliable delivery will generate more complaints than sales."
+    },
+    {
+      "type": "p",
+      "text": "Start with a minimum viable store, nail the logistics, then scale. Don't try to build Amazon on day one."
+    }
+  ]
+}

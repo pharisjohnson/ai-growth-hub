@@ -1,0 +1,94 @@
+{
+  "slug": "website-redesign-when",
+  "title": "5 Signs Your Website Needs a Redesign",
+  "excerpt": "Your website might be costing you customers without you knowing. Here are the warning signs — and what to do about them.",
+  "tag": "Web Design",
+  "date": "2026-07-25",
+  "readTime": "4 min",
+  "published": false,
+  "image": "",
+  "content": [
+    {
+      "type": "p",
+      "text": "Your website is your most important marketing asset. But many businesses are running on outdated, underperforming sites that actively drive customers away."
+    },
+    {
+      "type": "p",
+      "text": "Here are five signs your website needs a redesign — and what to do about it."
+    },
+    {
+      "type": "h2",
+      "text": "Sign 1: It's Not Mobile-Friendly"
+    },
+    {
+      "type": "p",
+      "text": "Over 70% of Kenyan web traffic comes from mobile devices. If your site isn't optimized for mobile, you're losing the majority of your potential customers."
+    },
+    {
+      "type": "p",
+      "text": "Test it: pull up your site on your phone. Can you read the text without zooming? Is the navigation easy to use? Do buttons work with your thumb?"
+    },
+    {
+      "type": "h2",
+      "text": "Sign 2: It's Slow"
+    },
+    {
+      "type": "p",
+      "text": "Google says 53% of mobile users abandon sites that take more than 3 seconds to load. If your site is slow, you're losing over half your visitors before they see your content."
+    },
+    {
+      "type": "p",
+      "text": "Test it: use Google PageSpeed Insights. Anything below 70/100 needs attention."
+    },
+    {
+      "type": "h2",
+      "text": "Sign 3: It Doesn't Generate Leads"
+    },
+    {
+      "type": "p",
+      "text": "A website that looks good but doesn't generate enquiries is an expensive business card. If visitors aren't converting into leads, the site isn't doing its job."
+    },
+    {
+      "type": "note",
+      "text": "Average website conversion rate is 2-3%. If yours is below 1%, something is fundamentally broken — usually the design, copy, or user flow."
+    },
+    {
+      "type": "h2",
+      "text": "Sign 4: Your Brand Has Outgrown It"
+    },
+    {
+      "type": "p",
+      "text": "If your brand has evolved but your website hasn't, there's a disconnect. Customers judge consistency. A dated website undermines a modern brand."
+    },
+    {
+      "type": "h2",
+      "text": "Sign 5: You're Embarrassed to Share It"
+    },
+    {
+      "type": "p",
+      "text": "This one's simple: if you don't want to send people to your website, it needs a redesign. Your website should be something you're proud to share."
+    },
+    {
+      "type": "h2",
+      "text": "What a Redesign Involves"
+    },
+    {
+      "type": "p",
+      "text": "A proper redesign isn't just cosmetic. It includes:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Strategy: Understanding your audience and goals",
+        "Design: Modern, conversion-focused layout",
+        "Development: Fast, responsive, secure",
+        "Content: Updated copy that converts",
+        "SEO: Preserving and improving your search rankings"
+      ]
+    },
+    {
+      "type": "blockquote",
+      "text": "\"We knew our site needed work, but we didn't realize how much business we were losing until we redesigned. Enquiries doubled in the first month.\" — Director, Nairobi architecture firm"
+    }
+  ]
+}

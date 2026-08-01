@@ -1,0 +1,117 @@
+{
+  "slug": "digital-operations-tools-kenya",
+  "title": "Digital Operations Tools: How to Run Your Business Without Chaos",
+  "excerpt": "A practical rundown of the tools that keep Kenyan businesses organized — project management, communication, files, and automation.",
+  "tag": "Business",
+  "date": "2026-08-03",
+  "readTime": "6 min",
+  "published": false,
+  "image": "",
+  "content": [
+    {
+      "type": "p",
+      "text": "Running a business online means juggling a lot: clients, content, invoices, emails, and meetings. Most owners don't fail from lack of effort. They drown in scattered tools and lost information."
+    },
+    {
+      "type": "p",
+      "text": "The fix is a simple, consistent operations stack. Here's the toolkit we recommend to businesses in Nairobi and across East Africa."
+    },
+    {
+      "type": "h2",
+      "text": "Start With Your Stack, Not Your Apps"
+    },
+    {
+      "type": "p",
+      "text": "Before adding tools, decide what you need to manage: projects, communication, files, and repetitive tasks. One tool per job. That's the whole system."
+    },
+    {
+      "type": "note",
+      "text": "Rule of thumb: if a tool doesn't replace something you already do, skip it. More apps mean more tabs, not more productivity. Most of these tools have free tiers that cover a small team, with paid plans from around KES 1,000-3,000 per month."
+    },
+    {
+      "type": "h2",
+      "text": "Project and Task Management"
+    },
+    {
+      "type": "p",
+      "text": "Trello, Asana, and ClickUp all work well. Trello is the easiest to learn. Asana handles bigger teams. Notion works if you want notes and tasks in one place."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "One board per major client or project",
+        "A shared calendar for deadlines",
+        "A weekly review: what moved, what's stuck"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Communication"
+    },
+    {
+      "type": "p",
+      "text": "Email is for formal records. Chat is for quick answers. WhatsApp Business is the default for client communication in Kenya, but internal teams benefit from Slack or Microsoft Teams, where conversations stay searchable."
+    },
+    {
+      "type": "p",
+      "text": "Set one simple rule: important decisions happen in writing, not in scattered voice notes."
+    },
+    {
+      "type": "h2",
+      "text": "Files and Documents"
+    },
+    {
+      "type": "p",
+      "text": "Google Workspace is the most practical starting point: Docs, Sheets, Drive, and Gmail in one place with a generous free tier."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "One shared folder structure: Clients, Finance, Marketing, Operations",
+        "Clear file naming so nothing is ever 'final final v3'",
+        "Sheets for simple financials until you outgrow them"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Automation"
+    },
+    {
+      "type": "p",
+      "text": "Zapier and Make connect your apps so data moves without you. When someone fills your website form, it can create a lead row in a sheet, send a notification, and book a follow-up call."
+    },
+    {
+      "type": "note",
+      "text": "Start with one workflow that saves you an hour a week. Automate that before touching anything else."
+    },
+    {
+      "type": "h2",
+      "text": "Scheduling and Meetings"
+    },
+    {
+      "type": "p",
+      "text": "Calendly or Google Calendar booking pages end the back-and-forth of finding meeting times. Share your link, clients pick a slot, and reminders go out automatically."
+    },
+    {
+      "type": "h2",
+      "text": "What to Adopt First"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Week 1: pick a project tool and move every open task into it",
+        "Week 2: set up shared folders and naming rules",
+        "Week 3: automate one repetitive workflow",
+        "Week 4: review what stuck and drop what didn't"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Tools don't create discipline. But the right stack makes good habits easy and bad ones obvious."
+    },
+    {
+      "type": "blockquote",
+      "text": "The goal isn't more tools. It's fewer places where information can get lost."
+    }
+  ]
+}

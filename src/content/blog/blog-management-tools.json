@@ -1,0 +1,104 @@
+{
+  "slug": "blog-management-tools",
+  "title": "How to Manage a Business Blog: Tools for Planning, Writing, and Publishing",
+  "excerpt": "The complete toolkit for running a business blog — from content calendars and drafting to scheduling and analytics.",
+  "tag": "Content Marketing",
+  "date": "2026-08-05",
+  "readTime": "6 min",
+  "published": false,
+  "image": "",
+  "content": [
+    {
+      "type": "p",
+      "text": "A blog only works if you can run it consistently. Most businesses start strong, publish five posts, then stall because the process is messy."
+    },
+    {
+      "type": "p",
+      "text": "The fix is a simple toolchain that covers four jobs: planning, writing, publishing, and measuring. Here's how to set it up."
+    },
+    {
+      "type": "h2",
+      "text": "Planning: The Content Calendar"
+    },
+    {
+      "type": "p",
+      "text": "Notion and Google Sheets are the two most common choices. Notion gives you a proper database with statuses. Sheets is free and everyone already knows it."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Columns for: title, keyword, status, publish date, author",
+        "Plan one month ahead, minimum",
+        "Batch topics by theme so writing sessions stay focused"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Writing and Editing"
+    },
+    {
+      "type": "p",
+      "text": "Google Docs is the workhorse: comments, suggestions, and version history make editing painless. Grammarly catches the obvious errors before a human has to."
+    },
+    {
+      "type": "p",
+      "text": "If you use AI for drafts, treat it as a junior writer. It produces the first version; a human adds the voice, examples, and final judgment."
+    },
+    {
+      "type": "note",
+      "text": "Keep a short style guide in the same folder as your calendar: tone, banned words, how you address the reader. It keeps every post sounding like the same brand."
+    },
+    {
+      "type": "h2",
+      "text": "Publishing: The CMS"
+    },
+    {
+      "type": "p",
+      "text": "WordPress powers a large share of business blogs and handles plugins, SEO, and scheduled publishing out of the box. Ghost is a cleaner, faster option focused purely on writing."
+    },
+    {
+      "type": "p",
+      "text": "For businesses that want speed and zero maintenance, a custom site on a modern stack publishes with a simple push to the repository. No dashboard to log into, no updates to babysit."
+    },
+    {
+      "type": "h2",
+      "text": "Scheduling and Distribution"
+    },
+    {
+      "type": "p",
+      "text": "Buffer and Hootsuite schedule social posts in advance. Meta Business Suite does it free for Facebook and Instagram. Mailchimp or Substack can turn each post into an email newsletter."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Write one week, schedule the next",
+        "Turn each post into three social snippets",
+        "Send the newsletter the day the post goes live"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Images"
+    },
+    {
+      "type": "p",
+      "text": "Canva handles graphics. Pexels and Pixabay supply free stock photos. Keep a folder of brand templates so every post image looks consistent."
+    },
+    {
+      "type": "h2",
+      "text": "Measuring"
+    },
+    {
+      "type": "p",
+      "text": "Google Analytics 4 shows which posts bring traffic. Google Search Console shows which keywords you rank for. Check both once a month, then write more of what works."
+    },
+    {
+      "type": "p",
+      "text": "A blog that is planned, published, and measured on a rhythm beats a brilliant blog that publishes whenever someone remembers."
+    },
+    {
+      "type": "blockquote",
+      "text": "Consistency is the strategy. The tools just make consistency possible."
+    }
+  ]
+}

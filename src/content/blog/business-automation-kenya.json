@@ -1,0 +1,89 @@
+{
+  "slug": "business-automation-kenya",
+  "title": "Automation for Small Businesses: Reclaim 10 Hours a Week",
+  "excerpt": "The highest-value workflows to automate first — leads, invoicing, support, and content — with tools that cost less than a staff member.",
+  "tag": "AI Marketing",
+  "date": "2026-08-10",
+  "readTime": "6 min",
+  "published": false,
+  "image": "",
+  "content": [
+    {
+      "type": "p",
+      "text": "Every business has tasks that happen on repeat: sending the same reply, updating the same spreadsheet, chasing the same unpaid invoice. Each one takes five minutes. Together they eat a full day every week."
+    },
+    {
+      "type": "p",
+      "text": "Automation is how you get those hours back. Here are the workflows we automate first for clients, in order of impact."
+    },
+    {
+      "type": "h2",
+      "text": "1. Lead Capture and Follow-Up"
+    },
+    {
+      "type": "p",
+      "text": "When a website form is submitted, most businesses copy the details into a spreadsheet by hand and reply hours later. By then the lead is cold."
+    },
+    {
+      "type": "p",
+      "text": "Zapier or Make can take that submission, add it to a sheet or CRM, and send an instant acknowledgment. Follow-up speed alone lifts conversion."
+    },
+    {
+      "type": "h2",
+      "text": "2. Invoicing and Payment Reminders"
+    },
+    {
+      "type": "p",
+      "text": "Tools like Zoho Invoice or Wave send the invoice, chase it automatically, and flag late payers. No more awkward messages asking for money. The tool does the tracking, you keep the relationship."
+    },
+    {
+      "type": "h2",
+      "text": "3. Customer Support Replies"
+    },
+    {
+      "type": "p",
+      "text": "A simple chatbot or WhatsApp Business automated reply answers the top ten questions instantly: prices, hours, location, delivery times. Real people handle the rest."
+    },
+    {
+      "type": "note",
+      "text": "Automation handles the repetitive 80%. It frees your team for the conversations that actually need a human."
+    },
+    {
+      "type": "h2",
+      "text": "4. Content Distribution"
+    },
+    {
+      "type": "p",
+      "text": "Write once, publish everywhere. Scheduling tools post to social channels, a newsletter tool emails your list, and the whole thing runs while you sleep."
+    },
+    {
+      "type": "h2",
+      "text": "5. Data Entry and Reporting"
+    },
+    {
+      "type": "p",
+      "text": "A workflow that moves numbers from one app to another removes transcription errors. Weekly sales reports can assemble themselves from your payment and point-of-sale data."
+    },
+    {
+      "type": "h2",
+      "text": "How to Start Without Breaking Anything"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "List your three most repetitive weekly tasks",
+        "Pick the one with the clearest steps and the biggest time cost",
+        "Map the steps in plain language before touching a tool",
+        "Build the smallest version, test it with real data, then expand"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Start small. A workflow that saves one hour a week and runs reliably beats five workflows that save ten hours and break on Friday."
+    },
+    {
+      "type": "blockquote",
+      "text": "Automate the boring parts, and the interesting parts get more of your attention."
+    }
+  ]
+}
