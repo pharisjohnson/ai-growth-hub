@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { getAllPosts, type ContentBlock, type Post } from "../lib/blog";
-import { checkAdmin, login, logout, savePost, uploadImage } from "../lib/admin-server";
+import { checkAdmin, deletePost, login, logout, savePost, uploadImage } from "../lib/admin-server";
 
 export const Route = createFileRoute("/admin")({
   head: () => ({
@@ -203,6 +203,7 @@ function Editor({ post, onBack }: { post: Post; onBack: () => void }) {
   }));
   const [msg, setMsg] = useState<Msg | null>(null);
   const [saving, setSaving] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   function setField<K extends keyof Post>(key: K, value: Post[K]) {
@@ -278,6 +279,20 @@ function Editor({ post, onBack }: { post: Post; onBack: () => void }) {
     } else {
       setMsg({ type: "err", text: r.error ?? "Save failed." });
       setSaving(false);
+    }
+  }
+
+  async function handleDelete() {
+    if (!window.confirm(`Delete "${form.title}"? This removes the post and cannot be undone.`)) return;
+    setDeleting(true);
+    setMsg(null);
+    const r = await deletePost({ data: { slug: form.slug } });
+    if (r.ok) {
+      setMsg({ type: "ok", text: "Deleted. Deploying to the site..." });
+      setTimeout(() => window.location.reload(), 1500);
+    } else {
+      setMsg({ type: "err", text: r.error ?? "Delete failed." });
+      setDeleting(false);
     }
   }
 
@@ -400,11 +415,20 @@ function Editor({ post, onBack }: { post: Post; onBack: () => void }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-4 pt-4 border-t hairline">
-          <button onClick={handleSave} disabled={saving} className="btn-primary inline-flex disabled:opacity-50">
-            {saving ? "Saving..." : "Save post"}
+        <div className="flex items-center justify-between pt-4 border-t hairline">
+          <div className="flex items-center gap-4">
+            <button onClick={handleSave} disabled={saving} className="btn-primary inline-flex disabled:opacity-50">
+              {saving ? "Saving..." : "Save post"}
+            </button>
+            <button onClick={onBack} className="btn-ghost">Cancel</button>
+          </div>
+          <button
+            onClick={handleDelete}
+            disabled={deleting}
+            className="font-mono text-xs text-red-500 hover:underline disabled:opacity-50"
+          >
+            {deleting ? "Deleting..." : "Delete post"}
           </button>
-          <button onClick={onBack} className="btn-ghost">Cancel</button>
         </div>
       </div>
     </Shell>

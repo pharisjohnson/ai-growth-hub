@@ -3,7 +3,7 @@
 import { toJSONAsync } from "seroval";
 import { defaultSerovalPlugins } from "@tanstack/router-core";
 
-const BASE = "http://[::1]:3001/_serverFn/";
+const BASE = "http://[::1]:3000/_serverFn/";
 const SERVER_FN_FILE = "/@id/src/lib/admin-server.ts?tss-serverfn-split";
 function fnId(name) {
   return Buffer.from(JSON.stringify({ file: SERVER_FN_FILE, export: `${name}_createServerFn_handler` }), "utf8").toString("base64url");
@@ -64,5 +64,15 @@ await rpc("savePost", {
 const tinyPng =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
 await rpc("uploadImage", { dataUrl: tinyPng, originalName: "test-image.png" });
+
+// 7. Delete the test post
+await rpc("deletePost", { slug: "dashboard-test-post" });
+
+// 8. Deleting a non-existent post must error cleanly
+await rpc("deletePost", { slug: "no-such-post" });
+
+// 9. Unauthenticated delete must be rejected (fresh jar)
+cookie = null;
+await rpc("deletePost", { slug: "dashboard-test-post" });
 
 console.log("\ncookies set during run:", JSON.stringify(cookiesSeen.map((c) => c.slice(0, 24) + "...")));

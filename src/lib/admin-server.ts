@@ -114,6 +114,37 @@ export const savePost = createServerFn({ method: "POST" }).handler(async ({ data
   }
 });
 
+export const deletePost = createServerFn({ method: "POST" }).handler(async ({ data }: { data: { slug: string } }) => {
+  if (!(await isAuthed())) return { ok: false as const, error: "Not authorized. Log in again." };
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return { ok: false as const, error: "Server not configured. Set the GITHUB_TOKEN env var in Vercel." };
+  if (!/^[a-z0-9-]+$/.test(data.slug)) return { ok: false as const, error: "Invalid slug." };
+
+  const branch = process.env.GITHUB_BRANCH ?? "main";
+  const path = `${CONTENT_DIR}/${data.slug}.json`;
+  try {
+    const existing = await ghGet(token, path, branch);
+    if (!existing) return { ok: false as const, error: "Post not found." };
+    const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message: `delete post: ${data.slug}`, branch, sha: existing.sha }),
+    });
+    if (!res.ok) {
+      const t = await res.text();
+      throw new Error(`GitHub DELETE failed: ${res.status} ${t.slice(0, 300)}`);
+    }
+    return { ok: true as const };
+  } catch (e) {
+    return { ok: false as const, error: e instanceof Error ? e.message : "Delete failed." };
+  }
+});
+
 export const uploadImage = createServerFn({ method: "POST" }).handler(async ({ data }: { data: { dataUrl: string; originalName: string } }) => {
   if (!(await isAuthed())) return { ok: false as const, error: "Not authorized. Log in again." };
   const token = process.env.GITHUB_TOKEN;
