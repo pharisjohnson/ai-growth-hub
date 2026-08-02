@@ -11,7 +11,11 @@
   "content": [
     {
       "type": "p",
-      "text": "Ten AI tools can cover most of what a Kenyan small business needs to write, design, support, and organize. Most have free tiers, and a full paid stack costs less than KES 5,000 a month. We have watched a Nairobi boutique draft a week of captions in one sitting and a Mombasa shop answer WhatsApp messages after closing, both with tools from this list."
+      "text": "Ten AI tools can cover most of what a Kenyan small business needs to write, design, support, and organize. Most have free tiers, and a full paid stack costs less than KES 5,000 a month."
+    },
+    {
+      "type": "p",
+      "text": "We have watched a Nairobi boutique draft a week of captions in one sitting and a Mombasa shop answer WhatsApp messages after closing, both with tools from this list."
     },
     {
       "type": "p",
@@ -116,7 +120,19 @@
     },
     {
       "type": "p",
-      "text": "ChatGPT drafts blog posts, email replies, and product descriptions, and the free tier is genuinely useful. Canva AI turns plain ideas into social graphics without a designer, and its templates save hours of fiddling. CapCut edits Reels and TikTok videos with AI that removes most of the manual work. A Nairobi boutique we know drafts a week of captions every Sunday morning and schedules them before breakfast."
+      "text": "The three tools most Kenyan businesses try first all have useful free tiers:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "ChatGPT drafts blog posts, email replies, and product descriptions.",
+        "Canva AI turns plain ideas into social graphics without a designer, and its templates save hours of fiddling.",
+        "CapCut edits Reels and TikTok videos with AI that removes most of the manual work."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "A Nairobi boutique we know drafts a week of captions every Sunday morning and schedules them before breakfast."
     },
     {
       "type": "h3",

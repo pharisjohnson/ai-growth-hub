@@ -12,7 +12,11 @@
   "content": [
     {
       "type": "p",
-      "text": "If you are a business owner in Nairobi trying to figure out what a website costs in Kenya, you have probably seen quotes from KES 15,000 to KES 3 million. That range is so wide it is useless on its own. The real answer: a professional, custom website for a Kenyan SME costs between KES 120,000 and KES 500,000, and a full e-commerce platform runs from KES 400,000 upward. What you pay depends on what you are actually buying."
+      "text": "If you are a business owner in Nairobi trying to figure out what a website costs in Kenya, you have probably seen quotes from KES 15,000 to KES 3 million. That range is so wide it is useless on its own."
+    },
+    {
+      "type": "p",
+      "text": "The real answer: a professional, custom website for a Kenyan SME costs between KES 120,000 and KES 500,000, and a full e-commerce platform runs from KES 400,000 upward. What you pay depends on what you are actually buying."
     },
     {
       "type": "p",
@@ -173,12 +177,11 @@
       "text": "Two mistakes dominate the Kenyan market. We see both every month."
     },
     {
-      "type": "p",
-      "text": "First, businesses under-invest by picking the cheapest option, then spend six months frustrated that the site does not generate leads. They rebuild within the year, spending more in total than a proper build would have cost. A KES 35,000 template that fails and gets replaced by a KES 350,000 build is a KES 385,000 website."
-    },
-    {
-      "type": "p",
-      "text": "Second, businesses overpay by going to a large agency with big overheads, account managers, and sales commissions. The work is not necessarily better. You are paying for the sales process. A senior-led studio sits in the middle: experienced people doing the work directly, without the account management theatre."
+      "type": "ul",
+      "items": [
+        "Under-investing: businesses pick the cheapest option, then spend six months frustrated that the site does not generate leads. They rebuild within the year, spending more in total than a proper build would have cost. A KES 35,000 template that fails and gets replaced by a KES 350,000 build is a KES 385,000 website.",
+        "Overpaying: businesses go to a large agency with big overheads, account managers, and sales commissions. The work is not necessarily better. You are paying for the sales process. A senior-led studio sits in the middle: experienced people doing the work directly, without the account management theatre."
+      ]
     },
     {
       "type": "link",

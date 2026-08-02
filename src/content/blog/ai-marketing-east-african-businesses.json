@@ -12,11 +12,19 @@
   "content": [
     {
       "type": "p",
-      "text": "AI marketing for East African businesses is already practical and affordable. We have built chatbots for hotels in Kilifi that answer booking questions at 2am, content pipelines for Nairobi agencies that produce three times the output with the same team, and lead qualification flows that book meetings without a single manual email. The tools cost from zero to about KES 80,000 to set up, and they run on the phones and WhatsApp numbers your customers already use."
+      "text": "AI marketing for East African businesses is already practical and affordable. We have built chatbots for hotels in Kilifi that answer booking questions at 2am, content pipelines for Nairobi agencies that produce three times the output, and lead qualification flows that book meetings without a single manual email."
     },
     {
       "type": "p",
-      "text": "This guide explains what AI marketing actually means for a business in Nairobi, Mombasa, or Kampala, which three uses deliver the fastest results, and the mistakes that quietly waste budgets. You do not need a data science team, and you do not need to rebuild your operation. You need a few tools, clean processes, and one human who reviews the output."
+      "text": "The tools cost from zero to about KES 80,000 to set up, and they run on the phones and WhatsApp numbers your customers already use."
+    },
+    {
+      "type": "p",
+      "text": "This guide explains what AI marketing actually means for a business in Nairobi, Mombasa, or Kampala, which three uses deliver the fastest results, and the mistakes that quietly waste budgets."
+    },
+    {
+      "type": "p",
+      "text": "You do not need a data science team, and you do not need to rebuild your operation. You need a few tools, clean processes, and one human who reviews the output."
     },
     {
       "type": "p",
@@ -44,7 +52,15 @@
     },
     {
       "type": "p",
-      "text": "AI marketing means using software that learns from your business data to write, answer, sort, and predict. The practical version has nothing to do with robots taking over. It is a chatbot that reads your menu and quotes your prices correctly, a tool that turns your notes into a blog draft, or a system that scores an enquiry as hot, warm, or cold before your salesperson ever sees it."
+      "text": "AI marketing means using software that learns from your business data to write, answer, sort, and predict. The practical version has nothing to do with robots taking over."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "A chatbot that reads your menu and quotes your prices correctly.",
+        "A tool that turns your notes into a blog draft in minutes.",
+        "A system that scores an enquiry as hot, warm, or cold before your salesperson ever sees it."
+      ]
     },
     {
       "type": "p",
@@ -60,7 +76,15 @@
     },
     {
       "type": "p",
-      "text": "Three forces make this the right moment. First, the tools are finally cheap. Most start free, and paid plans cost less than a junior employee. Second, East African customers are mobile-first and expect fast replies. A booking enquiry that waits eight hours usually goes to the hotel next door. Third, the talent is already there. Your team knows your customers, and AI simply gives them more hours."
+      "text": "Three forces make this the right moment."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "The tools are finally cheap. Most start free, and paid plans cost less than a junior employee.",
+        "East African customers are mobile-first and expect fast replies. A booking enquiry that waits eight hours usually goes to the hotel next door.",
+        "The talent is already there. Your team knows your customers, and AI simply gives them more hours."
+      ]
     },
     {
       "type": "p",

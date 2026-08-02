@@ -98,13 +98,25 @@ function renderContent(blocks: ContentBlock[]) {
       case "p":
         return <p key={i}>{block.text}</p>;
       case "ul":
-        return <ul key={i}>{block.items.map((item, j) => <li key={j}>{item}</li>)}</ul>;
+        return (
+          <ul key={i} className="my-5 list-disc space-y-2.5 pl-5 text-muted-foreground">
+            {block.items.map((item, j) => (
+              <li key={j} className="leading-relaxed">{item}</li>
+            ))}
+          </ul>
+        );
       case "ol":
-        return <ol key={i}>{block.items.map((item, j) => <li key={j}>{item}</li>)}</ol>;
+        return (
+          <ol key={i} className="my-5 list-decimal space-y-2.5 pl-5 text-muted-foreground">
+            {block.items.map((item, j) => (
+              <li key={j} className="leading-relaxed">{item}</li>
+            ))}
+          </ol>
+        );
       case "blockquote":
         return <blockquote key={i} className="border-l-2 border-accent pl-4 italic my-6 text-muted-foreground">{block.text}</blockquote>;
       case "note":
-        return <div key={i} className="bg-surface border hairline rounded-xl p-6 my-8 text-sm text-ink">{block.text}</div>;
+        return <div key={i} className="my-10 rounded-xl border hairline bg-surface p-6 text-sm leading-relaxed text-ink">{block.text}</div>;
       case "takeaways":
         return (
           <div key={i} className="my-8 rounded-2xl border hairline bg-surface p-6">
@@ -292,7 +304,7 @@ function BlogPost() {
             </aside>
 
             <div>
-              <article className="mx-auto max-w-2xl prose-headings:display prose-headings:text-ink prose-headings:mt-12 prose-headings:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4 prose-a:text-accent prose-a:underline prose-a:underline-offset-4 prose-strong:text-ink prose-ul:text-muted-foreground prose-li:leading-relaxed prose-li:mb-2 prose-ol:text-muted-foreground prose-ol:list-decimal prose-ol:pl-5">
+              <article className="mx-auto max-w-2xl prose-headings:display prose-headings:text-ink prose-headings:mt-12 prose-headings:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-5 prose-a:text-accent prose-a:underline prose-a:underline-offset-4 prose-strong:text-ink prose-li:leading-relaxed prose-li:mb-2">
                 {renderContent(post.content)}
               </article>
 
