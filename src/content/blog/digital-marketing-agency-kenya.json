@@ -1,20 +1,75 @@
 {
   "slug": "digital-marketing-agency-kenya",
   "title": "How to Choose a Digital Marketing Agency in Kenya",
-  "excerpt": "Not all agencies are equal. Here's a framework for evaluating agencies — and the red flags to watch for.",
+  "excerpt": "How to choose a digital marketing agency in Kenya: what services you really need, how to evaluate agencies properly, and the red flags that waste budgets.",
   "tag": "Business",
   "date": "2026-07-23",
-  "readTime": "5 min",
+  "readTime": "7 min read",
   "published": false,
-  "image": "",
+  "author": "Noon Studio Africa",
+  "image": "https://images.pexels.com/photos/5668885/pexels-photo-5668885.jpeg?auto=compress&cs=tinysrgb&w=1200",
   "content": [
     {
       "type": "p",
-      "text": "Choosing a digital marketing agency in Kenya is overwhelming. Every agency promises results. Most over-promise and under-deliver."
+      "text": "Choosing a digital marketing agency in Kenya comes down to three questions: who does the work, can they show results for businesses like yours, and what happens if it does not work. Agencies that answer those clearly are rare. Most over-promise and under-deliver, and we have seen too many budgets burned on vanity metrics."
     },
     {
       "type": "p",
-      "text": "Here's a practical framework for evaluating agencies — and the red flags to watch for."
+      "text": "This guide gives you a practical framework for evaluating agencies, the red flags that should end a conversation, and the questions to ask before you sign. By the end, you will know how to pick a partner who earns their fee, not one who just collects it. You will also know what to ask about money before the first meeting."
+    },
+    {
+      "type": "takeaways",
+      "items": [
+        "Most businesses need two or three services, not seven.",
+        "Senior practitioners doing the work beats account managers managing juniors.",
+        "Demand case studies with numbers for businesses like yours.",
+        "Avoid guaranteed rankings, lock-in contracts, and vague reporting.",
+        "Month-to-month or milestone billing is fairer than long commitments."
+      ]
+    },
+    {
+      "type": "link",
+      "text": "Bigger is not better. See why a senior-led studio beats a big agency.",
+      "href": "/blog/why-senior-led-studio-beats-agency",
+      "label": "Related reading"
+    },
+    {
+      "type": "h2",
+      "text": "What a Digital Marketing Agency in Kenya Should Do for You"
+    },
+    {
+      "type": "p",
+      "text": "A good agency connects your business to the customers who are already searching and scrolling: your website ranks on Google, your ads reach the right audience, your social channels build trust, and your content answers real questions. The agency's job is results, not activity. Posts, ads, and reports are means, not ends."
+    },
+    {
+      "type": "p",
+      "text": "In Kenya, that work happens on mobile-first channels. Customers find you on Google, decide on Instagram and WhatsApp, and pay with M-Pesa. An agency that understands this flow will build differently from one that imports a foreign playbook."
+    },
+    {
+      "type": "p",
+      "text": "A Nairobi restaurant, for example, needs local SEO, Instagram content, and a booking flow. A Mombasa tour operator needs Google Ads on travel searches and a content plan. The services differ, but the goal is the same: customers who find you and choose you."
+    },
+    {
+      "type": "h2",
+      "text": "Why Choosing Well Matters So Much in Kenya"
+    },
+    {
+      "type": "p",
+      "text": "Budgets are precious. A KES 100,000 monthly retainer is a serious commitment for most businesses, and a wrong choice burns a year of runway. We have seen businesses pay for six months of pretty reports with no sales impact, then start over with a different agency and a smaller budget."
+    },
+    {
+      "type": "p",
+      "text": "The Kenyan market also has a wide quality spread. You will find one-person freelancers, big agencies with account managers, and senior-led studios in between. Each has its place. The trick is matching the model to your needs and knowing what you are actually paying for."
+    },
+    {
+      "type": "p",
+      "text": "The right partner also saves you from yourself. A good agency will tell you when a service is not worth your money yet. That honesty is rare and valuable, and it is the best sign you have found the right one."
+    },
+    {
+      "type": "image",
+      "src": "https://images.pexels.com/photos/5668885/pexels-photo-5668885.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Two people reviewing marketing reports at a table in a Nairobi office",
+      "caption": "Choose an agency that shows you numbers, not just activity."
     },
     {
       "type": "h2",
@@ -22,96 +77,185 @@
     },
     {
       "type": "p",
-      "text": "Before evaluating agencies, clarify what you need:"
+      "text": "Before you evaluate anyone, decide what you actually need. Most businesses need two or three services, not seven. An agency that tries to sell you everything is upselling, not strategizing."
     },
     {
       "type": "ul",
       "items": [
         "Website design and development",
         "SEO and organic traffic growth",
-        "Paid advertising (Google Ads, social ads)",
+        "Paid advertising on Google and social media",
         "Social media management",
-        "Content marketing",
-        "Email marketing",
+        "Content marketing and email",
         "AI automation and chatbots"
       ]
     },
     {
       "type": "p",
-      "text": "Most businesses need 2-3 of these services, not all seven. An agency that tries to sell you everything is upselling, not strategizing."
+      "text": "Write your list, then match agencies to it. A specialist in one service usually beats a generalist who does all seven badly. If you are not sure what you need, ask the agency to explain the trade-offs between services rather than selling them all."
     },
     {
       "type": "h2",
-      "text": "The Evaluation Framework"
-    },
-    {
-      "type": "h3",
-      "text": "1. Team Composition"
+      "text": "The Three Agency Models Compared"
     },
     {
       "type": "p",
-      "text": "Ask who will work on your account. If the answer involves 'account managers,' 'coordinators,' or 'juniors,' that's a red flag. You want senior strategists and practitioners handling your work."
+      "text": "Here is how the main models compare. There is no universal winner, but there is a best fit for most businesses."
     },
     {
-      "type": "h3",
-      "text": "2. Case Studies with Numbers"
+      "type": "table",
+      "headers": [
+        "Model",
+        "Who does the work",
+        "Best for",
+        "Watch out for"
+      ],
+      "rows": [
+        [
+          "Big agency",
+          "Account managers and juniors",
+          "Large brands with big budgets",
+          "Overhead, padding, slow responses"
+        ],
+        [
+          "Senior-led studio",
+          "Senior strategists and practitioners",
+          "SMEs that need results and value",
+          "Smaller team, so capacity is limited"
+        ],
+        [
+          "Freelancer or one-person",
+          "The freelancer",
+          "Tight budgets, narrow scope",
+          "Single point of failure, limited range"
+        ]
+      ]
     },
     {
       "type": "p",
-      "text": "Generic case studies are worthless. Ask for specific results: traffic increased by X%, leads grew by Y%, revenue improved by Z%."
+      "text": "Big agencies shine on huge campaigns where scale matters. Freelancers work well for a single service on a tight budget. For most SMEs, the senior-led studio hits the sweet spot: senior people, direct communication, and honest pricing. Whatever model you choose, the person doing the work matters more than the logo on the invoice."
     },
     {
-      "type": "h3",
-      "text": "3. Pricing Transparency"
+      "type": "h2",
+      "text": "How to Evaluate an Agency in Five Steps"
     },
     {
       "type": "p",
-      "text": "If an agency won't give you a ballpark price before a discovery call, they're either padding quotes based on your budget or hiding something."
+      "text": "Run every candidate through the same steps so you can compare them fairly."
+    },
+    {
+      "type": "ol",
+      "items": [
+        "List the services you actually need. Most businesses need two or three.",
+        "Ask who will work on your account, by name and role.",
+        "Demand case studies with numbers for businesses like yours.",
+        "Get a ballpark price before any long discovery process.",
+        "Check the contract terms, especially notice periods and ownership of your assets."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The answers tell you more than the price ever will. An agency that names the person doing the work, shows relevant results, and quotes a clear price is usually the safest bet in the room. Do the same checks for a big agency that you would for a freelancer. The model does not matter if the person doing your work is junior and unsupervised."
+    },
+    {
+      "type": "h2",
+      "text": "Questions to Ask Before You Sign"
+    },
+    {
+      "type": "p",
+      "text": "Take these questions to every meeting. The answers sort the serious from the salesy."
+    },
+    {
+      "type": "ol",
+      "items": [
+        "Who specifically will handle my account, and what is their experience?",
+        "Can you show me results for a business like mine, with numbers?",
+        "How do you measure success, and what happens if targets are missed?",
+        "What is your reporting cadence, and who explains the reports?",
+        "Can I cancel with 30 days notice, and who owns my accounts and content?"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Red Flags That Should End the Conversation"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Guaranteed rankings. Nobody can guarantee Google.",
+        "No case studies, or case studies without numbers.",
+        "Account managers instead of practitioners doing the work.",
+        "Long lock-in contracts before results are proven.",
+        "Reports full of metrics and empty of insight.",
+        "One-size-fits-all packages that ignore your market."
+      ]
     },
     {
       "type": "note",
-      "text": "Red flag: Agencies that require long-term contracts before proving results. Month-to-month or milestone-based billing is fairer."
-    },
-    {
-      "type": "h2",
-      "text": "Red Flags"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Guaranteed rankings (nobody can guarantee Google)",
-        "No case studies or portfolio",
-        "Account managers instead of practitioners",
-        "Long-term lock-in contracts",
-        "Vague reporting (lots of metrics, no insights)",
-        "One-size-fits-all packages"
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Questions to Ask"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Who specifically will handle my account?",
-        "Can you show me results for a similar business?",
-        "How do you measure success?",
-        "What's your reporting cadence?",
-        "Can I cancel with 30 days notice?"
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "The Alternative: Senior-Led Studios"
-    },
-    {
-      "type": "p",
-      "text": "Senior-led studios like Noon Studio offer the strategic thinking of an agency with the hands-on execution of a dedicated team. You get senior people doing the work — not managing the people doing the work."
+      "text": "A quick test: ask for a plain-language summary of last month's work for an existing client. Confident agencies share this freely. Vague ones suddenly get busy. And beware the agency that blames the algorithm, the season, or the economy every month. Results agencies own outcomes and explain variance with data."
     },
     {
       "type": "blockquote",
-      "text": "\"We chose a senior-led studio over a big agency. Same strategic thinking, better execution, half the cost.\" — Founder, Nairobi e-commerce"
+      "text": "You are not paying for reports. You are paying for customers."
+    },
+    {
+      "type": "h2",
+      "text": "FAQ"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "How much does a digital marketing agency cost in Kenya?",
+          "a": "Retainers typically run from KES 50,000 to KES 300,000 a month depending on services and scope. SEO and content projects are often billed monthly, while ad budgets are separate. In our experience, clear scopes beat big packages, and you pay more for senior people than for managed junior work."
+        },
+        {
+          "q": "How long should I give an agency before judging results?",
+          "a": "Paid ads can show signal in four to six weeks. SEO and content take three to six months to build real rankings. Set expectations per channel, and agree on what success looks like before you start."
+        },
+        {
+          "q": "What is the difference between an agency and a senior-led studio?",
+          "a": "An agency often layers account managers between you and the work. A senior-led studio has experienced people doing the work directly. For most SMEs, that means better execution and less overhead."
+        },
+        {
+          "q": "Should I sign a long-term contract with an agency?",
+          "a": "Be cautious. Month-to-month or milestone-based terms are fairer, and a confident agency will prove itself before asking for a long commitment. Notice periods of 30 days are reasonable."
+        },
+        {
+          "q": "What should an agency report show me?",
+          "a": "Traffic, leads, and revenue movements tied to what the agency did. If a report shows reach and likes but nothing about enquiries or sales, you are paying for activity, not results."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Pick the Partner Who Earns Their Fee"
+    },
+    {
+      "type": "p",
+      "text": "The right agency answers three questions clearly: who does the work, what results have they shown for businesses like yours, and what happens if it does not work. Use the framework above, trust the red flags, and take your time. The cost of choosing slowly is nothing compared with the cost of choosing wrong."
+    },
+    {
+      "type": "p",
+      "text": "If you are evaluating agencies now, we would be glad to be on your shortlist. We are a senior-led studio in Nairobi, and we will show you real work and honest numbers. Talk to us and compare."
+    },
+    {
+      "type": "link",
+      "text": "Content is a core agency service. See how content marketing works in East Africa.",
+      "href": "/blog/content-marketing-east-africa",
+      "label": "Related reading"
+    },
+    {
+      "type": "link",
+      "text": "Paid reach needs a strong foundation. Start with SEO services in Kenya.",
+      "href": "/blog/seo-services-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "link",
+      "text": "AI marketing is changing what agencies offer. See the practical plays.",
+      "href": "/blog/ai-marketing-east-african-businesses",
+      "label": "Related reading"
     }
   ]
 }

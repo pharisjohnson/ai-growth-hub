@@ -1,74 +1,185 @@
 {
   "slug": "ecommerce-website-kenya",
   "title": "Building an E-Commerce Website in Kenya: The Complete Guide",
-  "excerpt": "From M-Pesa integration to shipping logistics — everything you need to know before launching an online store in Kenya.",
+  "excerpt": "Building an e-commerce website in Kenya: platform choices, M-Pesa integration, delivery logistics, realistic budgets, and the mistakes that sink online stores.",
   "tag": "E-Commerce",
   "date": "2026-07-11",
-  "readTime": "7 min",
+  "readTime": "8 min read",
   "published": false,
-  "image": "",
+  "author": "Noon Studio Africa",
+  "image": "https://images.pexels.com/photos/6207729/pexels-photo-6207729.jpeg?auto=compress&cs=tinysrgb&w=1200",
   "content": [
     {
       "type": "p",
-      "text": "E-commerce in Kenya is growing fast. M-Pesa adoption, improving logistics, and changing consumer behavior mean more Kenyan businesses are selling online than ever before."
+      "text": "A professional e-commerce website in Kenya costs between KES 250,000 and KES 1.5 million, depending on how many products you sell and what features you need. The build takes two to four months, and M-Pesa at checkout is non-negotiable for most customers. Get those numbers right and your store has a real chance."
     },
     {
       "type": "p",
-      "text": "But building an e-commerce website in Kenya has unique challenges that most guides don't cover. Here's what you actually need to know."
+      "text": "This guide covers the platform choices, the payment and delivery realities in Kenya, what to budget, and the mistakes that sink online stores. By the end you will know exactly what to plan for before you spend a shilling."
+    },
+    {
+      "type": "p",
+      "text": "Whether you sell fashion, electronics, food, or professional products, the foundations are the same. What changes is your catalog size, your delivery model, and the features your customers expect."
+    },
+    {
+      "type": "takeaways",
+      "items": [
+        "A professional online store in Kenya costs KES 250,000-1.5M depending on catalog size and features.",
+        "WooCommerce suits most Kenyan businesses because it balances cost, flexibility, and local payments.",
+        "M-Pesa via the Daraja API is a must-have, and testing edge cases prevents lost orders.",
+        "Delivery is the real friction point. Sort logistics before you launch.",
+        "Start with a minimum viable store, nail payments and delivery, then expand."
+      ]
+    },
+    {
+      "type": "link",
+      "text": "Wondering how a store build fits into your overall website budget?",
+      "href": "/blog/how-much-website-cost-kenya",
+      "label": "Related reading"
     },
     {
       "type": "h2",
-      "text": "The Platform Question"
+      "text": "What an E-Commerce Website Is"
     },
     {
       "type": "p",
-      "text": "You have three main options:"
+      "text": "An e-commerce website is a store that sells online. Customers browse products, add them to a cart, pay, and arrange delivery, all without calling you. In Kenya that usually means M-Pesa at checkout, mobile-friendly pages, and delivery options that match how customers actually shop."
     },
     {
-      "type": "ul",
-      "items": [
-        "WooCommerce (WordPress): Most flexible, huge ecosystem, requires maintenance. Best for businesses that want full control.",
-        "Shopify: Easiest to set up, limited customization, monthly fees. Good for simple product catalogs.",
-        "Custom build: Maximum flexibility, highest cost. Only makes sense for complex requirements."
+      "type": "p",
+      "text": "A serious store is not just a catalog. It has product pages, inventory, order management, payment confirmation, and a way to handle returns and complaints. The platform you choose determines how much of that comes ready-made and how much a developer has to build."
+    },
+    {
+      "type": "p",
+      "text": "A store also needs to feel trustworthy. Clear prices, honest delivery times, visible contact details, and a returns policy all matter. Kenyan customers have many options, and trust decides where they click."
+    },
+    {
+      "type": "h2",
+      "text": "Why E-Commerce Matters for Kenyan Businesses"
+    },
+    {
+      "type": "p",
+      "text": "Kenyan shoppers have changed how they buy. They compare prices on their phones, read reviews, and pay with M-Pesa. Businesses from Nairobi to Mombasa and Kisumu now meet customers online first, and a store that works on a small screen wins the sale."
+    },
+    {
+      "type": "p",
+      "text": "We have seen retailers double their reach with an online store because they stopped being limited to foot traffic and phone calls. The store works while they sleep, takes orders on weekends, and shows up in Google when someone searches for what they sell."
+    },
+    {
+      "type": "p",
+      "text": "It is not about replacing your shop or your WhatsApp selling. It is about giving customers a reliable way to browse, pay, and trust you, and keeping the sale when they are ready to buy."
+    },
+    {
+      "type": "p",
+      "text": "The shift is visible in daily habits. People check stock on their phones before visiting a shop. They ask about delivery before they ask about price. A store that answers those questions instantly wins the customer who is ready to buy now."
+    },
+    {
+      "type": "image",
+      "src": "https://images.pexels.com/photos/6207729/pexels-photo-6207729.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Online store checkout with a mobile payment prompt",
+      "caption": "M-Pesa at checkout is the standard Kenyan shoppers expect."
+    },
+    {
+      "type": "h2",
+      "text": "Choosing a Platform"
+    },
+    {
+      "type": "p",
+      "text": "You have three main options, and each fits a different kind of business. Here is how they compare."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Platform",
+        "Typical cost",
+        "Strengths",
+        "Watch out for"
+      ],
+      "rows": [
+        [
+          "WooCommerce (WordPress)",
+          "KES 250,000-700,000 build",
+          "Full control, huge ecosystem, M-Pesa plugins",
+          "Needs regular maintenance"
+        ],
+        [
+          "Shopify",
+          "Monthly fees plus build",
+          "Fast to launch, reliable hosting, easy payments",
+          "Monthly costs add up, limited customization"
+        ],
+        [
+          "Custom build",
+          "KES 700,000-1.5M+",
+          "Anything is possible, built for your exact flow",
+          "Longest build, highest cost"
+        ]
       ]
     },
     {
       "type": "note",
-      "text": "For most Kenyan businesses, WooCommerce offers the best balance of flexibility, cost, and local payment integration."
-    },
-    {
-      "type": "h2",
-      "text": "M-Pesa Integration"
+      "text": "For most Kenyan businesses, WooCommerce offers the best balance of flexibility, cost, and local payment integration. We build most of our stores on it for that reason."
     },
     {
       "type": "p",
-      "text": "No Kenyan e-commerce site is complete without M-Pesa. The Daraja API makes integration straightforward, but there are nuances:"
+      "text": "Whichever platform you choose, insist on three things: mobile-first design, clean product pages, and a checkout with as few steps as possible. Every extra field and every slow image costs you completed orders."
+    },
+    {
+      "type": "link",
+      "text": "Choosing a studio matters for stores too. Here is what to look for in Nairobi.",
+      "href": "/blog/web-design-nairobi-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "h2",
+      "text": "M-Pesa and Payments Done Right"
+    },
+    {
+      "type": "p",
+      "text": "No Kenyan store is complete without M-Pesa. The Daraja API is the standard way to integrate it, and a careful build handles the details that make or break customer trust."
     },
     {
       "type": "ul",
       "items": [
-        "Use the Daraja API (not STK push for customer-initiated payments)",
-        "Set up proper webhooks for payment confirmation",
-        "Test thoroughly with the sandbox environment",
-        "Handle edge cases: timeouts, partial payments, reversals"
+        "Use the Daraja API for payments and set up webhooks so orders confirm automatically.",
+        "Test with the sandbox environment before you go live.",
+        "Handle edge cases: timeouts, partial payments, and reversals.",
+        "Offer card payments alongside M-Pesa. Some customers prefer cards.",
+        "Send an automatic confirmation message after payment so customers feel safe."
       ]
     },
     {
-      "type": "h2",
-      "text": "Logistics and Delivery"
+      "type": "p",
+      "text": "Payment hiccups cost real money. A customer who pays and gets no confirmation will call you, complain on social media, or both. Getting this right is worth the extra testing time."
     },
     {
       "type": "p",
-      "text": "The biggest friction point in Kenyan e-commerce isn't payments — it's delivery. Options include:"
+      "text": "Plan for support after launch too. Payment providers change endpoints, plugins need updates, and your customers will find edge cases your testing missed. A maintenance arrangement keeps the store healthy."
+    },
+    {
+      "type": "h2",
+      "text": "Delivery and Logistics"
+    },
+    {
+      "type": "p",
+      "text": "The biggest friction point in Kenyan e-commerce is not payment. It is delivery. Customers want to know when their order arrives and what it costs to send."
     },
     {
       "type": "ul",
       "items": [
-        "In-house delivery (control but high cost)",
-        "Third-party logistics (Sendy, G4S, etc.)",
-        "Customer pickup points",
-        "Hybrid model (delivery for Nairobi, pickup for upcountry)"
+        "In-house delivery: full control, higher cost, works well inside Nairobi.",
+        "Third-party logistics: Sendy, G4S, and courier services cover more ground.",
+        "Pickup points: let customers collect from your shop or a partner location.",
+        "Hybrid model: delivery in Nairobi, pickup upcountry. Many stores run this way."
       ]
+    },
+    {
+      "type": "p",
+      "text": "Whatever you choose, show delivery options and prices at checkout. Hidden delivery surprises are the fastest way to lose a repeat customer."
+    },
+    {
+      "type": "p",
+      "text": "For new stores, the hybrid model is a sensible start. Deliver in Nairobi where margins allow, and offer pickup or courier for upcountry customers. You can add more options as order volumes grow."
     },
     {
       "type": "h2",
@@ -76,31 +187,123 @@
     },
     {
       "type": "p",
-      "text": "A professional e-commerce site in Kenya:"
+      "text": "Budgeting is where most owners get stuck, so here is the honest picture. Your build cost is the start. Plan for hosting, maintenance, content, and marketing as monthly costs from month one."
     },
     {
-      "type": "ul",
-      "items": [
-        "Basic (10-50 products): KES 250k-400k",
-        "Mid-range (50-200 products): KES 400k-700k",
-        "Advanced (200+ products, custom features): KES 700k-1.5M+"
+      "type": "table",
+      "headers": [
+        "Store size",
+        "Typical cost",
+        "What is included"
+      ],
+      "rows": [
+        [
+          "Basic (10-50 products)",
+          "KES 250,000-400,000",
+          "Design, development, M-Pesa integration, launch"
+        ],
+        [
+          "Mid-range (50-200 products)",
+          "KES 400,000-700,000",
+          "Everything above plus inventory and order management"
+        ],
+        [
+          "Advanced (200+ products)",
+          "KES 700,000-1.5M+",
+          "Custom features, integrations, and scaling"
+        ]
       ]
     },
     {
       "type": "p",
-      "text": "These include design, development, payment integration, and launch. Ongoing hosting and maintenance are additional (typically KES 15k-30k/month)."
+      "text": "These prices cover design, development, payment integration, and launch. Ongoing hosting and maintenance add roughly KES 15,000-30,000 per month, and you should budget for content updates and marketing on top."
+    },
+    {
+      "type": "note",
+      "text": "Note: these ranges assume a professional build with real payment integration. Template stores can cost less, but they rarely handle Kenyan payments and logistics well out of the box."
     },
     {
       "type": "h2",
-      "text": "Common Mistakes"
+      "text": "Common Mistakes to Avoid"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Launching before logistics are sorted. A beautiful store with unreliable delivery generates complaints, not sales.",
+        "Skipping M-Pesa or making checkout complicated. Every extra step loses customers.",
+        "Copying product descriptions from suppliers. Thin content ranks poorly and confuses buyers.",
+        "Trying to build Amazon on day one. Start small, prove the model, then scale.",
+        "Ignoring mobile. Most Kenyan shopping happens on phones, so mobile-first design is not optional."
+      ]
     },
     {
       "type": "p",
-      "text": "The biggest: launching before the logistics are sorted. A beautiful e-commerce site with unreliable delivery will generate more complaints than sales."
+      "text": "The winning pattern is simple: a minimum viable store, sorted payments and delivery, then steady improvement based on what customers actually do."
     },
     {
       "type": "p",
-      "text": "Start with a minimum viable store, nail the logistics, then scale. Don't try to build Amazon on day one."
+      "text": "There is one more mistake worth naming: neglecting product photography. In e-commerce, your images are your shop window. Blurry phone photos of products make even a well-built store look cheap."
+    },
+    {
+      "type": "blockquote",
+      "text": "A store is never finished. The winning owners treat it like their shop floor: restocked, tidied, and improved every week."
+    },
+    {
+      "type": "h2",
+      "text": "FAQ"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "How much does an e-commerce website cost in Kenya?",
+          "a": "A basic store with 10-50 products costs KES 250,000-400,000. Mid-range stores with 50-200 products run KES 400,000-700,000, and advanced builds start at KES 700,000."
+        },
+        {
+          "q": "How do I integrate M-Pesa into my online store?",
+          "a": "Through Safaricom's Daraja API. A developer sets up the payment endpoint, webhooks for confirmation, and the checkout flow, then tests with the sandbox before going live."
+        },
+        {
+          "q": "Which platform is best for e-commerce in Kenya?",
+          "a": "For most Kenyan businesses, WooCommerce offers the best balance of cost, flexibility, and local payment integration. Shopify suits simple catalogs, and custom builds suit complex requirements."
+        },
+        {
+          "q": "How long does it take to build an online store?",
+          "a": "Most stores take two to four months from discovery to launch. Payment integration and testing add time, and content delays push the schedule further."
+        },
+        {
+          "q": "Do I need a website if I already sell on Instagram and WhatsApp?",
+          "a": "Social selling works, but a store gives you search visibility, reliable checkout, and credibility. Many businesses use both: social media for reach, the store for the sale."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Build a Store That Sells"
+    },
+    {
+      "type": "p",
+      "text": "An online store is a serious investment, and done properly it pays for itself through orders that arrive without you chasing them. The key is preparation: the right platform, working payments, and delivery customers can trust."
+    },
+    {
+      "type": "p",
+      "text": "If you want a store built by people who understand the Kenyan market, talk to us. We will walk through your products, your logistics, and your budget, then give you an honest quote."
+    },
+    {
+      "type": "p",
+      "text": "Start where you are. If you already sell on WhatsApp and Instagram, a store formalizes what works and adds search visibility on top. The goal is not perfection on day one. It is a store that takes orders reliably, then grows."
+    },
+    {
+      "type": "link",
+      "text": "Get more store traffic with paid search that converts.",
+      "href": "/blog/google-ads-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "link",
+      "text": "Keep your store fresh. Here is how to tell when it needs a redesign.",
+      "href": "/blog/website-redesign-when",
+      "label": "Related reading"
     }
   ]
 }

@@ -1,24 +1,92 @@
 {
   "slug": "web-design-nairobi-kenya",
   "title": "Web Design in Nairobi: What to Look for in a Design Studio (2026)",
-  "excerpt": "A practical guide to choosing a web design studio in Nairobi — what matters, what doesn't, and how to avoid wasting money.",
+  "excerpt": "Web design in Nairobi: what actually matters when choosing a studio, which questions to ask before signing, and how to avoid wasting money on the wrong team.",
   "tag": "Web Design",
   "date": "2026-06-20",
-  "readTime": "6 min",
+  "updated": "2026-08-02",
+  "readTime": "8 min read",
   "published": true,
-  "image": "",
+  "author": "Noon Studio Africa",
+  "image": "https://images.pexels.com/photos/2696299/pexels-photo-2696299.jpeg?auto=compress&cs=tinysrgb&w=1200",
   "content": [
     {
       "type": "p",
-      "text": "Nairobi has no shortage of web designers. Freelancers, agencies, studios — they're everywhere. But finding the right one? That's the hard part."
+      "text": "The right web design studio in Nairobi is the one where senior people do the actual work, the process is transparent, and success is measured in leads, not just aesthetics. Freelancers, agencies, and studios all sell websites here, but they are not the same product. Most Nairobi businesses pick based on price or portfolio, and that is exactly how projects go sideways."
     },
     {
       "type": "p",
-      "text": "Most businesses make the same mistake: they choose based on price or portfolio aesthetics, then wonder why the project goes sideways."
+      "text": "This guide tells you what actually matters when choosing a web design studio in Nairobi, what questions to ask before you sign, and how to avoid the mistakes that waste money and months."
+    },
+    {
+      "type": "p",
+      "text": "This guide is practical, not theoretical. It comes from building sites for Kenyan businesses across industries and watching what separates good engagements from painful ones."
+    },
+    {
+      "type": "takeaways",
+      "items": [
+        "Senior people doing the work matter more than agency size or awards.",
+        "A transparent process with clear milestones beats a vague 'we will handle it' promise.",
+        "Measure success in leads and enquiries, not page beauty.",
+        "Cheap builds usually cost more in the long run because you rebuild within a year.",
+        "Ask the five questions in this guide before you commit to any studio."
+      ]
+    },
+    {
+      "type": "link",
+      "text": "Budget comes first for most owners. Here is what websites actually cost in Kenya.",
+      "href": "/blog/how-much-website-cost-kenya",
+      "label": "Related reading"
     },
     {
       "type": "h2",
-      "text": "What Actually Matters When Choosing a Studio"
+      "text": "What a Web Design Studio Actually Does"
+    },
+    {
+      "type": "p",
+      "text": "A web design studio plans, designs, and builds websites for businesses. The good ones start with strategy: who your customers are, what you want them to do, and how the site will bring in enquiries. Then they design, develop, test, and launch."
+    },
+    {
+      "type": "p",
+      "text": "A studio differs from a freelancer in one important way. A studio has a team and a process, so your project does not die when one person goes quiet. A studio differs from a big agency in another way. In a studio, the people you meet are usually the people doing the work."
+    },
+    {
+      "type": "p",
+      "text": "The best studios also bring opinions. They push back when a feature will not help, they simplify when you over-complicate, and they tell you when your budget does not match your ambitions. That honesty is worth more than any portfolio page."
+    },
+    {
+      "type": "h2",
+      "text": "Why Choosing Well Matters in Nairobi"
+    },
+    {
+      "type": "p",
+      "text": "Nairobi customers are mobile-first and research-heavy. They check Google, read reviews, and compare three or four businesses before they call. Your website is the first impression in that process, and it either earns the call or kills it."
+    },
+    {
+      "type": "p",
+      "text": "We have seen businesses in Kilimani and Westlands lose enquiries for months because their site loaded slowly or looked outdated, while a competitor with a cleaner site took the bookings. The website is not decoration. It is your Nairobi storefront that never closes."
+    },
+    {
+      "type": "p",
+      "text": "Think about the last time you landed on a slow, cluttered site. You probably left within seconds and tried the next search result. Your customers do exactly that to you. In Nairobi's market, where word of mouth moves fast, a bad website also reaches your competitors' salespeople quickly."
+    },
+    {
+      "type": "p",
+      "text": "We have also seen the opposite: a modest business with a sharp website winning clients against bigger competitors, simply because it looked more credible online. In Kenya, perception is often the tiebreaker."
+    },
+    {
+      "type": "image",
+      "src": "https://images.pexels.com/photos/2696299/pexels-photo-2696299.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Web designer reviewing layouts on a laptop in Nairobi",
+      "caption": "The people who pitch your project should be the people who build it."
+    },
+    {
+      "type": "h2",
+      "text": "What to Look For in a Studio"
+    },
+    {
+      "type": "p",
+      "text": "Beyond the three essentials, a few smaller signals separate professionals from amateurs. Response speed, the quality of their questions, and whether they return your calls all count."
     },
     {
       "type": "h3",
@@ -26,15 +94,15 @@
     },
     {
       "type": "p",
-      "text": "Ask who will actually design and build your site. If the answer is 'our team' or 'our account manager will coordinate,' that's a red flag. You want to know the specific senior people handling your project — not a team of juniors with an account manager filtering communication."
+      "text": "Ask who will design and build your site. If the answer is 'our team' or 'our account manager will coordinate', be careful. You want the specific senior people who will touch your project, not juniors filtering through layers."
     },
     {
       "type": "h3",
-      "text": "2. Process Transparency"
+      "text": "2. A Transparent Process"
     },
     {
       "type": "p",
-      "text": "A good studio will walk you through their process: discovery, wireframing, design, development, testing, launch. If they skip straight to 'send us your content and we'll build it,' they're not thinking strategically about your business."
+      "text": "A good studio walks you through discovery, wireframing, design, development, testing, and launch. If they skip straight to 'send us your content', they are not thinking strategically about your business."
     },
     {
       "type": "h3",
@@ -42,49 +110,171 @@
     },
     {
       "type": "p",
-      "text": "Pretty websites that don't convert are expensive art projects. Ask studios how they measure success. If the answer involves traffic, leads, or revenue — good sign. If it's just about aesthetics — run."
+      "text": "Pretty websites that do not convert are expensive art projects. Ask how they measure success. Traffic, leads, and enquiries are good answers. Aesthetics alone is not."
+    },
+    {
+      "type": "p",
+      "text": "Ask for examples of sites that brought in enquiries, and ask what changed after launch. The good studios track this and can show you."
     },
     {
       "type": "note",
-      "text": "Red flag: Studios that show only their portfolio without discussing results. A beautiful site that generates zero leads is a failure."
+      "text": "Red flag: a studio that only shows its portfolio without discussing results. A beautiful site that generates zero leads is a failure."
     },
     {
       "type": "h2",
-      "text": "Questions to Ask Before Hiring"
+      "text": "Comparing Your Options in Nairobi"
+    },
+    {
+      "type": "p",
+      "text": "The market in Nairobi breaks down into three broad options, and each suits a different situation."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Option",
+        "Typical cost",
+        "Who does the work",
+        "Best for"
+      ],
+      "rows": [
+        [
+          "Freelancer",
+          "KES 30,000-150,000",
+          "One person, often a generalist",
+          "Tight budgets and simple brochure sites"
+        ],
+        [
+          "Traditional agency",
+          "KES 400,000-1.5M+",
+          "Juniors with account managers on top",
+          "Large corporates with big budgets"
+        ],
+        [
+          "Senior-led studio",
+          "KES 150,000-600,000",
+          "Senior designers and developers directly",
+          "SMEs that need leads and rankings"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The senior-led studio is where most Nairobi SMEs should land. Senior people, direct communication, and pricing that reflects the work instead of the sales machine."
+    },
+    {
+      "type": "p",
+      "text": "Prices move with scope, not just size. A five-page site for a clinic differs from a ten-page site for a property firm, and both differ from a booking system. Ask for a scope breakdown, not just a number."
+    },
+    {
+      "type": "link",
+      "text": "Prefer senior people over account managers? Here is why the model matters.",
+      "href": "/blog/why-senior-led-studio-beats-agency",
+      "label": "Related reading"
+    },
+    {
+      "type": "h2",
+      "text": "Questions to Ask Before You Hire"
+    },
+    {
+      "type": "ol",
+      "items": [
+        "Who specifically will design and build my site? Ask for names and seniority.",
+        "How do you measure success? Listen for leads, enquiries, and rankings.",
+        "What happens if I am unhappy with the first design? Look for a clear revision process.",
+        "Do you handle SEO and performance, or are they extras?",
+        "What is included after launch? Support, training, and how long it lasts."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The answers tell you more than the price. A KES 300,000 quote from a studio that names its team and shows relevant case studies is usually the best deal in the room."
+    },
+    {
+      "type": "note",
+      "text": "Note: get everything in writing. A scope document that lists pages, features, revisions, and support protects both sides and prevents 'that was extra' surprises at invoicing time."
+    },
+    {
+      "type": "h2",
+      "text": "Common Mistakes Nairobi Businesses Make"
     },
     {
       "type": "ul",
       "items": [
-        "Who specifically will work on my project?",
-        "How do you measure success?",
-        "What happens if I'm not happy with the first design?",
-        "Do you handle SEO and performance?",
-        "What's included in post-launch support?"
+        "Choosing the cheapest option and expecting premium results. A KES 30,000 template is not the same product as a KES 300,000 custom build.",
+        "Judging studios only on portfolio aesthetics. Anyone can show you a pretty site. Ask what it achieved.",
+        "Waiting too long to invest. Every month with a bad website is a month of lost leads.",
+        "Handing over content late, then blaming the studio for the delay.",
+        "Skipping post-launch support and letting the site rot for two years."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Most of these are avoidable. A little homework before you sign saves you from a rebuild later."
+    },
+    {
+      "type": "p",
+      "text": "One more pattern we see: owners who treat the website as a one-time event and vanish after launch. The sites that perform best are the ones whose owners keep updating content, testing offers, and asking for improvements."
+    },
+    {
+      "type": "blockquote",
+      "text": "\"We wasted six months with a cheap freelancer before coming to Noon. The cost of that wasted time exceeded what we paid for a proper site.\" Founder, Nairobi fintech"
+    },
+    {
+      "type": "h2",
+      "text": "FAQ"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "How much does web design cost in Nairobi?",
+          "a": "A professional custom website from a senior-led studio costs KES 150,000-600,000 in Nairobi. Freelancers charge KES 30,000-150,000 for template work, and full e-commerce builds start around KES 400,000."
+        },
+        {
+          "q": "How long does it take to build a website?",
+          "a": "A typical custom site takes four to eight weeks from discovery to launch. E-commerce and web applications take two to four months. Timelines depend on how fast content and feedback arrive."
+        },
+        {
+          "q": "Should I hire a freelancer or an agency in Nairobi?",
+          "a": "For a simple brochure site, a reliable freelancer can work. For a site that needs to generate leads and rank on Google, choose a senior-led studio. Agencies add layers you pay for without getting better work."
+        },
+        {
+          "q": "What should I ask before hiring a web design studio?",
+          "a": "Ask who will do the work, how they measure success, what the revision process looks like, whether SEO is included, and what happens after launch. The answers separate real studios from resellers."
+        },
+        {
+          "q": "Do I need SEO with my website?",
+          "a": "Yes. A site nobody can find is a brochure nobody reads. Basic SEO structure, meta tags, and fast loading should be part of the build, and ongoing content work keeps rankings growing."
+        }
       ]
     },
     {
       "type": "h2",
-      "text": "What Nairobi Businesses Get Wrong"
+      "text": "Choose the Studio, Not Just the Price"
     },
     {
       "type": "p",
-      "text": "The biggest mistake: choosing the cheapest option and expecting premium results. A KES 30k website from a freelancer is not the same product as a KES 300k custom build from a senior-led studio."
+      "text": "Your website is your most important marketing asset. Treat it that way. Choose a studio based on seniority, process, and focus on results, and you will get a site that earns its keep."
     },
     {
       "type": "p",
-      "text": "The second biggest mistake: waiting too long to invest. Every month with a bad website is a month of lost leads, lost trust, and lost revenue."
-    },
-    {
-      "type": "blockquote",
-      "text": "\"We wasted six months with a cheap freelancer before coming to Noon. The cost of that wasted time exceeded what we paid for a proper site.\" — Founder, Nairobi fintech"
-    },
-    {
-      "type": "h2",
-      "text": "The Bottom Line"
+      "text": "At Noon Studio, senior people do the work from start to finish. If you want an honest walkthrough of your project, talk to us. We will show you real examples and tell you plainly what will and will not work."
     },
     {
       "type": "p",
-      "text": "Choose a studio based on seniority of the team, transparency of process, and focus on your business results — not portfolio aesthetics or lowest price. Your website is your most important marketing asset. Treat it that way."
+      "text": "The market is full of options, but only a few deliver what they promise. Choose carefully, ask the right questions, and you will end up with a site that works as hard as you do."
+    },
+    {
+      "type": "link",
+      "text": "Not sure if your current site is holding you back? Here are the signs.",
+      "href": "/blog/website-redesign-when",
+      "label": "Related reading"
+    },
+    {
+      "type": "link",
+      "text": "See what a full online store build involves before you plan one.",
+      "href": "/blog/ecommerce-website-kenya",
+      "label": "Related reading"
     }
   ]
 }

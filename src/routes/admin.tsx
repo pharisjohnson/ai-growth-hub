@@ -190,8 +190,14 @@ const BLOCK_LABELS: Record<string, string> = {
   h2: "Heading 2",
   h3: "Heading 3",
   ul: "List",
+  ol: "Numbered list",
   blockquote: "Quote",
   note: "Note box",
+  takeaways: "Key takeaways",
+  table: "Table (JSON)",
+  faq: "FAQ (JSON)",
+  image: "Image (JSON)",
+  link: "Internal link (JSON)",
 };
 
 function Editor({ post, onBack }: { post: Post; onBack: () => void }) {
@@ -219,9 +225,19 @@ function Editor({ post, onBack }: { post: Post; onBack: () => void }) {
 
   function addBlock(type: string) {
     const block: ContentBlock =
-      type === "ul"
-        ? { type: "ul", items: [""] }
-        : { type: type as "p" | "h2" | "h3" | "blockquote" | "note", text: "" };
+      type === "ul" || type === "ol"
+        ? { type: type as "ul" | "ol", items: [""] }
+        : type === "takeaways"
+          ? { type: "takeaways", items: [""] }
+          : type === "table"
+            ? { type: "table", headers: ["Header"], rows: [[""]] }
+            : type === "faq"
+              ? { type: "faq", items: [{ q: "", a: "" }] }
+              : type === "image"
+                ? { type: "image", src: "", alt: "", caption: "" }
+                : type === "link"
+                  ? { type: "link", text: "", href: "", label: "" }
+                  : { type: type as "p" | "h2" | "h3" | "blockquote" | "note", text: "" };
     setForm((f) => ({ ...f, content: [...f.content, block] }));
   }
 
@@ -240,11 +256,39 @@ function Editor({ post, onBack }: { post: Post; onBack: () => void }) {
   }
 
   function blockToText(b: ContentBlock): string {
-    return b.type === "ul" ? b.items.join("\n") : (b as { text: string }).text;
+    switch (b.type) {
+      case "ul":
+      case "ol":
+      case "takeaways":
+        return b.items.join("\n");
+      case "table":
+        return JSON.stringify({ headers: b.headers, rows: b.rows }, null, 2);
+      case "faq":
+        return JSON.stringify(b.items, null, 2);
+      case "image":
+        return JSON.stringify({ src: b.src, alt: b.alt, caption: b.caption }, null, 2);
+      case "link":
+        return JSON.stringify({ text: b.text, href: b.href, label: b.label }, null, 2);
+      default:
+        return (b as { text: string }).text;
+    }
   }
 
   function textToBlock(type: string, raw: string): ContentBlock {
-    if (type === "ul") return { type: "ul", items: raw.split("\n").map((s) => s.trim()).filter(Boolean) };
+    if (type === "ul" || type === "ol" || type === "takeaways")
+      return { type: type as "ul" | "ol" | "takeaways", items: raw.split("\n").map((s) => s.trim()).filter(Boolean) };
+    if (type === "table" || type === "faq" || type === "image" || type === "link") {
+      try {
+        const parsed = JSON.parse(raw);
+        if (type === "table") return { type: "table", headers: parsed.headers ?? [], rows: parsed.rows ?? [] };
+        if (type === "faq") return { type: "faq", items: parsed ?? [] };
+        if (type === "image") return { type: "image", src: parsed.src ?? "", alt: parsed.alt ?? "", caption: parsed.caption ?? "" };
+        return { type: "link", text: parsed.text ?? "", href: parsed.href ?? "", label: parsed.label ?? "" };
+      } catch {
+        // Fall back to a paragraph if the JSON is invalid while editing.
+        return { type: "p", text: raw };
+      }
+    }
     return { type: type as "p" | "h2" | "h3" | "blockquote" | "note", text: raw };
   }
 

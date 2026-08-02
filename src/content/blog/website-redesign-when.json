@@ -1,94 +1,291 @@
 {
   "slug": "website-redesign-when",
   "title": "5 Signs Your Website Needs a Redesign",
-  "excerpt": "Your website might be costing you customers without you knowing. Here are the warning signs — and what to do about them.",
+  "excerpt": "Your website may be costing you customers. Here are five signs it needs a redesign, what the work involves, and what a redesign costs in Kenya today.",
   "tag": "Web Design",
   "date": "2026-07-25",
-  "readTime": "4 min",
+  "readTime": "8 min read",
   "published": false,
-  "image": "",
+  "author": "Noon Studio Africa",
+  "image": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200",
   "content": [
     {
       "type": "p",
-      "text": "Your website is your most important marketing asset. But many businesses are running on outdated, underperforming sites that actively drive customers away."
+      "text": "Your website needs a redesign when it stops earning its keep: when it looks outdated, loads slowly, fails on phones, or stops generating enquiries. For most Nairobi businesses the honest answer is that the site needs work long before they notice, because customers leave quietly and never complain."
     },
     {
       "type": "p",
-      "text": "Here are five signs your website needs a redesign — and what to do about it."
+      "text": "This guide walks through the five signs that your site needs a redesign, what a redesign actually involves, what it costs, and how to protect your search rankings while you do it."
+    },
+    {
+      "type": "p",
+      "text": "The guide is built around the five signs, plus what a redesign involves, what it costs, and the questions to ask before you start. Read the signs first. They will tell you where you stand."
+    },
+    {
+      "type": "takeaways",
+      "items": [
+        "Five signs: poor mobile experience, slow loading, no leads, an outgrown brand, and embarrassment about sharing your site.",
+        "A redesign is strategy, content, and SEO work, not just new colors.",
+        "Redesigns for SMEs run KES 150,000-500,000 depending on scope.",
+        "You can preserve rankings with proper redirects and SEO care during the rebuild.",
+        "Waiting costs more than redesigning. Every month with a weak site is lost enquiries."
+      ]
+    },
+    {
+      "type": "link",
+      "text": "Before you budget the redesign, here is what websites actually cost in Kenya.",
+      "href": "/blog/how-much-website-cost-kenya",
+      "label": "Related reading"
     },
     {
       "type": "h2",
-      "text": "Sign 1: It's Not Mobile-Friendly"
+      "text": "What a Website Redesign Is"
     },
     {
       "type": "p",
-      "text": "Over 70% of Kenyan web traffic comes from mobile devices. If your site isn't optimized for mobile, you're losing the majority of your potential customers."
+      "text": "A redesign rebuilds your website to meet current standards for design, performance, and user experience. It is not a paint job. It revisits your audience, your goals, your content, and your technology, then rebuilds around them."
     },
     {
       "type": "p",
-      "text": "Test it: pull up your site on your phone. Can you read the text without zooming? Is the navigation easy to use? Do buttons work with your thumb?"
+      "text": "A refresh changes the look. A redesign changes how the site works, how fast it loads, how it ranks, and how it converts. If your site has not changed in three years, it is almost certainly a redesign candidate."
+    },
+    {
+      "type": "p",
+      "text": "Timing matters too. The longer a weak site runs, the more it costs in lost enquiries and lost rankings. A three-year-old site that was never updated is usually leaking customers in ways the owner cannot see."
     },
     {
       "type": "h2",
-      "text": "Sign 2: It's Slow"
+      "text": "Why It Matters in Kenya"
     },
     {
       "type": "p",
-      "text": "Google says 53% of mobile users abandon sites that take more than 3 seconds to load. If your site is slow, you're losing over half your visitors before they see your content."
+      "text": "Most Kenyan customers browse on phones, often on connections that are slower than they look. If your site takes ten seconds to load on a Nairobi connection, they are gone. If the text is too small to read, they are gone. If the button does not work, they are gone."
     },
     {
       "type": "p",
-      "text": "Test it: use Google PageSpeed Insights. Anything below 70/100 needs attention."
+      "text": "We have worked with businesses whose old sites quietly lost enquiries for years. The enquiry form did not work, the phone number was outdated, or the site simply looked like it belonged to a different decade. None of them knew until they rebuilt and the enquiries started flowing."
+    },
+    {
+      "type": "p",
+      "text": "The stakes are higher than they look. In a market where customers compare three businesses before choosing, your website is often the deciding document. A competitor with a fast, clean site does not need to be better than you. It just needs to look better."
+    },
+    {
+      "type": "image",
+      "src": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Old website beside a redesigned mobile-friendly version",
+      "caption": "A redesign is about performance and leads, not just looks."
     },
     {
       "type": "h2",
-      "text": "Sign 3: It Doesn't Generate Leads"
+      "text": "The Five Signs Your Website Needs a Redesign"
     },
     {
       "type": "p",
-      "text": "A website that looks good but doesn't generate enquiries is an expensive business card. If visitors aren't converting into leads, the site isn't doing its job."
+      "text": "These signs are not about taste. They are about behavior: what visitors do on your site and what the numbers say. Watch for them in your own analytics before you commission any work."
     },
     {
-      "type": "note",
-      "text": "Average website conversion rate is 2-3%. If yours is below 1%, something is fundamentally broken — usually the design, copy, or user flow."
+      "type": "h3",
+      "text": "Sign 1: It Is Not Mobile-Friendly"
     },
     {
-      "type": "h2",
+      "type": "p",
+      "text": "Pull up your site on your phone. Can you read without zooming? Do buttons work with your thumb? If the answer is no, you are losing most of your visitors, because the majority of Kenyan traffic is mobile."
+    },
+    {
+      "type": "h3",
+      "text": "Sign 2: It Is Slow"
+    },
+    {
+      "type": "p",
+      "text": "Run your site through Google PageSpeed Insights. We treat anything below 70 as a problem worth fixing. Slow sites frustrate visitors, rank poorly, and quietly send people to your competitors. A fast site is also a ranking advantage, because speed is part of how Google judges pages."
+    },
+    {
+      "type": "h3",
+      "text": "Sign 3: It Does Not Generate Leads"
+    },
+    {
+      "type": "p",
+      "text": "If visitors are not converting into enquiries, the site is an expensive business card. In our experience, most weak sites convert below 1% of visitors, and the fix is usually design, copy, and user flow rather than more traffic."
+    },
+    {
+      "type": "h3",
       "text": "Sign 4: Your Brand Has Outgrown It"
     },
     {
       "type": "p",
-      "text": "If your brand has evolved but your website hasn't, there's a disconnect. Customers judge consistency. A dated website undermines a modern brand."
+      "text": "If your brand has evolved but the website has not, customers feel the disconnect. A dated site undermines a modern brand, and visitors assume your service quality matches your website quality."
     },
     {
-      "type": "h2",
-      "text": "Sign 5: You're Embarrassed to Share It"
+      "type": "h3",
+      "text": "Sign 5: You Are Embarrassed to Share It"
     },
     {
       "type": "p",
-      "text": "This one's simple: if you don't want to send people to your website, it needs a redesign. Your website should be something you're proud to share."
+      "text": "This one is simple. If you avoid sending people to your website, it needs a redesign. Your site should be something you are proud to put in front of customers and investors."
+    },
+    {
+      "type": "note",
+      "text": "Quick check: if three or more of these signs sound familiar, a redesign is overdue. If one or two do, fix those specific problems first."
+    },
+    {
+      "type": "p",
+      "text": "The good news: every one of these problems is fixable, and most are fixed by the same rebuild. You do not need five separate projects. You need one honest redesign."
+    },
+    {
+      "type": "h2",
+      "text": "Keep It or Redesign It?"
+    },
+    {
+      "type": "p",
+      "text": "Not every old site needs a full rebuild. Here is how we sort the options."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Situation",
+        "What it usually means",
+        "Best move"
+      ],
+      "rows": [
+        [
+          "Site works but looks dated",
+          "Design refresh, same structure",
+          "Update design and content, keep your URLs"
+        ],
+        [
+          "Site is slow or broken on phones",
+          "Technical rebuild needed",
+          "Full redesign with a performance focus"
+        ],
+        [
+          "No leads for months",
+          "Conversion problems",
+          "Redesign with strategy and better copy"
+        ],
+        [
+          "Brand has changed",
+          "Identity mismatch",
+          "Full redesign aligned to the new brand"
+        ],
+        [
+          "Only one or two issues",
+          "Targeted fixes",
+          "Fix those issues, redesign later if needed"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "If you are still unsure, ask your customers. A simple question on WhatsApp or in your review requests can reveal what visitors think of your site. Their answers usually match the signs above."
     },
     {
       "type": "h2",
       "text": "What a Redesign Involves"
     },
     {
-      "type": "p",
-      "text": "A proper redesign isn't just cosmetic. It includes:"
-    },
-    {
       "type": "ul",
       "items": [
-        "Strategy: Understanding your audience and goals",
-        "Design: Modern, conversion-focused layout",
-        "Development: Fast, responsive, secure",
-        "Content: Updated copy that converts",
-        "SEO: Preserving and improving your search rankings"
+        "Strategy: understanding your audience, your goals, and what was wrong with the old site",
+        "Design: a modern, conversion-focused layout that works on phones",
+        "Development: fast, responsive, secure code",
+        "Content: updated copy that speaks to your customers",
+        "SEO: redirects, structure, and metadata that protect your rankings"
       ]
     },
     {
+      "type": "p",
+      "text": "The SEO part surprises most owners. A redesign that ignores redirects can wipe out years of rankings. A careful rebuild keeps the traffic you already have while the new site earns more."
+    },
+    {
+      "type": "p",
+      "text": "Budget for content work. The biggest cause of redesign delays is not design or code. It is copy, images, and product details that were never written. Plan the content early and the project stays on schedule."
+    },
+    {
+      "type": "h2",
+      "text": "What a Redesign Costs in Kenya"
+    },
+    {
+      "type": "p",
+      "text": "For most SMEs, a full redesign runs KES 150,000-500,000 depending on the number of pages and the features involved. E-commerce rebuilds cost more, often from KES 400,000, because payments, inventory, and order flows are part of the scope."
+    },
+    {
+      "type": "p",
+      "text": "Compare that with the cost of waiting. A site that fails to convert for six months has already cost you more in lost enquiries than most redesigns."
+    },
+    {
+      "type": "note",
+      "text": "Note: if a studio quotes you a redesign without asking about your old site's rankings, walk away. SEO preservation is not optional."
+    },
+    {
+      "type": "p",
+      "text": "Expect to pay in stages rather than one lump sum, with clear milestones for discovery, design, development, and launch. A staged approach keeps you informed and keeps the project moving."
+    },
+    {
       "type": "blockquote",
-      "text": "\"We knew our site needed work, but we didn't realize how much business we were losing until we redesigned. Enquiries doubled in the first month.\" — Director, Nairobi architecture firm"
+      "text": "\"We knew our site needed work, but we did not realize how much business we were losing until we redesigned. Enquiries doubled in the first month.\" Director, Nairobi architecture firm"
+    },
+    {
+      "type": "h2",
+      "text": "FAQ"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "How much does a website redesign cost in Kenya?",
+          "a": "A full SME redesign runs KES 150,000-500,000 in Kenya. E-commerce rebuilds start around KES 400,000. The cost depends on pages, features, and how much content needs rewriting."
+        },
+        {
+          "q": "How long does a redesign take?",
+          "a": "Most redesigns take four to eight weeks from discovery to launch. Larger sites with e-commerce or custom features can take two to four months."
+        },
+        {
+          "q": "Will a redesign hurt my Google rankings?",
+          "a": "It can, if done carelessly. With proper 301 redirects, preserved URLs where sensible, and solid SEO foundations, most businesses keep their rankings and improve them after launch."
+        },
+        {
+          "q": "How often should a business redesign its website?",
+          "a": "Most businesses should look at a meaningful update every two to three years, and a full redesign when the site no longer converts or represents the brand."
+        },
+        {
+          "q": "Do I need a redesign or just a refresh?",
+          "a": "If the site works well and only looks dated, a refresh is enough. If it is slow, broken on phones, or not generating leads, a redesign is the honest answer."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Stop Losing Customers to an Old Website"
+    },
+    {
+      "type": "p",
+      "text": "Your website works for you or against you. If the signs in this guide sound familiar, the redesign pays for itself through the enquiries you stop losing."
+    },
+    {
+      "type": "p",
+      "text": "Talk to us if you are not sure where your site stands. We will audit it, tell you honestly whether a refresh or a full redesign is right, and give you a straight quote."
+    },
+    {
+      "type": "p",
+      "text": "Whatever you decide, decide soon. Every month with an outdated site is a month your competitors use to pull ahead. The redesign is not an expense. It is the cheapest marketing improvement most businesses can make."
+    },
+    {
+      "type": "link",
+      "text": "Choosing a studio for the redesign? Here is what to look for in Nairobi.",
+      "href": "/blog/web-design-nairobi-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "link",
+      "text": "Why a senior-led studio is the right size for a redesign project.",
+      "href": "/blog/why-senior-led-studio-beats-agency",
+      "label": "Related reading"
+    },
+    {
+      "type": "link",
+      "text": "If your store needs a rebuild, here is what e-commerce sites involve.",
+      "href": "/blog/ecommerce-website-kenya",
+      "label": "Related reading"
     }
   ]
 }

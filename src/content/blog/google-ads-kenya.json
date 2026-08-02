@@ -1,16 +1,57 @@
 {
   "slug": "google-ads-kenya",
   "title": "Google Ads in Kenya: A Beginner's Guide to Paid Search",
-  "excerpt": "Is Google Ads worth it for Kenyan businesses? Here's a realistic breakdown of costs, results, and what to expect.",
+  "excerpt": "Is Google Ads worth it for Kenyan businesses? Here is a realistic breakdown of costs, budgets, common mistakes, and how to set up campaigns that convert.",
   "tag": "Paid Ads",
   "date": "2026-07-16",
-  "readTime": "5 min",
+  "readTime": "8 min read",
   "published": false,
-  "image": "",
+  "author": "Noon Studio Africa",
+  "image": "https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&w=1200",
   "content": [
     {
       "type": "p",
-      "text": "Google Ads can be a powerful growth channel for Kenyan businesses — but only if you know what you're doing. Most businesses waste their budget on poorly set up campaigns."
+      "text": "Google Ads works for Kenyan businesses when people are actively searching for what you sell, and it costs KES 50,000-100,000 per month in ad spend to test properly. Most businesses that fail with it do so because they skip conversion tracking and send clicks to the wrong pages, not because the platform is broken."
+    },
+    {
+      "type": "p",
+      "text": "This guide covers whether Google Ads is right for your business, what clicks cost in Kenya by industry, the mistakes that burn budgets, and how to set up campaigns that pay for themselves."
+    },
+    {
+      "type": "p",
+      "text": "You do not need to become a Google Ads expert to succeed with it. You need to understand the fundamentals, avoid the expensive mistakes, and know when to bring in help. That is what this guide gives you."
+    },
+    {
+      "type": "takeaways",
+      "items": [
+        "Google Ads suits businesses that sell services or products people actively search for.",
+        "Plan KES 50,000-100,000 per month in ad spend for at least three months of testing.",
+        "Clicks in Kenya cost KES 20-300 depending on your industry.",
+        "Conversion tracking is not optional. Without it you are flying blind.",
+        "Every ad should lead to a dedicated landing page, not your homepage."
+      ]
+    },
+    {
+      "type": "link",
+      "text": "Paid ads convert best when the website behind them is solid. Here is what a good site costs in Kenya.",
+      "href": "/blog/how-much-website-cost-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "h2",
+      "text": "What Google Ads Is"
+    },
+    {
+      "type": "p",
+      "text": "Google Ads is the platform where your ads appear when people search for terms related to your business. You bid on keywords, pay per click, and appear above the organic results. Done well, it puts you in front of people with clear intent: they searched, so they want what you offer."
+    },
+    {
+      "type": "p",
+      "text": "The key phrase is 'done well'. Google Ads is a system with hundreds of settings, and the default setup burns budget. Success comes from tight keywords, sharp landing pages, and constant optimization."
+    },
+    {
+      "type": "p",
+      "text": "Paid search is different from social media ads. On Facebook or Instagram, you interrupt people. On Google, people come to you with a question and your ad answers it. That intent is why paid search converts so well when it is set up properly."
     },
     {
       "type": "h2",
@@ -18,55 +59,106 @@
     },
     {
       "type": "p",
-      "text": "Google Ads works best when:"
+      "text": "Google Ads works best when demand already exists. People are searching for your service, your product has clear search volume, and you can convert clicks into revenue. If those three hold, paid search can be your fastest growth channel."
+    },
+    {
+      "type": "p",
+      "text": "It works less well for brand awareness or products people do not know to search for. Nobody searches for a service they do not know exists. For that, content and social media are better tools."
+    },
+    {
+      "type": "p",
+      "text": "The businesses that do best share one trait: they know their numbers. They know what a customer is worth, what they can pay to acquire one, and which services carry the best margins. Without those numbers, every bid is a guess."
     },
     {
       "type": "ul",
       "items": [
-        "People are actively searching for your service",
-        "Your product has clear search volume",
-        "You can convert clicks into revenue",
-        "You have budget for at least 3 months of testing"
+        "Law firms, clinics, and consultancies where clients search for services",
+        "E-commerce stores with products people compare online",
+        "Local services like movers, salons, and repair shops",
+        "B2B companies whose buyers research on Google before calling"
       ]
     },
     {
       "type": "p",
-      "text": "It works less well for brand awareness or products people don't know to search for."
+      "text": "If you are not sure, run a simple test. Search Google for the phrases customers would use to find you. If competitors with ads appear, there is demand. If the results are quiet, demand may be too thin for paid search."
+    },
+    {
+      "type": "image",
+      "src": "https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Search results page showing a paid ad above organic results",
+      "caption": "Paid search puts you in front of people who are already looking."
     },
     {
       "type": "h2",
-      "text": "Costs in Kenya"
+      "text": "What Clicks Cost in Kenya"
     },
     {
       "type": "p",
-      "text": "Google Ads costs in Kenya vary widely by industry:"
+      "text": "Cost per click varies widely by industry. Here is what we typically see in the Kenyan market."
     },
     {
-      "type": "ul",
-      "items": [
-        "Professional services (legal, consulting): KES 100-300 per click",
-        "E-commerce: KES 20-80 per click",
-        "Local services: KES 30-150 per click",
-        "SaaS/B2B: KES 50-200 per click"
+      "type": "table",
+      "headers": [
+        "Industry",
+        "Typical cost per click",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Professional services (legal, consulting)",
+          "KES 100-300",
+          "High intent, high competition"
+        ],
+        [
+          "E-commerce and retail",
+          "KES 20-80",
+          "Lower intent, higher volume"
+        ],
+        [
+          "Local services",
+          "KES 30-150",
+          "Depends on your area and niche"
+        ],
+        [
+          "SaaS and B2B",
+          "KES 50-200",
+          "Longer sales cycles, higher value"
+        ]
       ]
+    },
+    {
+      "type": "p",
+      "text": "These are ranges, not promises. Your actual cost depends on your keywords, your competitors, and your quality score. The right move is to test, measure, and refine."
+    },
+    {
+      "type": "p",
+      "text": "Do not fixate on the price per click alone. What matters is cost per customer. A KES 200 click that turns into a KES 50,000 client is cheap. A KES 20 click that never converts is expensive. Track the whole journey."
+    },
+    {
+      "type": "link",
+      "text": "A conversion-ready website makes every click count. Here is how to choose a studio in Nairobi.",
+      "href": "/blog/web-design-nairobi-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "h2",
+      "text": "How Much Budget You Need"
+    },
+    {
+      "type": "p",
+      "text": "Budget at least KES 50,000-100,000 per month in ad spend to generate meaningful data. Below that, you will not get enough conversions to know what works."
+    },
+    {
+      "type": "p",
+      "text": "Treat the first three months as a testing phase. You are not buying sales in month one. You are buying data: which keywords convert, which ads work, which pages close. Then you scale what works and cut what does not."
     },
     {
       "type": "note",
-      "text": "Budget at least KES 50k-100k/month in ad spend to generate meaningful data. Below that, you won't have enough conversions to optimize."
+      "text": "A common mistake is judging Google Ads after two weeks. Give the data time. Most campaigns only start performing after consistent testing and optimization."
     },
     {
-      "type": "h2",
-      "text": "Common Mistakes"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "No conversion tracking (flying blind)",
-        "Broad keywords that waste budget",
-        "No negative keywords (paying for irrelevant clicks)",
-        "Sending traffic to homepage instead of landing pages",
-        "Optimizing for clicks instead of conversions"
-      ]
+      "type": "p",
+      "text": "If KES 50,000 per month is not possible, consider a narrower approach: one city, one service, one landing page. A focused campaign with a small budget beats a broad one that spreads every shilling thin."
     },
     {
       "type": "h2",
@@ -74,33 +166,117 @@
     },
     {
       "type": "p",
-      "text": "The biggest waste in Google Ads: sending paid traffic to your homepage. Every ad should point to a dedicated landing page designed for one specific conversion goal."
+      "text": "The biggest waste in Google Ads is sending paid traffic to your homepage. A homepage has too many goals. A landing page has one: convert the visitor."
     },
     {
       "type": "p",
-      "text": "A good landing page converts 3-5x better than a generic homepage. That means 3-5x more customers for the same ad spend."
+      "text": "Every ad should point to a dedicated landing page built for one specific conversion, whether that is a booking, a call, or a purchase. In our experience, a focused landing page converts several times better than a generic homepage. That means more customers for the same ad spend."
+    },
+    {
+      "type": "p",
+      "text": "A good landing page is simple: one clear headline, one offer, one action, and no distractions. It loads fast, works on a phone, and states the next step plainly. If your site cannot do that yet, fix the site before you scale the ads."
     },
     {
       "type": "h2",
-      "text": "Getting Started"
-    },
-    {
-      "type": "p",
-      "text": "For Kenyan businesses new to Google Ads:"
+      "text": "Common Mistakes That Burn Budget"
     },
     {
       "type": "ul",
       "items": [
-        "Start with search ads (not display or video)",
-        "Focus on high-intent keywords",
-        "Set up conversion tracking from day one",
-        "Create dedicated landing pages",
-        "Test with a small budget, then scale what works"
+        "No conversion tracking. You cannot optimize what you cannot measure.",
+        "Broad keywords. A general term in Nairobi wastes money on irrelevant clicks.",
+        "No negative keywords. You end up paying for searches that will never buy.",
+        "Sending clicks to the homepage instead of dedicated landing pages.",
+        "Optimizing for clicks instead of conversions. Clicks are vanity. Customers pay.",
+        "Pausing campaigns after two weeks. Data needs time to become insight."
       ]
     },
     {
+      "type": "p",
+      "text": "Every one of these is fixable. The pattern behind them is impatience. Paid ads reward patience and process."
+    },
+    {
+      "type": "p",
+      "text": "There is a deeper mistake underneath the list: treating Google Ads like a set-and-forget tool. Campaigns need weekly attention, and the accounts that perform are the ones someone actually manages. Whether that is you or a partner, someone must own it."
+    },
+    {
+      "type": "h2",
+      "text": "How to Get Started"
+    },
+    {
+      "type": "ol",
+      "items": [
+        "Start with search ads only. Display and video come later.",
+        "Pick high-intent keywords that match what you sell.",
+        "Set up conversion tracking before you spend a shilling.",
+        "Build a dedicated landing page for each offer.",
+        "Run a small test budget, measure, then scale what works."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Note: Google also runs free tools like the Keyword Planner to size demand before you spend. Use them to validate your terms and refine your budget estimate."
+    },
+    {
+      "type": "p",
+      "text": "If this sounds like a lot, it is. That is why many businesses hand it to a team that has run campaigns across Kenyan industries."
+    },
+    {
       "type": "blockquote",
-      "text": "\"We were spending KES 50k/month on Google Ads with no tracking. When we set up proper tracking and landing pages, we tripled our leads with the same budget.\" — Owner, Nairobi law firm"
+      "text": "\"We were spending KES 50,000 per month on Google Ads with no tracking. When we set up proper tracking and landing pages, we tripled our leads with the same budget.\" Owner, Nairobi law firm"
+    },
+    {
+      "type": "h2",
+      "text": "FAQ"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "How much does Google Ads cost in Kenya?",
+          "a": "Ad spend of KES 50,000-100,000 per month is a realistic starting range, and clicks cost KES 20-300 depending on your industry. Management fees from an agency add KES 20,000-60,000 per month if you outsource it."
+        },
+        {
+          "q": "Is Google Ads worth it for small businesses in Kenya?",
+          "a": "Yes, when people actively search for what you sell and you can convert clicks into enquiries. It is not for brand awareness. Test for three months with tracking and landing pages before judging it."
+        },
+        {
+          "q": "How long does Google Ads take to work?",
+          "a": "Expect a testing phase of one to three months. Google needs conversion data to optimize. Campaigns usually improve steadily once you feed it consistent, tracked results."
+        },
+        {
+          "q": "Can I run Google Ads myself?",
+          "a": "You can, but the learning curve is steep and mistakes cost real money. If you run it yourself, start with search ads, tracking, and landing pages. Many owners hand it over after one burned budget."
+        },
+        {
+          "q": "Google Ads or SEO, which should I choose?",
+          "a": "Both, eventually. Ads give fast results while SEO builds long-term traffic. If budget is tight, start with SEO foundations and use ads for your most profitable searches."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Make Your Ad Budget Earn Its Keep"
+    },
+    {
+      "type": "p",
+      "text": "Google Ads is not a slot machine. It is a system that rewards setup, tracking, and patience. Businesses that respect that get leads their competitors pay far more for."
+    },
+    {
+      "type": "p",
+      "text": "If you want help setting up campaigns that convert, talk to us. We will audit your market, set up tracking, and build landing pages that turn clicks into customers."
+    },
+    {
+      "type": "link",
+      "text": "Prefer a partner who runs the whole digital mix? Here is what a digital marketing agency does.",
+      "href": "/blog/digital-marketing-agency-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "link",
+      "text": "Build long-term organic traffic to complement your paid campaigns.",
+      "href": "/blog/seo-services-kenya",
+      "label": "Related reading"
     }
   ]
 }

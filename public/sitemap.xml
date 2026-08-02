@@ -17,7 +17,7 @@
   </url>
   <url>
     <loc>https://noonstudio.africa/pricing</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
@@ -29,5 +29,34 @@
     <loc>https://noonstudio.africa/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://noonstudio.africa/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://noonstudio.africa/blog/how-much-website-cost-kenya</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://noonstudio.africa/blog/web-design-nairobi-kenya</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://noonstudio.africa/blog/ai-marketing-east-african-businesses</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://noonstudio.africa/blog/why-senior-led-studio-beats-agency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
   </url>
 </urlset>

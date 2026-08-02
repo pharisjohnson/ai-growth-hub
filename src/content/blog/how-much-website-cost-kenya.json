@@ -1,109 +1,190 @@
 {
   "slug": "how-much-website-cost-kenya",
   "title": "How Much Does a Website Cost in Kenya? (2026 Guide)",
-  "excerpt": "A breakdown of what Kenyan businesses actually pay for a professional website — from a simple landing page to a full e-commerce platform.",
+  "excerpt": "Kenyan businesses pay between KES 15,000 and KES 1.5 million for a website. Here is what each price range actually buys, and how to budget without overpaying.",
   "tag": "Web Design",
   "date": "2026-07-01",
-  "readTime": "5 min",
+  "updated": "2026-08-02",
+  "readTime": "8 min read",
   "published": true,
-  "image": "",
+  "author": "Noon Studio Africa",
+  "image": "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg?auto=compress&cs=tinysrgb&w=1200",
   "content": [
     {
       "type": "p",
-      "text": "If you're a business owner in Nairobi wondering what a website actually costs in 2026, you've probably seen quotes ranging from KES 30,000 to KES 3 million. That's not helpful."
+      "text": "If you are a business owner in Nairobi trying to figure out what a website costs in Kenya, you have probably seen quotes from KES 15,000 to KES 3 million. That range is so wide it is useless on its own. The real answer: a professional, custom website for a Kenyan SME costs between KES 120,000 and KES 500,000, and a full e-commerce platform runs from KES 400,000 upward. What you pay depends on what you are actually buying."
     },
     {
       "type": "p",
-      "text": "The truth is: what you pay depends entirely on what you're buying. A template site slapped together in an afternoon is not the same as a custom-built marketing engine. Both are called 'websites.' Both are priced very differently."
+      "text": "This guide breaks down every price tier in plain numbers, explains what you are really paying for, and shows you how to avoid the two most expensive mistakes Kenyan businesses make. By the end, you will know exactly what to budget and what questions to ask any web design company in Kenya."
+    },
+    {
+      "type": "takeaways",
+      "items": [
+        "A template or DIY site costs KES 15,000-60,000 but rarely generates leads or ranks on Google.",
+        "A professional custom site for a Kenyan SME costs KES 120,000-500,000.",
+        "E-commerce and web applications start at KES 400,000 and take 2-4 months to build.",
+        "Ongoing costs like hosting, domain, and maintenance add KES 30,000-120,000 per year.",
+        "The cheapest option often costs more in the long run because you rebuild within a year."
+      ]
+    },
+    {
+      "type": "link",
+      "text": "Compare custom design versus templates in our guide to web design in Nairobi.",
+      "href": "/blog/web-design-nairobi-kenya",
+      "label": "Related reading"
     },
     {
       "type": "h2",
       "text": "The Three Tiers of Websites in Kenya"
     },
     {
+      "type": "p",
+      "text": "Almost every quote you receive will fall into one of three tiers. Knowing which tier you are being sold is the first step to pricing a website fairly."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tier",
+        "Price range",
+        "What you get",
+        "Best for"
+      ],
+      "rows": [
+        [
+          "DIY or template",
+          "KES 15,000-60,000",
+          "Pre-built template, stock images, basic hosting",
+          "Proof of concept, very early stage, digital business card"
+        ],
+        [
+          "Professional custom",
+          "KES 120,000-500,000",
+          "Custom design, SEO foundation, analytics, CMS, support",
+          "SMEs that need leads and rankings"
+        ],
+        [
+          "Platform or e-commerce",
+          "KES 400,000-1.5M+",
+          "Full store, payments, inventory, user accounts, 2-4 months build",
+          "Retailers, membership sites, custom apps"
+        ]
+      ]
+    },
+    {
       "type": "h3",
-      "text": "1. DIY or Template (KES 15k — 60k)"
+      "text": "1. DIY or Template: KES 15,000-60,000"
     },
     {
       "type": "p",
-      "text": "Platforms like GoDaddy, Wix, or a freelancer on Upwork. You get a pre-built template, stock images, and basic hosting. Fine for a very early-stage business that just needs a digital business card."
+      "text": "This is the Wix, GoDaddy, or cheap-freelancer route. You get a pre-built template, stock images, and basic hosting for a year. It is fine if you only need an online business card that says you exist."
     },
     {
       "type": "note",
-      "text": "Good for: Sole proprietors, proof-of-concept, temporary landing pages. Not good for: Businesses that need to compete, rank on Google, or convert visitors."
-    },
-    {
-      "type": "h3",
-      "text": "2. Professional Custom Build (KES 120k — 500k)"
+      "text": "Good for: sole proprietors, proof of concept, temporary landing pages. Not good for: businesses that need to compete, rank on Google, or convert visitors into paying customers."
     },
     {
       "type": "p",
-      "text": "A professionally designed and developed website built to your brand. Custom layouts, performance optimization, SEO foundation, analytics setup, and a CMS you can actually use. This is what most serious Nairobi businesses should budget for."
+      "text": "The problem with this tier is not the price. It is the ceiling. Template sites load slowly, look like every other business on the street, and give you almost no control over search visibility. We have seen dozens of Nairobi businesses pay KES 30,000 for a template, wait six months for leads, then come back for a real build."
+    },
+    {
+      "type": "h3",
+      "text": "2. Professional Custom Build: KES 120,000-500,000"
+    },
+    {
+      "type": "p",
+      "text": "This is the tier most serious Nairobi businesses should budget for. A professionally designed and developed website built around your brand and your customers. You get custom layouts, performance optimization, an SEO foundation, analytics setup, and a content management system you can actually use without calling the developer."
     },
     {
       "type": "ul",
       "items": [
-        "Custom design (not a template)",
-        "Responsive on all devices",
-        "Basic SEO setup",
-        "Analytics and form integration",
-        "30-60 days of post-launch support"
+        "Custom design, not a template",
+        "Responsive on phones, tablets, and desktop",
+        "Basic SEO setup: structure, meta tags, sitemap",
+        "Analytics and contact form integration",
+        "30-60 days of post-launch support",
+        "Training so your team can update content"
       ]
     },
     {
       "type": "h3",
-      "text": "3. Platform or E-Commerce (KES 400k — 1.5M+)"
+      "text": "3. Platform or E-Commerce: KES 400,000-1.5M+"
     },
     {
       "type": "p",
-      "text": "A full e-commerce platform, membership site, or custom web application. Product catalogs, payment integration, inventory management, user accounts — the whole stack. These projects typically take 2-4 months and involve ongoing maintenance."
+      "text": "A full e-commerce platform, membership site, or custom web application lives here. Product catalogs, M-Pesa and card payment integration, inventory management, user accounts, the whole stack. These projects take 2-4 months and need ongoing maintenance, because a store is never really finished."
     },
     {
       "type": "h2",
-      "text": "What You're Really Paying For"
+      "text": "What You Are Really Paying For"
     },
     {
       "type": "p",
-      "text": "A website quote covers more than just 'making a site.' You're paying for:"
+      "text": "A website quote covers far more than 'making a site'. When a studio quotes KES 320,000 for a 10-15 page site, you are buying all of the following:"
     },
     {
       "type": "ul",
       "items": [
-        "Strategy: Understanding your audience, goals, and competitive landscape",
-        "Design: Layout, typography, color, imagery — the look and feel",
-        "Development: Code that works across browsers and devices",
-        "Content: Copywriting, photography, or illustration",
-        "Testing: Making sure everything works before launch",
-        "Ongoing support: Fixes, updates, and optimizations after launch"
+        "Strategy: understanding your audience, goals, and competitive landscape",
+        "Design: layout, typography, color, and imagery that reflect your brand",
+        "Development: code that works across browsers and devices",
+        "Content: copywriting, photography, or illustration",
+        "Testing: checking forms, payments, and speed before launch",
+        "Ongoing support: fixes, updates, and optimization after launch"
       ]
     },
     {
       "type": "p",
-      "text": "When a studio quotes KES 320k for a 10-15 page site, they're selling all of the above. When a freelancer quotes KES 30k, they're selling a template and hoping you don't ask for revisions."
+      "text": "When a freelancer quotes KES 30,000, they are selling a template and hoping you do not ask for revisions. The difference is not the number of pages. It is who does the work and what happens after launch."
     },
     {
       "type": "blockquote",
-      "text": "\"The bitterness of poor quality remains long after the sweetness of low price is forgotten.\" — Benjamin Franklin"
+      "text": "\"The bitterness of poor quality remains long after the sweetness of low price is forgotten.\" Benjamin Franklin"
     },
     {
       "type": "h2",
-      "text": "Why Nairobi Businesses Overpay (or Under-Invest)"
+      "text": "The Hidden Costs Most Quotes Leave Out"
     },
     {
       "type": "p",
-      "text": "Two mistakes we see often:"
+      "text": "The design fee is only part of the picture. A website is a running cost, not a one-time purchase. Budget for these from day one:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Domain name: KES 1,500-4,000 per year for a .co.ke or .com",
+        "Hosting: KES 1,000-8,000 per month depending on traffic",
+        "SSL certificate: usually included, KES 3,000-10,000 if separate",
+        "Maintenance and updates: KES 2,000-10,000 per month",
+        "Content updates: new pages, blog posts, product listings",
+        "Marketing tools: analytics, email, and booking integrations"
+      ]
     },
     {
       "type": "p",
-      "text": "First, businesses under-invest by going with the cheapest option, then spend six months frustrated that their site doesn't generate leads. They end up rebuilding — spending more in total."
+      "text": "A realistic annual budget for a professional site is the build cost plus 10-25% of that cost every year. A KES 300,000 site should carry about KES 30,000-75,000 per year in running costs. Businesses that skip maintenance usually end up with a slow, broken, or hacked site within two years."
+    },
+    {
+      "type": "h2",
+      "text": "Why Nairobi Businesses Overpay or Under-Invest"
     },
     {
       "type": "p",
-      "text": "Second, businesses overpay by going to a large agency with a big team, high overheads, and account managers who pad the bill. The work isn't better — you're just paying for the sales process."
+      "text": "Two mistakes dominate the Kenyan market. We see both every month."
     },
     {
       "type": "p",
-      "text": "A senior-led studio (like ours) sits in the middle. You pay for experienced people doing the work directly — not for account management theatre."
+      "text": "First, businesses under-invest by picking the cheapest option, then spend six months frustrated that the site does not generate leads. They rebuild within the year, spending more in total than a proper build would have cost. A KES 35,000 template that fails and gets replaced by a KES 350,000 build is a KES 385,000 website."
+    },
+    {
+      "type": "p",
+      "text": "Second, businesses overpay by going to a large agency with big overheads, account managers, and sales commissions. The work is not necessarily better. You are paying for the sales process. A senior-led studio sits in the middle: experienced people doing the work directly, without the account management theatre."
+    },
+    {
+      "type": "link",
+      "text": "Why a senior-led studio beats a big agency for most projects.",
+      "href": "/blog/why-senior-led-studio-beats-agency",
+      "label": "Related reading"
     },
     {
       "type": "h2",
@@ -111,11 +192,86 @@
     },
     {
       "type": "p",
-      "text": "For most Nairobi SMEs looking for a professional website that actually generates business: budget KES 200k-500k for a solid custom site."
+      "text": "For most Nairobi SMEs that need a website to generate business: budget KES 200,000-500,000 for a solid custom site. That range buys a professional outcome, a partner who cares about results, and a site that earns its keep instead of sitting there as a digital brochure nobody visits."
     },
     {
       "type": "p",
-      "text": "That gets you a professional outcome, a partner who cares about results, and a site that earns its keep — rather than sitting there as a digital brochure nobody visits."
+      "text": "If you are a startup with no revenue yet, the template route is an acceptable first step. Just know it is a placeholder, not a strategy. Plan the real build for the moment you have customers to serve."
+    },
+    {
+      "type": "h2",
+      "text": "How to Compare Quotes Like a Pro"
+    },
+    {
+      "type": "p",
+      "text": "When three companies quote you KES 80,000, KES 250,000, and KES 600,000 for the same project, do not pick the middle one by default. Ask every candidate the same five questions:"
+    },
+    {
+      "type": "ol",
+      "items": [
+        "Is this a custom design or a template? Ask to see the actual design process.",
+        "Who does the work? A senior designer and developer, or a junior with a manager on top?",
+        "What happens after launch? How many months of support are included?",
+        "Is SEO included, or is it a paid extra?",
+        "Can you show me two live sites you built for businesses like mine?"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The answers tell you more than the price ever will. A KES 250,000 quote from someone who shows you relevant, working case studies is usually the best deal in the room."
+    },
+    {
+      "type": "h2",
+      "text": "FAQ"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "How much does a simple website cost in Kenya?",
+          "a": "A simple template or DIY website costs KES 15,000-60,000 in Kenya. A simple custom site with 3-5 pages starts around KES 120,000. The template route is cheaper upfront but rarely generates leads."
+        },
+        {
+          "q": "How much does it cost to maintain a website in Kenya per year?",
+          "a": "Plan for 10-25% of the build cost per year. A KES 300,000 site needs roughly KES 30,000-75,000 annually for hosting, domain, updates, and maintenance."
+        },
+        {
+          "q": "Why are websites expensive in Kenya?",
+          "a": "A serious website includes strategy, custom design, development, content, testing, and post-launch support. Cheap quotes usually cover only a template. You are paying for work that actually generates customers, not for the pages themselves."
+        },
+        {
+          "q": "Can I get a good website for KES 50,000 in Kenya?",
+          "a": "You can get a decent template-based site for KES 50,000, but not a custom, SEO-ready, lead-generating website. That work realistically starts around KES 120,000 in the Kenyan market."
+        },
+        {
+          "q": "Do Kenyan businesses really need a website in 2026?",
+          "a": "Yes. Customers check Google before they buy, and a website is your credibility layer. A business without one loses to competitors who show up in search results with a professional site."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Build a Website That Pays for Itself"
+    },
+    {
+      "type": "p",
+      "text": "The right number to budget is not the cheapest number. It is the number that buys a site which brings in more than it costs. For most Nairobi SMEs, that is a KES 200,000-500,000 custom build with real SEO foundations and a team that stays around after launch."
+    },
+    {
+      "type": "p",
+      "text": "If you want a straight answer on what your project should cost, talk to us. We will walk through your goals, show you real examples, and give you an honest quote. No account managers, no padding, no templates pretending to be custom."
+    },
+    {
+      "type": "link",
+      "text": "See what a full e-commerce build involves before you budget for a store.",
+      "href": "/blog/ecommerce-website-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "link",
+      "text": "Not sure if you need a redesign? Here is how to tell.",
+      "href": "/blog/website-redesign-when",
+      "label": "Related reading"
     }
   ]
 }
