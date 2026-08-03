@@ -229,7 +229,7 @@ function ShareButtons({ slug, title }: { slug: string; title: string }) {
     { label: "WhatsApp", href: `https://wa.me/?text=${encodedTitle}%20${encoded}` },
   ];
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       <span className="mono-label">// Share</span>
       {links.map((l) => (
         <a
@@ -307,7 +307,7 @@ function BlogPost() {
 
       <section className="container-page py-14 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 lg:grid-cols-[16rem_1fr]">
+          <div className="grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[16rem_minmax(0,1fr)]">
             <aside className="hidden lg:block">
               <div className="sticky top-24 space-y-6">
                 <TableOfContents blocks={post.content} />

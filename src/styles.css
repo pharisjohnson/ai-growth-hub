@@ -103,6 +103,7 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
   body {
     background-color: var(--color-background);
@@ -111,6 +112,7 @@
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-wrap: break-word;
   }
   ::selection {
     background: var(--color-ink);
