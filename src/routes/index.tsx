@@ -54,9 +54,8 @@ function Home() {
                 <span className="italic text-accent">AI marketing</span> built to earn their keep.
               </h1>
               <p className="mt-8 max-w-xl text-lg text-muted-foreground">
-                You talk directly to the people doing the work. No account managers, no junior
-                handoffs, no jargon. Just a website that brings in customers and marketing that
-                pays for itself.
+                Websites that earn their keep. No handoffs, no jargon, no surprises.
+                Just design and marketing you can measure in shillings, not compliments.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-3">
                 <Link to="/contact" className="btn-primary">Start a project <span aria-hidden>→</span></Link>
