@@ -97,13 +97,13 @@ function renderContent(blocks: ContentBlock[]) {
         return <h3 key={i} className="mt-12 mb-5 font-display text-2xl text-ink">{block.text}</h3>;
       case "p":
         return (
-          <p key={i} className="mb-7 leading-relaxed text-muted-foreground [&_strong]:text-ink">
+          <p key={i} className="mb-5 leading-relaxed text-muted-foreground [&_strong]:text-ink">
             {block.text}
           </p>
         );
       case "ul":
         return (
-          <ul key={i} className="my-8 list-disc space-y-3 pl-12 pr-4 text-muted-foreground">
+          <ul key={i} className="my-8 list-disc space-y-2 pl-12 pr-4 text-muted-foreground">
             {block.items.map((item, j) => (
               <li key={j} className="leading-relaxed pl-1">{item}</li>
             ))}
@@ -111,7 +111,7 @@ function renderContent(blocks: ContentBlock[]) {
         );
       case "ol":
         return (
-          <ol key={i} className="my-8 list-decimal space-y-3 pl-12 pr-4 text-muted-foreground">
+          <ol key={i} className="my-8 list-decimal space-y-2 pl-12 pr-4 text-muted-foreground">
             {block.items.map((item, j) => (
               <li key={j} className="leading-relaxed pl-1">{item}</li>
             ))}
