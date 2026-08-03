@@ -99,7 +99,7 @@ function renderContent(blocks: ContentBlock[]) {
         return <p key={i}>{block.text}</p>;
       case "ul":
         return (
-          <ul key={i} className="my-6 list-disc space-y-2.5 pl-7 text-muted-foreground">
+          <ul key={i} className="my-6 list-disc space-y-2.5 pl-8 text-muted-foreground">
             {block.items.map((item, j) => (
               <li key={j} className="leading-relaxed">{item}</li>
             ))}
@@ -107,7 +107,7 @@ function renderContent(blocks: ContentBlock[]) {
         );
       case "ol":
         return (
-          <ol key={i} className="my-6 list-decimal space-y-2.5 pl-7 text-muted-foreground">
+          <ol key={i} className="my-6 list-decimal space-y-2.5 pl-8 text-muted-foreground">
             {block.items.map((item, j) => (
               <li key={j} className="leading-relaxed">{item}</li>
             ))}
@@ -304,7 +304,7 @@ function BlogPost() {
             </aside>
 
             <div>
-              <article className="mx-auto max-w-2xl prose-headings:display prose-headings:text-ink prose-headings:mt-12 prose-headings:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6 prose-a:text-accent prose-a:underline prose-a:underline-offset-4 prose-strong:text-ink prose-li:leading-relaxed prose-li:mb-2">
+              <article className="mx-auto max-w-xl prose-headings:display prose-headings:text-ink prose-headings:mt-12 prose-headings:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6 prose-a:text-accent prose-a:underline prose-a:underline-offset-4 prose-strong:text-ink prose-li:leading-relaxed prose-li:mb-2">
                 {renderContent(post.content)}
               </article>
 
