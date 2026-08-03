@@ -3,11 +3,11 @@ import { useState } from "react";
 
 const nav = [
   { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/work", label: "Work" },
   { to: "/pricing", label: "Pricing" },
   { to: "/blog", label: "Blog" },
-  { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
