@@ -88,33 +88,37 @@ function renderContent(blocks: ContentBlock[]) {
       case "h2": {
         const id = block.text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
         return (
-          <h2 key={i} id={id} className="scroll-mt-24">
+          <h2 key={i} id={id} className="mt-14 mb-6 scroll-mt-24 font-display text-3xl text-ink">
             {block.text}
           </h2>
         );
       }
       case "h3":
-        return <h3 key={i}>{block.text}</h3>;
+        return <h3 key={i} className="mt-12 mb-5 font-display text-2xl text-ink">{block.text}</h3>;
       case "p":
-        return <p key={i}>{block.text}</p>;
+        return (
+          <p key={i} className="mb-7 leading-relaxed text-muted-foreground [&_strong]:text-ink">
+            {block.text}
+          </p>
+        );
       case "ul":
         return (
-          <ul key={i} className="my-6 list-disc space-y-2.5 pl-8 text-muted-foreground">
+          <ul key={i} className="my-8 list-disc space-y-3 pl-12 pr-4 text-muted-foreground">
             {block.items.map((item, j) => (
-              <li key={j} className="leading-relaxed">{item}</li>
+              <li key={j} className="leading-relaxed pl-1">{item}</li>
             ))}
           </ul>
         );
       case "ol":
         return (
-          <ol key={i} className="my-6 list-decimal space-y-2.5 pl-8 text-muted-foreground">
+          <ol key={i} className="my-8 list-decimal space-y-3 pl-12 pr-4 text-muted-foreground">
             {block.items.map((item, j) => (
-              <li key={j} className="leading-relaxed">{item}</li>
+              <li key={j} className="leading-relaxed pl-1">{item}</li>
             ))}
           </ol>
         );
       case "blockquote":
-        return <blockquote key={i} className="border-l-2 border-accent pl-4 italic my-6 text-muted-foreground">{block.text}</blockquote>;
+        return <blockquote key={i} className="my-10 border-l-2 border-accent pl-5 italic leading-relaxed text-muted-foreground">{block.text}</blockquote>;
       case "note":
         return <div key={i} className="my-10 rounded-xl border hairline bg-surface p-6 text-sm leading-relaxed text-ink">{block.text}</div>;
       case "takeaways":
@@ -304,7 +308,7 @@ function BlogPost() {
             </aside>
 
             <div>
-              <article className="mx-auto max-w-xl prose-headings:display prose-headings:text-ink prose-headings:mt-12 prose-headings:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6 prose-a:text-accent prose-a:underline prose-a:underline-offset-4 prose-strong:text-ink prose-li:leading-relaxed prose-li:mb-2">
+              <article className="mx-auto max-w-2xl">
                 {renderContent(post.content)}
               </article>
 
