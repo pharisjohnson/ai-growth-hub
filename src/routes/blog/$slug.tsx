@@ -43,6 +43,9 @@ export const Route = createFileRoute("/blog/$slug")({
         ...(post?.image ? [{ property: "og:image", content: post.image }] : []),
         { property: "article:published_time", content: post?.date ?? "" },
         ...(post?.updated ? [{ property: "article:modified_time", content: post.updated }] : []),
+        ...(post && !post.published
+          ? [{ name: "robots", content: "noindex, nofollow" }]
+          : []),
       ],
       links: post
         ? [{ rel: "canonical", href: `https://www.noonstudio.africa/blog/${post.slug}` }]
@@ -274,6 +277,11 @@ function BlogPost() {
         <div className="container-page py-12 md:py-16">
           <Link to="/blog" className="font-mono text-xs text-muted-foreground hover:text-accent">← All articles</Link>
           <div className="mt-8 flex flex-wrap items-center gap-3">
+            {!post.published && (
+              <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-bold text-background">
+                DRAFT · NOT LIVE
+              </span>
+            )}
             <span className="inline-flex items-center rounded-full bg-ink px-3 py-1 text-xs font-medium text-background">{post.tag}</span>
             <span className="font-mono text-xs text-muted-foreground">{post.readTime}</span>
             <span className="font-mono text-xs text-muted-foreground">{formatFullDate(post.date)}</span>

@@ -20,6 +20,8 @@ export interface Post {
   date: string;
   readTime: string;
   published: boolean;
+  /** preview:true = private draft, only reachable by direct URL, hidden from sitemap and blog index */
+  preview?: boolean;
   image: string;
   author?: string;
   updated?: string;
@@ -48,8 +50,13 @@ export function getPublishedPosts(): Post[] {
 
 export function getScheduledPosts(): Post[] {
   return getAllPosts()
-    .filter((p) => !p.published)
+    .filter((p) => !p.published && !p.preview)
     .sort((a, b) => a.date.localeCompare(b.date));
+}
+
+/** Private drafts: not yet approved, only reachable by direct URL. */
+export function getPreviewPosts(): Post[] {
+  return getAllPosts().filter((p) => !p.published && p.preview);
 }
 
 export function getTags(): string[] {
