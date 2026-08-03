@@ -60,7 +60,15 @@
     },
     {
       "type": "p",
-      "text": "A logo is a mark. A brand is a promise. Consider two Nairobi coffee shops selling similar coffee at similar prices. One has a polished identity, a clear message, and consistent packaging. The other has a logo drawn by a friend. Customers do not consciously compare the two. They simply feel safer with the first, and they tell their friends about it."
+      "text": "A logo is a mark. A brand is a promise."
+    },
+    {
+      "type": "p",
+      "text": "Consider two Nairobi coffee shops selling similar coffee at similar prices. One has a polished identity, a clear message, and consistent packaging. The other has a logo drawn by a friend."
+    },
+    {
+      "type": "p",
+      "text": "Customers do not consciously compare the two. They simply feel safer with the first, and they tell their friends about it."
     },
     {
       "type": "h2",

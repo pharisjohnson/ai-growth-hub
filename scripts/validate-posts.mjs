@@ -31,6 +31,11 @@ function countWords(blocks) {
   return words;
 }
 
+function countSentences(text) {
+  const clean = text.replace(/\b(e\.g|i\.e|vs|Dr|Mr|Mrs|Ms|St|No|Inc|Ltd|Co)\./gi, "$1").replace(/\d\.\d/g, "dd");
+  return clean.split(/[.!?]+(?:\s|$)/).filter((s) => s.trim().length > 0).length;
+}
+
 const slugs = new Set(files.map((f) => f.replace(".json", "")));
 
 for (const f of files) {
@@ -58,6 +63,13 @@ for (const f of files) {
   }
   if (post.excerpt.length > 165) issues.push(`EXCERPT ${post.excerpt.length} chars (max 165)`);
   if (/—/.test(JSON.stringify(post.content))) issues.push("EM-DASH PRESENT");
+
+  // Readability: no paragraph over 5 sentences
+  for (const b of post.content) {
+    if (b.type === "p" && countSentences(b.text) > 5) {
+      issues.push(`PARAGRAPH ${post.content.indexOf(b)} HAS ${countSentences(b.text)} SENTENCES (max 5)`);
+    }
+  }
 
   // Read time check
   const rt = `${Math.max(1, Math.round(words / 200))} min read`;

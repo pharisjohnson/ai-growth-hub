@@ -44,7 +44,21 @@
     },
     {
       "type": "p",
-      "text": "Here is the pattern most business owners know well. A salesperson sells you the dream. An account manager briefs a junior designer. The junior produces something average. You revise three times. The account manager bills you for the back-and-forth. Repeat every month."
+      "text": "Here is the pattern most business owners know well."
+    },
+    {
+      "type": "ol",
+      "items": [
+        "A salesperson sells you the dream.",
+        "An account manager briefs a junior designer.",
+        "The junior produces something average.",
+        "You revise three times.",
+        "The account manager bills you for the back-and-forth."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Repeat every month."
     },
     {
       "type": "p",
