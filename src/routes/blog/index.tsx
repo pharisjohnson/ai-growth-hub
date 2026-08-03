@@ -10,7 +10,7 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:title", content: "Blog · Noon Studio Africa · Nairobi" },
       { property: "og:description", content: "Web design, AI marketing, and branding insights from Nairobi for East African businesses." },
     ],
-    links: [{ rel: "canonical", href: "https://www.noonstudio.africa/blog" }],
+    links: [{ rel: "canonical", href: "https://noonstudio.africa/blog" }],
   }),
   component: BlogIndex,
 });

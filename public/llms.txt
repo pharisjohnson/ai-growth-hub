@@ -1,0 +1,37 @@
+# Noon Studio Africa
+
+> Nairobi-based web design, branding, and AI marketing studio for East African SMEs. We build websites, brands, and AI-powered marketing systems that earn their keep.
+
+Noon Studio Africa is a boutique studio in Nairobi, Kenya. We help small and medium businesses across East Africa win customers online with websites, branding, AI automation, SEO, and digital marketing. Our promise: design and marketing you can measure in shillings, not compliments.
+
+## Key pages
+
+- [Home](https://noonstudio.africa/)
+- [Services: Web Design, AI & Marketing](https://noonstudio.africa/services)
+- [Work / Portfolio](https://noonstudio.africa/work)
+- [Pricing](https://noonstudio.africa/pricing)
+- [About](https://noonstudio.africa/about)
+- [Blog](https://noonstudio.africa/blog)
+- [Contact](https://noonstudio.africa/contact)
+
+## Blog
+
+- [AI Marketing for East African Businesses: A Practical Guide](https://noonstudio.africa/blog/ai-marketing-east-african-businesses)
+- [How Much Does a Website Cost in Kenya? (2026 Guide)](https://noonstudio.africa/blog/how-much-website-cost-kenya)
+- [How to Pick a Web Design Partner Without Getting Ripped Off](https://noonstudio.africa/blog/how-to-pick-a-web-design-partner)
+- [Web Design in Nairobi: What to Look for in a Design Studio (2026)](https://noonstudio.africa/blog/web-design-nairobi-kenya)
+
+## Services
+
+- Web design & development (Next.js, modern, mobile-first, fast)
+- Brand identity & logo design
+- AI automation (chatbots, workflows, content systems)
+- SEO & search marketing
+- Social media marketing
+- Digital marketing strategy
+
+## Contact
+
+- Email: matata@noonstudio.africa
+- Phone: +254 740 824 474
+- Location: Nairobi, Kenya

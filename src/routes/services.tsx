@@ -8,6 +8,7 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Services — Web, Brand, AI & Marketing · Noon Studio Africa" },
       { property: "og:description", content: "Everything you need to grow online, in one place: web design, AI automation, branding, marketing, SEO, and social media." },
     ],
+    links: [{ rel: "canonical", href: "https://noonstudio.africa/services" }],
   }),
   component: Services,
 });

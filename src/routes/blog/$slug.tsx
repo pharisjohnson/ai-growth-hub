@@ -30,7 +30,7 @@ export const Route = createFileRoute("/blog/$slug")({
           ...(post.author ? { author: { "@type": "Organization", name: post.author } } : {}),
           publisher: { "@type": "Organization", name: "Noon Studio Africa" },
           ...(post.image ? { image: post.image } : {}),
-          mainEntityOfPage: `https://www.noonstudio.africa/blog/${post.slug}`,
+          mainEntityOfPage: `https://noonstudio.africa/blog/${post.slug}`,
         }
       : null;
     return {
@@ -48,7 +48,7 @@ export const Route = createFileRoute("/blog/$slug")({
           : []),
       ],
       links: post
-        ? [{ rel: "canonical", href: `https://www.noonstudio.africa/blog/${post.slug}` }]
+        ? [{ rel: "canonical", href: `https://noonstudio.africa/blog/${post.slug}` }]
         : [],
       scripts: [
         ...(articleSchema ? [{ type: "application/ld+json", children: JSON.stringify(articleSchema) }] : []),
@@ -220,7 +220,7 @@ function renderContent(blocks: ContentBlock[]) {
 }
 
 function ShareButtons({ slug, title }: { slug: string; title: string }) {
-  const url = `https://www.noonstudio.africa/blog/${slug}`;
+  const url = `https://noonstudio.africa/blog/${slug}`;
   const encoded = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);
   const links = [

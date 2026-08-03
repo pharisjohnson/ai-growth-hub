@@ -13,6 +13,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image:height", content: "630" },
       { name: "twitter:image", content: "https://noonstudio.africa/og-image.png" },
     ],
+    links: [{ rel: "canonical", href: "https://noonstudio.africa/" }],
   }),
   component: Home,
 });
