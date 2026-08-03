@@ -4,9 +4,9 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Web Design, AI & Marketing Services · Noon Studio Africa · Nairobi" },
-      { name: "description", content: "Nairobi web design, AI automation, and digital marketing services. Branding, SEO, social media, and more — one senior-led studio in Kenya." },
+      { name: "description", content: "Websites, branding, AI automation, SEO, social media and digital marketing for Kenyan SMEs. Everything you need to win customers online, from one small team in Nairobi." },
       { property: "og:title", content: "Services — Web, Brand, AI & Marketing · Noon Studio Africa" },
-      { property: "og:description", content: "Six integrated capabilities from Nairobi: web design, AI automation, branding, marketing, SEO, and social media." },
+      { property: "og:description", content: "Everything you need to grow online, in one place: web design, AI automation, branding, marketing, SEO, and social media." },
     ],
   }),
   component: Services,
@@ -28,7 +28,7 @@ const services = [
   {
     n: "03",
     title: "Digital Marketing",
-    body: "Strategic campaigns across paid search, display, email and funnels — engineered around measurable ROI and clean attribution.",
+    body: "Strategic campaigns across paid search, display, email and funnels, engineered around measurable ROI and clean attribution.",
     bullets: ["Google & Meta Ads", "Email marketing & funnels", "Landing-page CRO", "Analytics & reporting"],
   },
   {
@@ -40,7 +40,7 @@ const services = [
   {
     n: "05",
     title: "Social Media Management",
-    body: "Full-service management — strategy, content creation, scheduling, community engagement and performance reporting.",
+    body: "Full-service management: strategy, content creation, scheduling, community engagement and performance reporting.",
     bullets: ["Content strategy", "Creative production", "Community management", "Monthly reporting"],
   },
   {
@@ -58,10 +58,11 @@ function Services() {
         <div className="container-page py-20 md:py-28">
           <p className="mono-label">// Services</p>
           <h1 className="display text-5xl md:text-7xl mt-6 text-ink max-w-4xl">
-            Everything you need to grow online — under one roof.
+            Everything you need to win customers online, under one roof.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Most agencies do one thing. We bring strategy, design, marketing and AI together so the work actually compounds.
+            Most agencies do one thing and hand you off to someone else. We bring strategy, design,
+            marketing and AI together so the work compounds, and you always deal with the people doing it.
           </p>
         </div>
       </section>
@@ -93,7 +94,7 @@ function Services() {
       <section className="border-t hairline bg-surface">
         <div className="container-page py-20 text-center">
           <h2 className="display text-3xl md:text-5xl text-ink">Need a custom mix?</h2>
-          <p className="mt-4 text-muted-foreground">Most engagements combine 2–3 services. Tell us the goal — we'll suggest the shape.</p>
+          <p className="mt-4 text-muted-foreground">Most engagements combine 2-3 services. Tell us the goal and we'll suggest the shape.</p>
           <Link to="/contact" className="btn-primary mt-8">Brief us →</Link>
         </div>
       </section>

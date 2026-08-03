@@ -3,10 +3,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Nairobi Web Design & AI Marketing Studio · Noon Studio Africa" },
-      { name: "description", content: "Noon Studio Africa is a senior-led web design and AI marketing consultancy in Nairobi, Kenya. We help African businesses grow online with websites, branding, and AI." },
+      { title: "About — Websites, Branding & AI Marketing · Noon Studio Africa" },
+      { name: "description", content: "Noon Studio Africa is a Nairobi studio helping SMEs and entrepreneurs across East Africa win customers online. Websites, branding, and AI marketing, built by the people you talk to." },
       { property: "og:title", content: "About · Noon Studio Africa · Nairobi, Kenya" },
-      { property: "og:description", content: "Senior-led web design and AI marketing consultancy based in Nairobi, Kenya serving East Africa." },
+      { property: "og:description", content: "Websites, branding and AI marketing for East African businesses that want customers, not brochures." },
     ],
   }),
   component: About,
@@ -22,7 +22,7 @@ function About() {
           </div>
           <div className="md:col-span-8">
             <h1 className="display text-4xl md:text-6xl text-ink">
-              We help African businesses look — and operate — like the best in the world.
+              We help small businesses win customers online, without the agency runaround.
             </h1>
           </div>
         </div>
@@ -32,23 +32,22 @@ function About() {
         <div className="md:col-span-4 space-y-6">
           <p className="mono-label">Mission</p>
           <p className="text-lg text-ink display">
-            To empower businesses across Africa with world-class digital tools, creative branding and AI-driven marketing that drive real outcomes.
+            To give East African small businesses the websites, brands and marketing they need to win customers and grow.
           </p>
           <p className="mono-label pt-6">Vision</p>
           <p className="text-lg text-ink display">
-            To be the leading creative and AI-native studio in East Africa.
+            To be the most trusted digital partner for SMEs across East Africa.
           </p>
         </div>
         <div className="md:col-span-8 space-y-6 text-muted-foreground leading-relaxed">
           <p>
-            Noon Studio Africa is a Nairobi-based marketing consultancy specialising in web design, digital marketing,
-            branding, social media management, SEO and AI automation. Founded as a sole proprietorship, we work with
-            clients across Kenya and the broader East African region.
+            Noon Studio Africa is a Nairobi-based studio helping small and growing businesses win customers online.
+            We build websites, brands, social media, SEO and AI automation, all in one place, so you don't need
+            four different vendors to get the job done.
           </p>
           <p>
-            We combine creative excellence with strategic thinking and modern tooling — delivering work that is
-            visually impactful, technically rigorous, and commercially effective. No bloated teams, no
-            account-management theatre. Just senior people doing the work.
+            No bloated teams. No account-manager theatre. You work directly with the people building your
+            website, and you always know what you are paying for and why.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-px bg-hairline border hairline mt-10">

@@ -4,10 +4,10 @@ import heroPortrait from "@/assets/hero-portrait.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Noon Studio Africa — Nairobi Web Design & AI Marketing Agency" },
-      { name: "description", content: "Nairobi web design and AI marketing agency. We build websites, branding, and AI automations for businesses across Kenya and East Africa." },
-      { property: "og:title", content: "Noon Studio Africa — Nairobi Web Design & AI Marketing" },
-      { property: "og:description", content: "Nairobi-based web design, branding, and AI marketing agency serving Kenya and East Africa." },
+      { title: "Noon Studio Africa — Websites, Branding & AI Marketing for Kenyan SMEs" },
+      { name: "description", content: "Websites, branding and AI marketing built to earn their keep. Noon Studio Africa helps SMEs and entrepreneurs across East Africa win customers online. No jargon, no runaround." },
+      { property: "og:title", content: "Noon Studio Africa — Built to Earn Its Keep" },
+      { property: "og:description", content: "Websites, branding and AI marketing for East African businesses that want customers, not brochures." },
       { property: "og:image", content: "https://noonstudio.africa/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -18,11 +18,11 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { n: "01", title: "Web Design & Development", body: "Custom, responsive sites and e-commerce built to convert — from landing pages to full platforms." },
+  { n: "01", title: "Web Design & Development", body: "Custom, responsive sites and e-commerce built to convert, from landing pages to full platforms." },
   { n: "02", title: "AI Automation", body: "Custom GPTs, chatbots, lead-routing and workflow automations that replace busywork." },
   { n: "03", title: "Digital Marketing", body: "Paid search, display, and email funnels engineered around measurable ROI." },
   { n: "04", title: "Branding & Graphics", body: "Logos, identity systems and collateral that hold up across every touchpoint." },
-  { n: "05", title: "Social Media", body: "Strategy, content, scheduling, community and reporting — handled end to end." },
+  { n: "05", title: "Social Media", body: "Strategy, content, scheduling, community and reporting, handled end to end." },
   { n: "06", title: "SEO & Content", body: "Technical audits, keyword strategy and content that grows organic visibility." },
 ];
 
@@ -51,11 +51,12 @@ function Home() {
               </div>
               <h1 className="display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-ink">
                 Websites, branding &<br />
-                <span className="italic text-accent">AI marketing</span> for African businesses.
+                <span className="italic text-accent">AI marketing</span> built to earn their keep.
               </h1>
               <p className="mt-8 max-w-xl text-lg text-muted-foreground">
-                We design, build, and automate — so you don't need four agencies to get a site that converts,
-                a brand that holds up, and marketing that compounds. One small team. Senior work only.
+                You talk directly to the people doing the work. No account managers, no junior
+                handoffs, no jargon. Just a website that brings in customers and marketing that
+                pays for itself.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-3">
                 <Link to="/contact" className="btn-primary">Start a project <span aria-hidden>→</span></Link>
@@ -86,7 +87,7 @@ function Home() {
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 border-t hairline pt-10">
             {[
               ["6", "Service lines"],
-              ["100%", "Senior-led"],
+              ["100%", "In-house, no handoffs"],
               ["50+", "Projects delivered"],
               ["EAC", "Regional reach"],
             ].map(([k, v]) => (

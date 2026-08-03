@@ -18,7 +18,7 @@ const tiers = [
     price: "From KES 120k",
     usd: "≈ $800",
     tag: "One-off",
-    body: "A focused starter project — perfect for new brands or single-page launches.",
+    body: "A focused starter project, perfect for new brands or single-page launches.",
     features: ["Up to 5-page website", "Brand starter kit", "Basic SEO setup", "Analytics & forms", "30-day post-launch support"],
     cta: "Start small",
   },
@@ -53,7 +53,7 @@ function Pricing() {
             Fair pricing, no surprises.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Indicative packages — every engagement is scoped to your goals. Most clients combine a project with an ongoing retainer.
+            Indicative packages. Every engagement is scoped to your goals, and most clients combine a project with an ongoing retainer.
           </p>
         </div>
       </section>
@@ -100,7 +100,7 @@ function Pricing() {
         </div>
 
         <p className="mt-10 text-center text-sm text-muted-foreground">
-          Need something custom? <Link to="/contact" className="text-accent underline underline-offset-4">Brief us</Link> — we'll come back with a tailored proposal.
+          Need something custom? <Link to="/contact" className="text-accent underline underline-offset-4">Brief us</Link> and we'll come back with a tailored proposal.
         </p>
 
         <div className="mt-16 max-w-2xl mx-auto text-center border-t hairline pt-10">

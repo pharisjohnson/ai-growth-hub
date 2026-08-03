@@ -1,4 +1,11 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".vercel/output"
+  "outputDirectory": ".vercel/output",
+  "redirects": [
+    {
+      "source": "/blog/why-senior-led-studio-beats-agency",
+      "destination": "/blog/how-to-pick-a-web-design-partner",
+      "permanent": true
+    }
+  ]
 }
