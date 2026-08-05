@@ -5,10 +5,10 @@
   "tag": "SEO",
   "date": "2026-08-03",
   "readTime": "6 min read",
-  "published": false,
+  "published": true,
   "author": "Noon Studio Africa",
   "image": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "preview": true,
+  "preview": false,
   "content": [
     {
       "type": "p",
