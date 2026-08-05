@@ -7,7 +7,7 @@
   "readTime": "6 min read",
   "published": false,
   "author": "Noon Studio Africa",
-  "image": "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "image": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200",
   "preview": true,
   "content": [
     {
@@ -200,7 +200,7 @@
     },
     {
       "type": "p",
-      "text": "This week we ran the full setup on our own site, and it took under an hour. First we resolved a domain verification issue: the Vercel project lacked the correct DNS TXT records for noonstudio.africa and www.noonstudio.africa, leaving both domains unverified and returning 404. Using the Vercel API and a Cloudflare user token, we added the missing verification TXT records, then confirmed both domains were verified. We then set the apex domain as primary (no redirect) and configured www to redirect to the apex with a 308 status. After that, every page and the sitemap now use noonstudio.africa as the canonical domain, with the www version redirecting to it. Mixed domains split your SEO between two addresses, and that quietly costs you rankings."
+      "text": "This week we ran the full setup on our own site, and it took under an hour. First we resolved a domain verification issue: the Vercel project lacked the correct DNS TXT records for noonstudio.africa and www.noonstudio.africa, leaving both domains unverified and returning 404. We added the missing verification TXT records via the Vercel API, then confirmed both domains were verified. We then set the apex domain as primary (no redirect) and configured www to redirect to the apex with a 308 status. After that, every page and the sitemap now use noonstudio.africa as the canonical domain, with the www version redirecting to it. Mixed domains split your SEO between two addresses, and that quietly costs you rankings."
     },
     {
       "type": "p",
