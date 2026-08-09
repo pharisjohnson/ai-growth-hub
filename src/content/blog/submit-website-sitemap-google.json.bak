@@ -1,0 +1,299 @@
+{
+  "slug": "submit-website-sitemap-google",
+  "title": "How to Submit Your Website to Google, Bing and AI: The Sitemap Guide",
+  "excerpt": "A sitemap tells Google, Bing and AI crawlers exactly which pages exist on your website. This guide shows how to submit one, why it matters for Kenyan businesses, and what changed now that AI models read your site too.",
+  "tag": "SEO",
+  "date": "2026-08-03",
+  "readTime": "6 min read",
+  "published": false,
+  "author": "Noon Studio Africa",
+  "image": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "preview": true,
+  "content": [
+    {
+      "type": "p",
+      "text": "You built a website, wrote honest copy, and made it look sharp on a phone. Then you waited for customers to find you on Google. Weeks passed. The phone stayed quiet."
+    },
+    {
+      "type": "p",
+      "text": "The problem is usually not your website. It is that Google never got a clear map of it."
+    },
+    {
+      "type": "p",
+      "text": "A sitemap is that map. It is a simple file that lists every page you want found. Search engines read it to discover pages they would otherwise miss, and to understand which pages matter most. Without one, Google has to stumble onto your content through links alone, and that takes time you do not have."
+    },
+    {
+      "type": "p",
+      "text": "We recently ran this exact process for noonstudio.africa. We generated the sitemap, submitted it to Google Search Console, pinged Bing through IndexNow, and added an llms.txt file so AI tools like ChatGPT and Perplexity can cite us. This guide walks through the whole process, in plain language, with the exact steps."
+    },
+    {
+      "type": "p",
+      "text": "If you run a business in Kenya, this matters more than you think. Local customers search on Google, but a growing number ask AI assistants first. Both need to know your site exists. A sitemap is the cheapest visibility insurance you will ever buy."
+    },
+    {
+      "type": "takeaways",
+      "items": [
+        "A sitemap tells search engines and AI crawlers which pages exist on your site.",
+        "Submit it in Google Search Console once, and new pages get picked up automatically.",
+        "IndexNow gives you instant indexing on Bing, Yandex and Seznam instead of waiting weeks.",
+        "An llms.txt file makes your site visible to AI assistants like ChatGPT and Perplexity.",
+        "The whole setup takes about an hour and needs no technical degree."
+      ]
+    },
+    {
+      "type": "link",
+      "text": "A sitemap only helps if the website underneath it is solid. See what a well-built site looks like in 2026.",
+      "href": "/blog/web-design-nairobi-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "h2",
+      "text": "What a sitemap actually is"
+    },
+    {
+      "type": "p",
+      "text": "A sitemap is an XML file, usually called sitemap.xml, sitting in the root of your website. It lists your pages and blog posts, along with a few extra details per page: when it was last updated, how important it is, and how often it changes."
+    },
+    {
+      "type": "p",
+      "text": "Think of it like a menu handed to a waiter. Without the menu, the kitchen learns your dishes by watching what other tables order, slowly and by accident. With the menu, every dish is known the moment the kitchen opens."
+    },
+    {
+      "type": "p",
+      "text": "Google has said for years that sitemaps do not guarantee better rankings. That is true. What they do guarantee is faster discovery. A new blog post can be indexed in hours instead of weeks, and pages buried two clicks deep finally get seen."
+    },
+    {
+      "type": "p",
+      "text": "For a small business site, one sitemap covering everything is the right size. You do not need image sitemaps, video sitemaps or news sitemaps until you grow well past where most Kenyan SMEs operate."
+    },
+    {
+      "type": "h2",
+      "text": "Why this changed: AI crawlers now read your site"
+    },
+    {
+      "type": "p",
+      "text": "For twenty years, the only readers that mattered were Googlebot and Bingbot. That changed. AI companies now run their own crawlers: GPTBot from OpenAI, ClaudeBot from Anthropic, PerplexityBot from Perplexity, and Google-Extended from Google itself."
+    },
+    {
+      "type": "p",
+      "text": "These crawlers read websites to train models and to answer questions. When a customer asks an AI assistant which web designer in Nairobi is worth hiring, the assistant pulls from sites it has read. If your site is invisible to those crawlers, you lose the answer to every AI question in your industry."
+    },
+    {
+      "type": "p",
+      "text": "The good news: the same sitemap that helps Google helps them. Most AI crawlers read robots.txt and follow sitemaps. Many also read a newer file called llms.txt, a plain-text index designed specifically for AI tools."
+    },
+    {
+      "type": "note",
+      "text": "Quick reality check: AI citations are not a ranking hack. They are a presence play. You want to be in the set of sites an AI assistant can even consider, and a sitemap plus llms.txt puts you there."
+    },
+    {
+      "type": "h2",
+      "text": "Step 1: Generate your sitemap"
+    },
+    {
+      "type": "p",
+      "text": "If you use a modern website builder, a sitemap probably already exists. WordPress sites have plugins for it. Next.js and Astro sites can generate one at build time. Most hosting platforms such as Vercel and Netlify expose it automatically."
+    },
+    {
+      "type": "p",
+      "text": "Check yours first. Open a browser and visit yoursite.com/sitemap.xml. If you see XML with a list of URLs, you are already halfway there. If you get a 404, your developer can add a small script that regenerates the sitemap every time the site is rebuilt."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Every public page should be in the list: home, services, pricing, about, contact.",
+        "Blog posts should be included only once they are published.",
+        "Do not list draft pages or pages you want to keep private.",
+        "Use your primary domain consistently. Pick one version and redirect the other."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Step 2: Submit to Google Search Console"
+    },
+    {
+      "type": "p",
+      "text": "Google Search Console is Google's free dashboard for your site. It shows which pages Google has indexed, which queries bring visitors, and whether anything is broken. Every business owner with a website should have it set up."
+    },
+    {
+      "type": "p",
+      "text": "First, verify you own the site. Log in at search.google.com/search-console with a Google account, add your domain, and prove ownership. Google offers several ways: a DNS record at your domain registrar, an HTML tag in your site code, or a file uploaded to your server. Pick whichever is easiest with your hosting setup."
+    },
+    {
+      "type": "p",
+      "text": "Once verified, open Sitemaps in the left menu, paste your sitemap URL, and click Submit. Google fetches it within hours and shows you exactly how many URLs were accepted. You should see zero errors and a full count of your pages."
+    },
+    {
+      "type": "p",
+      "text": "You only submit once. After that, Google re-reads the file on its own schedule, so new posts get discovered without any extra clicks from you."
+    },
+    {
+      "type": "h2",
+      "text": "Step 3: Ping Bing instantly with IndexNow"
+    },
+    {
+      "type": "p",
+      "text": "Google crawls on its own schedule. Bing, Yandex and Seznam support something faster: IndexNow. It is a simple service where you tell the search engine, right now, that a page was added or updated, and it crawls within minutes."
+    },
+    {
+      "type": "p",
+      "text": "IndexNow works with a key. You generate a random key, host it as a small file on your site, and then send a list of URLs to the IndexNow API whenever content changes. The key proves you control the site."
+    },
+    {
+      "type": "p",
+      "text": "This is a two-minute setup that saves weeks of waiting, especially if you publish blog posts regularly. It is free, and it covers three search engines with one call. We run it automatically after every new Noon Studio post goes live."
+    },
+    {
+      "type": "h2",
+      "text": "Step 4: Add llms.txt for AI assistants"
+    },
+    {
+      "type": "p",
+      "text": "llms.txt is a new, plain-text file that sits at the root of your site, like robots.txt. It gives AI crawlers a clean summary of your business and a list of your most important pages. Think of it as the elevator pitch version of your sitemap, written for machines."
+    },
+    {
+      "type": "p",
+      "text": "A good llms.txt has three parts: one line about who you are, a short description of what you offer, and a list of key pages with one-line labels. Keep it under a few hundred words. AI models are more likely to read a short, clean file than a sprawling one."
+    },
+    {
+      "type": "p",
+      "text": "This does not replace the sitemap. It complements it. The sitemap is the complete map; llms.txt is the curated summary. Both together tell AI tools you exist, what you do, and which pages answer which questions."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Channel",
+        "File or tool",
+        "What it does",
+        "How often"
+      ],
+      "rows": [
+        [
+          "Google",
+          "sitemap.xml + Search Console",
+          "Full map of your pages",
+          "Regenerates on every build"
+        ],
+        [
+          "Bing, Yandex, Seznam",
+          "IndexNow",
+          "Instant crawl notifications",
+          "Every new or edited page"
+        ],
+        [
+          "AI assistants",
+          "llms.txt + robots.txt",
+          "Curated summary for AI crawlers",
+          "When key pages change"
+        ],
+        [
+          "All crawlers",
+          "robots.txt",
+          "Rules for who can crawl",
+          "Rarely"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What we did for noonstudio.africa"
+    },
+    {
+      "type": "p",
+      "text": "This week we ran the full setup on our own site, and it took under an hour. First we resolved a domain verification issue: the Vercel project lacked the correct DNS TXT records for noonstudio.africa and www.noonstudio.africa, leaving both domains unverified and returning 404. We added the missing verification TXT records via the Vercel API, then confirmed both domains were verified. We then set the apex domain as primary (no redirect) and configured www to redirect to the apex with a 308 status. After that, every page and the sitemap now use noonstudio.africa as the canonical domain, with the www version redirecting to it. Mixed domains split your SEO between two addresses, and that quietly costs you rankings."
+    },
+    {
+      "type": "p",
+      "text": "Then we added canonical tags to every page. A canonical tag tells Google the official version of a page, which matters when the same content could appear under slightly different URLs. We regenerated the sitemap, which now lists eleven URLs: seven main pages and four published articles."
+    },
+    {
+      "type": "p",
+      "text": "We verified the domain in Google Search Console and submitted the sitemap. Google downloaded it within two seconds and reported zero errors. We also removed two old sitemap entries left over from the previous version of the site, so nothing confuses the crawler."
+    },
+    {
+      "type": "p",
+      "text": "Finally, we set up IndexNow with a hosted key file, pinged Bing with all eleven URLs, and added llms.txt plus a robots.txt that welcomes AI crawlers. The result: Google has the map, Bing got an instant notification, and AI assistants can read a clean summary of our business."
+    },
+    {
+      "type": "h2",
+      "text": "Common mistakes to avoid"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Submitting draft pages. Unpublished drafts in your sitemap confuse crawlers. Only list live content.",
+        "Mixing www and non-www. Pick one domain, redirect the other, and use the same one everywhere.",
+        "Forgetting robots.txt. If your robots file blocks a crawler, the sitemap does not help that crawler.",
+        "Never updating the sitemap. A stale map is as bad as no map. Regenerate it on every deploy.",
+        "Skipping Search Console entirely. The sitemap is half the job; the dashboard shows you whether it worked."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "How long until you see results"
+    },
+    {
+      "type": "p",
+      "text": "Indexing is not instant. Google usually processes a new sitemap within a few days, and full indexing of all pages can take one to three weeks for a small site. IndexNow on Bing is faster, often minutes to hours. Do not judge the setup by tomorrow's rankings; judge it by Search Console's coverage report, which shows indexed pages climbing week by week."
+    },
+    {
+      "type": "p",
+      "text": "The honest expectation: a sitemap does not make a weak site rank. It makes a good site visible. Combined with solid content, a fast website and genuine customer proof, it removes the biggest silent reason Kenyan businesses stay invisible online: nobody ever told Google the site existed."
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "Is a sitemap required for my website to appear on Google?",
+          "a": "No. Google can find pages through links alone. But for a small business site, a sitemap dramatically speeds up discovery of new pages and posts, and it costs nothing to set up. Most sites without one wait far longer to get indexed."
+        },
+        {
+          "q": "How much does it cost to submit a sitemap?",
+          "a": "Nothing. Google Search Console, Bing Webmaster Tools and IndexNow are all free. If your developer charges for this, you are paying for their time, not for the service itself. A competent developer can do it in under an hour."
+        },
+        {
+          "q": "Do AI tools like ChatGPT really read sitemaps?",
+          "a": "They read robots.txt and llms.txt, and many follow sitemaps. The llms.txt file is the most direct path: it gives AI crawlers a clean summary of your business in a format designed for them. Both are worth having."
+        },
+        {
+          "q": "Should I submit the sitemap again after publishing a new blog post?",
+          "a": "Not manually. Search engines re-read the sitemap on their own schedule. If you want a nudge, IndexNow can notify Bing instantly. The important part is that the sitemap regenerates automatically whenever the site builds."
+        },
+        {
+          "q": "What if my site is on www and my sitemap says the other version?",
+          "a": "That mismatch is a common silent problem. Make every link in the sitemap, canonicals and internal links use the same domain, and redirect the other version to it. Google treats the two as separate sites until you tell it otherwise."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Start with the map"
+    },
+    {
+      "type": "p",
+      "text": "Your website is one of the few business assets that works while you sleep. But it only works if the world knows it exists. A sitemap, a Search Console verification, an IndexNow key and an llms.txt file together take about an hour and cost nothing. That is the cheapest marketing infrastructure a Kenyan business can own."
+    },
+    {
+      "type": "p",
+      "text": "If you would rather spend that hour running your business, this is exactly the kind of setup we handle at Noon Studio. We build the site, map it for search engines, and make sure AI assistants can find it too. The phone starts ringing either way."
+    },
+    {
+      "type": "link",
+      "text": "SEO is a system, not a one-off task. Here is how ranking actually works in Kenya.",
+      "href": "/blog/seo-services-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "link",
+      "text": "Before you pay anyone for SEO, know what a website should cost.",
+      "href": "/blog/how-much-website-cost-kenya",
+      "label": "Related reading"
+    },
+    {
+      "type": "link",
+      "text": "Picking the right partner matters. Here is how to choose without getting ripped off.",
+      "href": "/blog/how-to-pick-a-web-design-partner",
+      "label": "Related reading"
+    }
+  ]
+}
