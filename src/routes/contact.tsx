@@ -10,45 +10,31 @@ const contactSchema = z.object({
   message: z.string().min(1, "Message is required"),
   budget: z.string().optional(),
   services: z.array(z.string()).optional(),
+  // Honeypot field - hidden from users, filled by bots
+  website: z.string().optional(),
 });
 
-const sendContactEmail = createServerFn({ method: "POST" })
+const submitLead = createServerFn({ method: "POST" })
   .inputValidator(contactSchema)
-  .handler(async ({ data }) => {
-    const { Resend } = await import("resend");
-    const resend = new Resend(process.env.RESEND_API_KEY);
-
-    const { name, email, company, message, budget, services } = data;
-    const servicesText = services && services.length > 0 ? services.join(", ") : "Not specified";
-
-    const { error } = await resend.emails.send({
-      from: "Noon Studio Africa <contact@noonstudio.africa>",
-      to: ["matata@noonstudio.africa"],
-      subject: `New project enquiry — ${company || name}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333;">New Project Enquiry</h2>
-          <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            ${company ? `<p><strong>Company:</strong> ${company}</p>` : ""}
-            ${budget ? `<p><strong>Budget:</strong> ${budget}</p>` : ""}
-            <p><strong>Services:</strong> ${servicesText}</p>
-          </div>
-          <div style="background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
-            <h3>Message:</h3>
-            <p style="white-space: pre-wrap;">${message}</p>
-          </div>
-        </div>
-      `,
-    });
-
-    if (error) {
-      console.error("Resend error:", error);
-      throw new Error("Failed to send email");
+  .handler(async ({ data, context }) => {
+    // Import the lead capture service
+    const { create_lead_capture_service } = await import("@/lib/integrations/airtable_leads");
+    
+    // Extract client info from request context
+    const request = context.request;
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() 
+      || request.headers.get("x-real-ip") 
+      || "unknown";
+    const userAgent = request.headers.get("user-agent") || "unknown";
+    
+    const service = create_lead_capture_service();
+    const result = service.process_lead(data, ip, userAgent);
+    
+    if (!result.success) {
+      throw new Error(result.message);
     }
-
-    return { success: true, message: "Email sent successfully" };
+    
+    return result;
   });
 
 export const Route = createFileRoute("/contact")({
@@ -70,7 +56,7 @@ function Contact() {
   const [selected, setSelected] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
-  const sendContactEmailFn = useServerFn(sendContactEmail);
+  const submitLeadFn = useServerFn(submitLead);
 
   const toggle = (i: string) =>
     setSelected((s) => (s.includes(i) ? s.filter((x) => x !== i) : [...s, i]));
@@ -88,16 +74,24 @@ function Contact() {
       message: fd.get("message") as string,
       budget: fd.get("budget") as string,
       services: selected,
+      // Honeypot field - hidden from users
+      website: fd.get("website") as string,
     };
 
     try {
-      await sendContactEmailFn({ data });
-      setSubmitStatus({ type: 'success', message: 'Thank you! We\'ll get back to you within one business day.' });
+      const result = await submitLeadFn({ data });
+      setSubmitStatus({ 
+        type: 'success', 
+        message: result.message 
+      });
       // Reset form
       (e.target as HTMLFormElement).reset();
       setSelected([]);
     } catch (error) {
-      setSubmitStatus({ type: 'error', message: 'Something went wrong. Please try again.' });
+      setSubmitStatus({ 
+        type: 'error', 
+        message: error instanceof Error ? error.message : 'Something went wrong. Please try again.' 
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -127,7 +121,7 @@ function Contact() {
           </div>
           <div>
             <p className="mono-label mb-2">Phone</p>
-            <a href="tel:+254740824474" className="text-lg display text-ink hover:text-accent">
+            <a href="tel:+254****4474" className="text-lg display text-ink hover:text-accent">
               +254 740 824 474
             </a>
           </div>
@@ -139,7 +133,6 @@ function Contact() {
         </div>
 
         <form onSubmit={onSubmit} className="md:col-span-8 space-y-8">
-
           <div className="grid sm:grid-cols-2 gap-6">
             <Field label="Your name" name="name" required />
             <Field label="Company" name="company" />
@@ -177,6 +170,12 @@ function Contact() {
               className="w-full bg-transparent border-b hairline py-3 text-base focus:outline-none focus:border-accent transition resize-none"
               placeholder="Goals, timeline, anything you want us to know…"
             />
+          </div>
+
+          {/* Honeypot field - hidden from users via CSS */}
+          <div style={{ display: "none" }} aria-hidden="true">
+            <label htmlFor="website">Website (leave blank)</label>
+            <input type="text" name="website" id="website" tabIndex={-1} autoComplete="off" />
           </div>
 
           <button type="submit" className="btn-primary" disabled={isSubmitting}>
