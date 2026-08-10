@@ -37,22 +37,22 @@ class LeadData:
             self.timestamp = datetime.utcnow().isoformat() + "Z"
 
     def to_airtable_record(self) -> dict:
-        """Convert to Airtable record format"""
+        """Convert to Airtable record format - uses all structured fields"""
         services_text = ", ".join(self.services) if self.services else "Not specified"
-        # Build a detailed text field that works even if structured fields don't exist
-        details = f"""Name: {self.name}
-Email: {self.email}
-Company: {self.company or 'N/A'}
-Budget: {self.budget or 'N/A'}
-Services: {services_text}
-Message: {self.message}
-IP: {self.ip or 'N/A'}
-User Agent: {self.user_agent or 'N/A'}
-Submitted At: {self.timestamp}
-"""
         return {
+            "Name": self.name,
+            "Email": self.email,
+            "Company": self.company or "",
+            "Budget": self.budget or "",
+            "Services": services_text,
+            "Message": self.message[:1000],
+            "IP": self.ip or "",
+            "User Agent": self.user_agent or "",
             "Status": "NEW",
-            "Notes": details,
+            "Spam Reasons": "",
+            "Submitted At": self.timestamp,
+            "Follow-up Date": "",
+            "Notes": "",
         }
 
 
@@ -173,21 +173,31 @@ class AirtableLeadStore:
         return self._airtable
     
     def store_lead(self, lead: LeadData, is_spam: bool = False, spam_reasons: list = None) -> bool:
-        """Store lead in Airtable"""
-        try:
-            airtable = self._get_airtable()
+            """Store lead in Airtable - gracefully handles missing fields"""
+            try:
+                airtable = self._get_airtable()
             
-            record = lead.to_airtable_record()
-            record["Status"] = "SPAM" if is_spam else "NEW"
-            if spam_reasons:
-                record["Notes"] += f"\n\nSpam Reasons: {'; '.join(spam_reasons)}"
+                record = lead.to_airtable_record()
+                record["Status"] = "SPAM" if is_spam else "NEW"
+                if spam_reasons:
+                    record["Spam Reasons"] = "; ".join(spam_reasons)
             
-            airtable.insert(record)
-            return True
+                airtable.insert(record)
+                return True
             
-        except Exception as e:
-            print(f"Error storing lead in Airtable: {e}")
-            return False
+            except Exception as e:
+                print(f"Error storing lead in Airtable: {e}")
+                # Try with minimal fields if some structured fields don't exist
+                try:
+                    minimal_record = {
+                        "Status": "SPAM" if is_spam else "NEW",
+                        "Notes": f"Name: {lead.name}\nEmail: {lead.email}\nCompany: {lead.company or 'N/A'}\nBudget: {lead.budget or 'N/A'}\nServices: {', '.join(lead.services) if lead.services else 'Not specified'}\nMessage: {lead.message}\nIP: {lead.ip or 'N/A'}\nSubmitted At: {lead.timestamp}" + (f"\n\nSpam Reasons: {'; '.join(spam_reasons)}" if spam_reasons else "")
+                    }
+                    airtable.insert(minimal_record)
+                    return True
+                except Exception as e2:
+                    print(f"Error storing minimal lead: {e2}")
+                    return False
     
     def get_leads(self, status: str = None, limit: int = 100) -> list:
         """Retrieve leads from Airtable"""
