@@ -108,7 +108,8 @@ class SpamProtection {
 }
 
 class LeadCaptureService {
-  private airtable: Airtable | null = null;
+  // Airtable Base is callable: base(tableName).create(...)
+  private airtableBase: ReturnType<Airtable['base']> | null = null;
   private tableName: string;
   private spamProtection: SpamProtection;
 
@@ -120,8 +121,7 @@ class LeadCaptureService {
     const baseId = process.env.AIRTABLE_BASE_ID;
     
     if (apiKey && baseId) {
-      this.airtable = new Airtable({ apiKey });
-      this.airtable.base(baseId);
+      this.airtableBase = new Airtable({ apiKey }).base(baseId);
     }
   }
 
@@ -168,10 +168,10 @@ class LeadCaptureService {
     }
 
     // Try to save to Airtable
-    if (this.airtable) {
+    if (this.airtableBase) {
       try {
         const record = this.toAirtableRecord(enrichedData);
-        await this.airtable(this.tableName).create(record);
+        await this.airtableBase(this.tableName).create(record);
         console.log('[LeadCapture] Lead saved to Airtable:', enrichedData.email);
       } catch (error) {
         console.error('[LeadCapture] Airtable save failed:', error);

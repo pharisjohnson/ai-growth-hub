@@ -16,19 +16,20 @@ const contactSchema = z.object({
 
 const submitLead = createServerFn({ method: "POST" })
   .inputValidator(contactSchema)
-  .handler(async ({ data, context }) => {
+  .handler(async ({ data }) => {
     // Import the lead capture service
-    const { create_lead_capture_service } = await import("@/lib/integrations/airtable_leads");
+    const { createLeadCaptureService } = await import("@/lib/integrations/airtable_leads");
     
-    // Extract client info from request context
-    const request = context.request;
+    // Extract client info from the request
+    const { getRequest } = await import("@tanstack/react-start/server");
+    const request = getRequest();
     const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() 
       || request.headers.get("x-real-ip") 
       || "unknown";
     const userAgent = request.headers.get("user-agent") || "unknown";
     
-    const service = create_lead_capture_service();
-    const result = service.process_lead(data, ip, userAgent);
+    const service = createLeadCaptureService();
+    const result = await service.processLead(data, ip, userAgent);
     
     if (!result.success) {
       throw new Error(result.message);
