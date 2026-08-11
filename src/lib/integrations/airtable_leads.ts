@@ -3,7 +3,7 @@
  * Handles storing leads in Airtable via Personal Access Token with spam protection
  */
 
-import { Airtable } from 'airtable';
+import Airtable from 'airtable';
 
 export interface LeadData {
   name: string;
