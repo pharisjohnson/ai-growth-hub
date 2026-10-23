@@ -191,3 +191,18 @@
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
   }
 }
+
+@keyframes security-banner-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.security-banner-track {
+  animation: security-banner-slide 40s linear infinite;
+}
+.security-banner:hover .security-banner-track,
+.security-banner:focus-within .security-banner-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .security-banner-track { animation: none; }
+}

@@ -1,0 +1,219 @@
+{
+  "slug": "php-hack-kenya-website-owners",
+  "title": "The PHP Hack: What Kenyan Website Owners Need to Do This Week",
+  "excerpt": "Two critical PHP flaws, nicknamed PHP2Shell, let attackers run code on a web server without logging in. Here is how to check your site, fix it on cPanel or a VPS, and what Kenyan law expects if data is exposed.",
+  "tag": "Security",
+  "date": "2026-10-23",
+  "readTime": "8 min read",
+  "published": true,
+  "author": "Noon Studio Africa",
+  "image": "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "preview": false,
+  "content": [
+    {
+      "type": "p",
+      "text": "Two critical flaws in PHP itself, nicknamed PHP2Shell, let an attacker run commands on a web server without logging in. Patches came out on 21 October 2026. If your website runs on PHP, which includes every WordPress site, you need to confirm your host has applied them."
+    },
+    {
+      "type": "takeaways",
+      "items": [
+        "The flaws are CVE-2026-109618 and CVE-2026-109619, rated 9.2 out of 10 for severity.",
+        "No login is needed to exploit them, and the bug is in PHP, not in your website's code.",
+        "Safe versions are PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, or newer.",
+        "Versions 8.1, 8.0 and 7.x are out of support. Move to 8.3 or 8.4.",
+        "Websites that do not use PHP, such as Next.js or plain HTML sites, are not affected by these two flaws."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What happened"
+    },
+    {
+      "type": "p",
+      "text": "PHP's developers fixed two serious bugs in the language engine. One is a memory-corruption bug that appears when PHP runs out of memory. The other is a use-after-free bug linked to state PHP keeps between requests. In both cases an attacker on the internet can send crafted requests and end up running their own code on your server."
+    },
+    {
+      "type": "p",
+      "text": "Because the bug is in PHP and not in your website, a perfectly written and fully updated WordPress site is still exposed until the server's PHP version is fixed. WordPress.org has confirmed no WordPress update is needed. The fix happens on the server."
+    },
+    {
+      "type": "note",
+      "text": "Is it being used in attacks? Reports disagree. The security firm watchTowr says it has seen attacks in the wild. The US agency CISA said on 21 October that it had not seen any at the time it published. Act as if attacks are happening. A site that has been taken over looks normal to visitors, so waiting to see if you are hit is the wrong plan."
+    },
+    {
+      "type": "h2",
+      "text": "Who is at risk"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Any site that runs PHP: WordPress, WooCommerce, Joomla, Drupal, Laravel and custom PHP sites.",
+        "Business sites on shared hosting or cPanel, where your host patches the server and you choose the PHP branch.",
+        "VPS and dedicated server owners, where you control the PHP version and must update it yourself.",
+        "Sites that take M-Pesa, card or customer data. A taken-over server can read all of it."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Step 1: find out which PHP version you run"
+    },
+    {
+      "type": "p",
+      "text": "You need to be on one of these fixed versions, or newer."
+    },
+    {
+      "type": "table",
+      "headers": ["Your PHP branch", "Safe version"],
+      "rows": [
+        ["8.5", "8.5.12 or newer"],
+        ["8.4", "8.4.27 or newer"],
+        ["8.3", "8.3.36 or newer"],
+        ["8.2", "8.2.35 or newer"],
+        ["8.1, 8.0 and 7.x", "No fix listed. These versions are out of support, so move to 8.3 or 8.4."]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "On cPanel, open MultiPHP Manager (some hosts call it Select PHP Version) and read the branch for each domain. cPanel often shows only the branch, such as 8.3, and not the exact number, and a branch can still be unpatched. To see the exact version, ask your host, or upload a file named info.php containing <?php phpinfo(); to your site, open it in a browser, read the version at the top, then delete the file straight away. Leaving it online helps attackers."
+    },
+    {
+      "type": "p",
+      "text": "On a VPS, connect over SSH and run: php -v. If your server runs PHP through PHP-FPM or Apache, the command line version and the website version can differ, so check both."
+    },
+    {
+      "type": "h2",
+      "text": "Step 2: get the fix"
+    },
+    {
+      "type": "p",
+      "text": "Most Kenyan business websites are not on a VPS. They sit on shared hosting with a cPanel login, where the host runs the server and you only choose settings. The fix depends on which of these you have, so start with the one that matches you."
+    },
+    {
+      "type": "h3",
+      "text": "Shared hosting with cPanel (most Kenyan business sites)"
+    },
+    {
+      "type": "p",
+      "text": "On shared hosting you cannot patch PHP yourself. The host does that for the whole server, and what you control is which PHP branch your site uses. Do these four things."
+    },
+    {
+      "type": "ol",
+      "items": [
+        "Check your version. In cPanel, open MultiPHP Manager and note the version next to each domain. Add-on domains and subdomains have their own setting, so check every one.",
+        "Move off old versions. If a domain shows 7.x, 8.0 or 8.1, switch it to 8.3 or 8.4 in the same screen. Take a backup first (Backup or JetBackup in cPanel), then open the site and test the key pages, the contact form and checkout. Old themes and plugins sometimes break on a newer version, so ask your developer before switching a live shop.",
+        "Ask your host to confirm the patch. Send this through support: Have you applied the October 21 PHP security update for CVE-2026-109618 and CVE-2026-109619 on my server? Which PHP versions are patched? Some hosts, including SiteGround and InMotion, switched off the affected functionality before the patch was out. Get the reply in writing.",
+        "Use the cPanel tools you already have. In File Manager, sort public_html and wp-content/uploads by date and look for PHP files you did not add. Under Cron Jobs, delete any entry you do not recognise. Under FTP Accounts and SSH Access, remove accounts nobody uses. If your host offers malware scanning such as Imunify or ImunifyAV, run a full scan."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "If your host will not confirm a patch, that is a reason to ask for a migration to a server that has one, or to change host. Do not leave customer data on a server where nobody can tell you its PHP is fixed. You do not need to rebuild your website to move it."
+    },
+    {
+      "type": "h3",
+      "text": "WordPress on cPanel"
+    },
+    {
+      "type": "p",
+      "text": "Updating WordPress does not fix this, because the PHP fix still comes from the host. While you wait, update WordPress, themes and plugins anyway, delete the ones you do not use, and install a security plugin that does file scanning and login protection. Keep automatic backups on, and send a copy somewhere other than the same hosting account."
+    },
+    {
+      "type": "h3",
+      "text": "VPS or dedicated server"
+    },
+    {
+      "type": "p",
+      "text": "On Ubuntu or Debian, run: sudo apt update && sudo apt upgrade. Then restart PHP and your web server (for example sudo systemctl restart php8.3-fpm nginx, using the service names on your machine) and run php -v again to confirm the new version. On AlmaLinux, Rocky or CentOS, use dnf update and take the PHP update from your PHP repository."
+    },
+    {
+      "type": "h3",
+      "text": "Docker"
+    },
+    {
+      "type": "p",
+      "text": "Updating the host does not update containers. Pull a fresh PHP base image, rebuild your image with docker compose build --pull, then recreate the containers with docker compose up -d."
+    },
+    {
+      "type": "h2",
+      "text": "Step 3: reduce your exposure while you wait"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Put the site behind a web application firewall. Cloudflare's free plan is a reasonable start for most small businesses.",
+        "Turn off any upload or script features you do not use.",
+        "Take a fresh backup and store a copy off the server before changing anything.",
+        "Remove old test sites, abandoned staging copies and unused plugins. Each one is another way in."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Step 4: check whether you were already hit"
+    },
+    {
+      "type": "p",
+      "text": "Attacks may have started before the patch, so patching alone is not enough. Look for the following."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "PHP files you do not recognise in wp-content/uploads, cache folders or the site root.",
+        "New administrator accounts you did not create.",
+        "Pages that redirect visitors to gambling, loan or pharmacy sites, especially when opened from Google.",
+        "Your hosting account suddenly using much more CPU or sending spam.",
+        "Scheduled tasks (cron jobs) you did not set up."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "If anything looks wrong, change your hosting, database, admin and email passwords from a clean device, and restore from a backup taken before the problem began."
+    },
+    {
+      "type": "h2",
+      "text": "The Kenyan angle"
+    },
+    {
+      "type": "p",
+      "text": "If your site stores customer names, phone numbers or order details, the Data Protection Act, 2019 applies to you. If personal data is exposed, the law expects you to notify the Office of the Data Protection Commissioner (ODPC) within 72 hours of becoming aware, and to tell the affected people when there is a real risk to them. Keep a short written record of what you found and when."
+    },
+    {
+      "type": "p",
+      "text": "You can also report the incident to KE-CIRT/CC, the national cyber incident response team run by the Communications Authority of Kenya. Businesses that take M-Pesa or card payments should also tell their payment provider if customer payment data could have been reached."
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "Is my WordPress site affected?",
+          "a": "Only if it runs on a server with an unpatched PHP version. WordPress itself needs no update for this flaw. The fix comes from your host or from updating PHP on your own server."
+        },
+        {
+          "q": "I am on shared hosting. Can I fix this myself?",
+          "a": "You can move your site to a supported PHP branch (8.3 or 8.4) in cPanel, but only your host can apply the server-level patch. Ask them to confirm it in writing."
+        },
+        {
+          "q": "My site is built with Next.js, Webflow or a site builder. Do I need to act?",
+          "a": "These two flaws are in PHP, so sites that do not run PHP are not affected by them. If you also run a PHP blog or shop on a subdomain, check that one."
+        },
+        {
+          "q": "How do I know if my site has already been hacked?",
+          "a": "Look for PHP files you did not upload, unknown admin users, odd redirects from Google, high CPU use and unfamiliar cron jobs. If you are not sure, a security scan from your host or a developer can tell you."
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "text": "Ask Noon Studio Africa to check your site",
+      "href": "/contact",
+      "label": "// Need a hand?"
+    },
+    {
+      "type": "p",
+      "text": "We can find out which PHP version your site runs, confirm your host applied the fix, scan for signs of a break-in, and set up a firewall and regular backups. Send us your website address and we will tell you where you stand."
+    },
+    {
+      "type": "p",
+      "text": "Sources: CISA, CERT-EU, Rapid7, watchTowr, Codeable and SiteGround advisories published between 21 and 23 October 2026. Details may change as the situation develops. This article is general guidance and not legal advice."
+    }
+  ]
+}
