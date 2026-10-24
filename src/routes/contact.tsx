@@ -17,9 +17,8 @@ const contactSchema = z.object({
 const submitLead = createServerFn({ method: "POST" })
   .inputValidator(contactSchema)
   .handler(async ({ data }) => {
-    // Import the lead capture service
-    const { createLeadCaptureService } = await import("@/lib/integrations/airtable_leads");
-    
+    const { processLead } = await import("@/lib/integrations/lead_capture");
+
     // Extract client info from the request
     const { getRequest } = await import("@tanstack/react-start/server");
     const request = getRequest();
@@ -28,11 +27,7 @@ const submitLead = createServerFn({ method: "POST" })
       || "unknown";
     const userAgent = request.headers.get("user-agent") || "unknown";
     
-    // Composio (Google Sheet + Telegram) when configured, otherwise the legacy Airtable path.
-    const { composioConfigured, processLeadComposio } = await import("@/lib/integrations/composio_leads");
-    const result = composioConfigured()
-      ? await processLeadComposio(data, ip, userAgent)
-      : await createLeadCaptureService().processLead(data, ip, userAgent);
+    const result = await processLead(data, ip, userAgent);
     
     if (!result.success) {
       throw new Error(result.message);

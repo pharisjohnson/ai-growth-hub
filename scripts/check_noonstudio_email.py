@@ -13,7 +13,7 @@ import dateutil.parser
 sys.path.insert(0, "/root/ai-growth-hub/src")
 
 # Use environment variables for secrets (set in environment, not in code)
-# AIRTABLE_API_KEY, AIRTABLE_BASE_ID, RESEND_API_KEY should be set in env
+# RESEND_API_KEY should be set in env
 
 import subprocess
 

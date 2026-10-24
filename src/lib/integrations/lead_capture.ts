@@ -13,7 +13,108 @@
  *   COMPOSIO_TELEGRAM_ACCOUNT_ID optional, only if the user has several Telegram connections
  */
 
-import { SpamProtection, type LeadData } from "./airtable_leads";
+
+export interface LeadData {
+  name: string;
+  email: string;
+  company: string;
+  message: string;
+  budget: string;
+  services: string[];
+  honeypot?: string;
+  timestamp?: string;
+  ip?: string;
+  userAgent?: string;
+}
+
+interface SpamCheckResult {
+  isSpam: boolean;
+  reason: string;
+}
+
+export class SpamProtection {
+  private static MAX_SUBMISSIONS_PER_HOUR = 5;
+  private ipCache: Map<string, number[]> = new Map();
+
+  checkHoneypot(honeypotValue: string): SpamCheckResult {
+    if (honeypotValue && honeypotValue.trim()) {
+      return { isSpam: true, reason: 'Honeypot triggered' };
+    }
+    return { isSpam: false, reason: '' };
+  }
+
+  checkRateLimit(ip: string): SpamCheckResult {
+    const now = Date.now();
+    const hourAgo = now - 3600000;
+    
+    const timestamps = this.ipCache.get(ip) || [];
+    const recentTimestamps = timestamps.filter(ts => ts > hourAgo);
+    
+    if (recentTimestamps.length >= SpamProtection.MAX_SUBMISSIONS_PER_HOUR) {
+      return { 
+        isSpam: true, 
+        reason: `Rate limit exceeded (${recentTimestamps.length}/${SpamProtection.MAX_SUBMISSIONS_PER_HOUR} per hour)` 
+      };
+    }
+    
+    recentTimestamps.push(now);
+    this.ipCache.set(ip, recentTimestamps);
+    
+    // Clean up old entries periodically
+    if (this.ipCache.size > 1000) {
+      for (const [key, value] of this.ipCache.entries()) {
+        const filtered = value.filter(ts => ts > hourAgo);
+        if (filtered.length === 0) {
+          this.ipCache.delete(key);
+        } else {
+          this.ipCache.set(key, filtered);
+        }
+      }
+    }
+    
+    return { isSpam: false, reason: '' };
+  }
+
+  checkContent(message: string, email: string): SpamCheckResult {
+    const spamKeywords = [
+      /\b(viagra|cialis|casino|lottery|winner|congratulations)\b/i,
+      /\b(click here|buy now|limited time|act now)\b/i,
+      /(https?:\/\/\S+){3,}/, // 3+ URLs
+      /\b(seo|backlink|guest post|link building)\b.*\b(service|package|offer)\b/i,
+    ];
+
+    for (const pattern of spamKeywords) {
+      if (pattern.test(message) || pattern.test(email)) {
+        return { isSpam: true, reason: 'Suspicious content pattern detected' };
+      }
+    }
+
+    const suspiciousTlDS = ['.xyz', '.top', '.click', '.loan', '.work', '.party', '.gq', '.ml', '.cf', '.tk'];
+    const emailDomain = email.split('@')[1]?.toLowerCase() || '';
+    for (const tld of suspiciousTlDS) {
+      if (emailDomain.endsWith(tld)) {
+        return { isSpam: true, reason: `Suspicious email domain: ${tld}` };
+      }
+    }
+
+    return { isSpam: false, reason: '' };
+  }
+
+  runAllChecks(data: LeadData): { isSpam: boolean; reasons: string[] } {
+    const reasons: string[] = [];
+    
+    const honeypot = this.checkHoneypot(data.honeypot || '');
+    if (honeypot.isSpam) reasons.push(honeypot.reason);
+    
+    const rateLimit = this.checkRateLimit(data.ip || 'unknown');
+    if (rateLimit.isSpam) reasons.push(rateLimit.reason);
+    
+    const content = this.checkContent(data.message, data.email);
+    if (content.isSpam) reasons.push(content.reason);
+    
+    return { isSpam: reasons.length > 0, reasons };
+  }
+}
 
 const COMPOSIO_URL = "https://backend.composio.dev/api/v3.1/tools/execute";
 const SHEETS_APPEND_TOOL = "GOOGLESHEETS_BATCH_UPDATE";
@@ -108,7 +209,7 @@ function telegramText(d: LeadData, sheetSaved: boolean): string {
 type FormLead = Pick<LeadData, "name" | "email" | "message"> &
   Partial<Pick<LeadData, "company" | "budget" | "services" | "honeypot">> & { website?: string };
 
-export async function processLeadComposio(
+export async function processLead(
   data: FormLead,
   ip: string,
   userAgent: string,
@@ -124,6 +225,14 @@ export async function processLeadComposio(
     userAgent,
     timestamp: new Date().toISOString(),
   };
+
+  if (!composioConfigured()) {
+    console.error("[LeadCapture] Not configured (COMPOSIO_API_KEY, LEADS_SHEET_ID, TELEGRAM_CHAT_ID). Lead:", JSON.stringify(data));
+    return {
+      success: false,
+      message: "Sorry, we could not record your message. Please email us or message us on WhatsApp.",
+    };
+  }
 
   const spam = spamProtection.runAllChecks(lead);
   if (spam.isSpam) {
