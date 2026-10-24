@@ -23,7 +23,7 @@ interface SpamCheckResult {
   reason: string;
 }
 
-class SpamProtection {
+export class SpamProtection {
   private static MAX_SUBMISSIONS_PER_HOUR = 5;
   private ipCache: Map<string, number[]> = new Map();
 
