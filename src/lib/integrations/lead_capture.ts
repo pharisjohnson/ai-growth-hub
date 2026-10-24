@@ -5,9 +5,11 @@
  *
  * Env vars (all server-side):
  *   COMPOSIO_API_KEY             Composio project API key
- *   COMPOSIO_USER_ID             user the Google Sheets + Telegram accounts are connected under
+ *   COMPOSIO_USER_ID             default Composio user the accounts are connected under
+ *   COMPOSIO_SHEETS_USER_ID      optional override for Google Sheets
+ *   COMPOSIO_TELEGRAM_USER_ID    optional override for Telegram
  *   LEADS_SHEET_ID               spreadsheet ID (the long string in the sheet URL)
- *   LEADS_SHEET_NAME             tab name, default "Leads"
+ *   LEADS_SHEET_NAME             tab name, default "Leads" (the sheet Composio created uses "Sheet1")
  *   TELEGRAM_CHAT_ID             chat the bot posts to
  *   COMPOSIO_SHEETS_ACCOUNT_ID   optional, only if the user has several Google connections
  *   COMPOSIO_TELEGRAM_ACCOUNT_ID optional, only if the user has several Telegram connections
@@ -117,7 +119,7 @@ export class SpamProtection {
 }
 
 const COMPOSIO_URL = "https://backend.composio.dev/api/v3.1/tools/execute";
-const SHEETS_APPEND_TOOL = "GOOGLESHEETS_BATCH_UPDATE";
+const SHEETS_APPEND_TOOL = "GOOGLESHEETS_SPREADSHEETS_VALUES_APPEND";
 const TELEGRAM_SEND_TOOL = "TELEGRAM_SEND_MESSAGE";
 
 export const SHEET_HEADERS = [
@@ -146,6 +148,7 @@ export function composioConfigured(): boolean {
 async function executeTool(
   slug: string,
   args: Record<string, unknown>,
+  userId: string | undefined,
   connectedAccountId?: string,
 ): Promise<void> {
   const res = await fetch(`${COMPOSIO_URL}/${slug}`, {
@@ -155,7 +158,7 @@ async function executeTool(
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      user_id: process.env.COMPOSIO_USER_ID || "default",
+      user_id: userId || process.env.COMPOSIO_USER_ID || "default",
       version: "latest",
       ...(connectedAccountId ? { connected_account_id: connectedAccountId } : {}),
       arguments: args,
@@ -249,11 +252,13 @@ export async function processLead(
     await executeTool(
       SHEETS_APPEND_TOOL,
       {
-        spreadsheet_id: process.env.LEADS_SHEET_ID,
-        sheet_name: process.env.LEADS_SHEET_NAME || "Leads",
+        spreadsheetId: process.env.LEADS_SHEET_ID,
+        range: `${process.env.LEADS_SHEET_NAME || "Leads"}!A1`,
+        valueInputOption: "RAW",
+        insertDataOption: "INSERT_ROWS",
         values: [toRow(lead)],
-        value_input_option: "RAW",
       },
+      process.env.COMPOSIO_SHEETS_USER_ID,
       process.env.COMPOSIO_SHEETS_ACCOUNT_ID,
     );
   } catch (error) {
@@ -266,6 +271,7 @@ export async function processLead(
     await executeTool(
       TELEGRAM_SEND_TOOL,
       { chat_id: process.env.TELEGRAM_CHAT_ID, text: telegramText(lead, sheetSaved) },
+      process.env.COMPOSIO_TELEGRAM_USER_ID,
       process.env.COMPOSIO_TELEGRAM_ACCOUNT_ID,
     );
   } catch (error) {
