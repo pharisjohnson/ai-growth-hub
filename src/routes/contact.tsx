@@ -4,14 +4,14 @@ import { useState } from "react";
 import { z } from "zod";
 
 const contactSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Valid email is required"),
-  company: z.string().optional(),
-  message: z.string().min(1, "Message is required"),
-  budget: z.string().optional(),
-  services: z.array(z.string()).optional(),
+  name: z.string().trim().min(1, "Name is required").max(120),
+  email: z.string().trim().email("Valid email is required").max(200),
+  company: z.string().max(160).optional(),
+  message: z.string().trim().min(1, "Message is required").max(5000),
+  budget: z.string().max(80).optional(),
+  services: z.array(z.string().max(60)).max(10).optional(),
   // Honeypot field - hidden from users, filled by bots
-  website: z.string().optional(),
+  website: z.string().max(500).optional(),
 });
 
 const submitLead = createServerFn({ method: "POST" })
@@ -54,7 +54,7 @@ const interests = ["Web Design", "AI Automation", "Digital Marketing", "Branding
 function Contact() {
   const [selected, setSelected] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string; fallback?: string }>({ type: null, message: '' });
   const submitLeadFn = useServerFn(submitLead);
 
   const toggle = (i: string) =>
@@ -65,7 +65,8 @@ function Contact() {
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: '' });
 
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const data = {
       name: fd.get("name") as string,
       email: fd.get("email") as string,
@@ -84,12 +85,25 @@ function Contact() {
         message: result.message 
       });
       // Reset form
-      (e.target as HTMLFormElement).reset();
+      form.reset();
       setSelected([]);
     } catch (error) {
-      setSubmitStatus({ 
-        type: 'error', 
-        message: error instanceof Error ? error.message : 'Something went wrong. Please try again.' 
+      // Keep the visitor's words: hand them a pre-filled email so the lead is not lost.
+      const body = [
+        data.message,
+        "",
+        `Name: ${data.name}`,
+        data.company ? `Company: ${data.company}` : "",
+        data.budget ? `Budget: ${data.budget}` : "",
+        selected.length ? `Services: ${selected.join(", ")}` : "",
+      ].filter(Boolean).join("\n");
+      const raw = error instanceof Error ? error.message : "";
+      setSubmitStatus({
+        type: 'error',
+        message: raw && raw.length < 200 && !/fetch|network|internal/i.test(raw)
+          ? raw
+          : "We couldn't send your message just now. Your details are still here, use one of the options below.",
+        fallback: `mailto:matata@noonstudio.africa?subject=${encodeURIComponent(`Project enquiry: ${data.company || data.name}`)}&body=${encodeURIComponent(body)}`,
       });
     } finally {
       setIsSubmitting(false);
@@ -120,8 +134,14 @@ function Contact() {
           </div>
           <div>
             <p className="mono-label mb-2">Phone</p>
-            <a href="tel:+254****4474" className="text-lg display text-ink hover:text-accent">
+            <a href="tel:+254740824474" className="text-lg display text-ink hover:text-accent">
               +254 740 824 474
+            </a>
+          </div>
+          <div>
+            <p className="mono-label mb-2">WhatsApp</p>
+            <a href="https://wa.me/254740824474" target="_blank" rel="noopener noreferrer" className="text-lg display text-ink hover:text-accent">
+              Chat on WhatsApp →
             </a>
           </div>
           <div>
@@ -133,9 +153,9 @@ function Contact() {
 
         <form onSubmit={onSubmit} className="md:col-span-8 space-y-8">
           <div className="grid sm:grid-cols-2 gap-6">
-            <Field label="Your name" name="name" required />
-            <Field label="Company" name="company" />
-            <Field label="Email" name="email" type="email" required />
+            <Field label="Your name" name="name" required autoComplete="name" maxLength={120} />
+            <Field label="Company" name="company" autoComplete="organization" maxLength={160} />
+            <Field label="Email" name="email" type="email" required autoComplete="email" maxLength={200} />
             <Field label="Budget (KES)" name="budget" placeholder="e.g. 200k–500k" />
           </div>
 
@@ -165,6 +185,7 @@ function Contact() {
             <textarea
               name="message"
               required
+              maxLength={5000}
               rows={6}
               className="w-full bg-transparent border-b hairline py-3 text-base focus:outline-none focus:border-accent transition resize-none"
               placeholder="Goals, timeline, anything you want us to know…"
@@ -181,12 +202,18 @@ function Contact() {
             {isSubmitting ? 'Sending...' : 'Send enquiry →'}
           </button>
           {submitStatus.type && (
-            <div className={`p-4 rounded-lg border ${
+            <div role="status" aria-live="polite" className={`p-4 rounded-lg border ${
               submitStatus.type === 'success'
                 ? 'bg-green-50 border-green-200 text-green-800'
                 : 'bg-red-50 border-red-200 text-red-800'
             }`}>
-              {submitStatus.message}
+              <p>{submitStatus.message}</p>
+              {submitStatus.fallback && (
+                <div className="mt-3 flex flex-wrap gap-3">
+                  <a href={submitStatus.fallback} className="underline font-medium">Send it by email</a>
+                  <a href="https://wa.me/254740824474" target="_blank" rel="noopener noreferrer" className="underline font-medium">WhatsApp us</a>
+                </div>
+              )}
             </div>
           )}
         </form>
@@ -195,7 +222,7 @@ function Contact() {
   );
 }
 
-function Field({ label, name, type = "text", required, placeholder }: { label: string; name: string; type?: string; required?: boolean; placeholder?: string }) {
+function Field({ label, name, type = "text", required, placeholder, autoComplete, maxLength }: { label: string; name: string; type?: string; required?: boolean; placeholder?: string; autoComplete?: string; maxLength?: number }) {
   return (
     <label className="block">
       <span className="mono-label mb-2 block">{label}{required && " *"}</span>
@@ -204,6 +231,8 @@ function Field({ label, name, type = "text", required, placeholder }: { label: s
         type={type}
         required={required}
         placeholder={placeholder}
+        autoComplete={autoComplete}
+        maxLength={maxLength}
         className="w-full bg-transparent border-b hairline py-3 text-base focus:outline-none focus:border-accent transition"
       />
     </label>

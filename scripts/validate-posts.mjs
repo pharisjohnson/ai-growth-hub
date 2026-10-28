@@ -55,8 +55,11 @@ for (const f of files) {
   if (links.length < 2) issues.push(`ONLY ${links.length} INTERNAL LINKS (min 2)`);
   for (const l of links) {
     const target = l.href.replace(/^\/blog\//, "").replace(/\/$/, "");
+    const sitePages = ["/", "/contact", "/services", "/work", "/pricing", "/about", "/blog"];
     if (target.startsWith("http") && !target.includes("noonstudio")) {
       // external link: fine, but flag for review
+    } else if (sitePages.includes(l.href.replace(/\/$/, "") || "/")) {
+      // link to a site page, not a post
     } else if (!slugs.has(target)) {
       issues.push(`BROKEN INTERNAL LINK -> /blog/${target}`);
     }

@@ -8,7 +8,8 @@ import type { ContentBlock, Post } from "./blog";
 const REPO = "pharisjohnson/ai-growth-hub";
 const CONTENT_DIR = "src/content/blog";
 const IMAGES_DIR = "public/images";
-const BLOCK_TYPES = new Set(["p", "h2", "h3", "ul", "blockquote", "note"]);
+const TEXT_BLOCKS = new Set(["p", "h2", "h3", "blockquote", "note"]);
+const LIST_BLOCKS = new Set(["ul", "ol", "takeaways"]);
 
 async function cookieHash(password: string): Promise<string> {
   const { createHash } = await import("node:crypto");
@@ -62,23 +63,39 @@ function validatePost(post: Post): string | null {
   if (!post.tag?.trim()) return "Tag is required.";
   if (!/^\d{4}-\d{2}-\d{2}$/.test(post.date)) return "Date must be YYYY-MM-DD.";
   if (!Array.isArray(post.content)) return "Content must be an array of blocks.";
-  for (const b of post.content as ContentBlock[]) {
-    if (!BLOCK_TYPES.has(b.type)) return `Unknown block type: ${b.type}`;
-    if (b.type === "ul") {
-      if (!Array.isArray(b.items) || b.items.some((i) => typeof i !== "string")) return "List blocks need an items array of strings.";
+  const isStr = (v: unknown) => typeof v === "string";
+  for (const [i, b] of (post.content as ContentBlock[]).entries()) {
+    const at = `Block ${i + 1} (${b?.type})`;
+    if (TEXT_BLOCKS.has(b.type)) {
+      if (!isStr((b as { text?: unknown }).text)) return `${at} needs a text string.`;
+    } else if (LIST_BLOCKS.has(b.type)) {
+      const items = (b as { items?: unknown }).items;
+      if (!Array.isArray(items) || !items.every(isStr)) return `${at} needs an items array of strings.`;
+    } else if (b.type === "table") {
+      if (!Array.isArray(b.headers) || !b.headers.every(isStr)) return `${at} needs a headers array of strings.`;
+      if (!Array.isArray(b.rows) || !b.rows.every((r) => Array.isArray(r) && r.every(isStr))) return `${at} needs rows as arrays of strings.`;
+    } else if (b.type === "faq") {
+      if (!Array.isArray(b.items) || !b.items.every((x) => x && isStr(x.q) && isStr(x.a))) return `${at} needs items like {"q": "...", "a": "..."}.`;
+    } else if (b.type === "image") {
+      if (!isStr(b.src) || !b.src.trim()) return `${at} needs an image src.`;
+      if (!isStr(b.alt)) return `${at} needs alt text.`;
+    } else if (b.type === "link") {
+      if (!isStr(b.text) || !isStr(b.href) || !b.href.trim()) return `${at} needs text and href.`;
     } else {
-      if (typeof (b as { text?: unknown }).text !== "string") return `Block "${b.type}" needs a text string.`;
+      return `Unknown block type: ${(b as { type?: string })?.type}`;
     }
   }
   return null;
 }
 
-export const checkAdmin = createServerFn({ method: "GET" }).handler(async ({ data }: { data: undefined }) => {
+export const checkAdmin = createServerFn({ method: "GET" }).handler(async () => {
   const configured = Boolean(process.env.ADMIN_PASSWORD && process.env.GITHUB_TOKEN);
   return { ok: await isAuthed(), configured };
 });
 
-export const login = createServerFn({ method: "POST" }).handler(async ({ data }: { data: { password: string } }) => {
+export const login = createServerFn({ method: "POST" })
+  .inputValidator((d: { password: string }) => d)
+  .handler(async ({ data }) => {
   const pw = process.env.ADMIN_PASSWORD;
   if (!pw) return { ok: false as const, error: "Admin not configured. Set the ADMIN_PASSWORD env var in Vercel." };
   if (data.password === pw) {
@@ -89,13 +106,15 @@ export const login = createServerFn({ method: "POST" }).handler(async ({ data }:
   return { ok: false as const, error: "Wrong password." };
 });
 
-export const logout = createServerFn({ method: "POST" }).handler(async ({ data }: { data: undefined }) => {
+export const logout = createServerFn({ method: "POST" }).handler(async () => {
   const { setCookie } = await import("@tanstack/react-start/server");
   setCookie("noon_admin", "", { httpOnly: true, sameSite: "lax", path: "/", maxAge: 0 });
   return { ok: true as const };
 });
 
-export const savePost = createServerFn({ method: "POST" }).handler(async ({ data }: { data: Post }) => {
+export const savePost = createServerFn({ method: "POST" })
+  .inputValidator((d: Post) => d)
+  .handler(async ({ data }) => {
   if (!(await isAuthed())) return { ok: false as const, error: "Not authorized. Log in again." };
   const token = process.env.GITHUB_TOKEN;
   if (!token) return { ok: false as const, error: "Server not configured. Set the GITHUB_TOKEN env var in Vercel." };
@@ -104,7 +123,10 @@ export const savePost = createServerFn({ method: "POST" }).handler(async ({ data
 
   const branch = process.env.GITHUB_BRANCH ?? "main";
   const path = `${CONTENT_DIR}/${data.slug}.json`;
-  const payload = JSON.stringify(data, null, 2) + "\n";
+  // A published post is never a private preview; an unpublished one stays a private
+  // preview (direct-URL only) unless explicitly set otherwise.
+  const post: Post = data.published ? { ...data, preview: false } : { ...data, preview: data.preview ?? true };
+  const payload = JSON.stringify(post, null, 2) + "\n";
   try {
     const existing = await ghGet(token, path, branch);
     await ghPut(token, path, Buffer.from(payload, "utf8").toString("base64"), `update post: ${data.slug}`, branch, existing?.sha);
@@ -114,7 +136,9 @@ export const savePost = createServerFn({ method: "POST" }).handler(async ({ data
   }
 });
 
-export const deletePost = createServerFn({ method: "POST" }).handler(async ({ data }: { data: { slug: string } }) => {
+export const deletePost = createServerFn({ method: "POST" })
+  .inputValidator((d: { slug: string }) => d)
+  .handler(async ({ data }) => {
   if (!(await isAuthed())) return { ok: false as const, error: "Not authorized. Log in again." };
   const token = process.env.GITHUB_TOKEN;
   if (!token) return { ok: false as const, error: "Server not configured. Set the GITHUB_TOKEN env var in Vercel." };
@@ -145,7 +169,9 @@ export const deletePost = createServerFn({ method: "POST" }).handler(async ({ da
   }
 });
 
-export const uploadImage = createServerFn({ method: "POST" }).handler(async ({ data }: { data: { dataUrl: string; originalName: string } }) => {
+export const uploadImage = createServerFn({ method: "POST" })
+  .inputValidator((d: { dataUrl: string; originalName: string }) => d)
+  .handler(async ({ data }) => {
   if (!(await isAuthed())) return { ok: false as const, error: "Not authorized. Log in again." };
   const token = process.env.GITHUB_TOKEN;
   if (!token) return { ok: false as const, error: "Server not configured. Set the GITHUB_TOKEN env var in Vercel." };
